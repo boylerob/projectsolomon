@@ -1,0 +1,158 @@
+[
+  {
+    "term": "Faith",
+    "synonyms": ["trust", "belief", "confidence", "reliance"],
+    "lemmas": "pistis (G4102), ʾemunah (H530)",
+    "definition": "Confident trust in God's character and promises—especially in Christ's finished work. Both gift and response (Ephesians 2:8–9; Hebrews 11:1)."
+  },
+  {
+    "term": "Grace",
+    "synonyms": ["unmerited favor", "mercy", "gift", "divine kindness"],
+    "lemmas": "charis (G5485), ḥesed (H2617)",
+    "definition": "God's unearned favor toward humanity, expressed fully in the redemptive work of Christ (Ephesians 2:8; Titus 2:11)."
+  },
+  {
+    "term": "Salvation",
+    "synonyms": ["deliverance", "rescue", "redemption", "eternal life"],
+    "lemmas": "sōtēria (G4991), yāshaʿ (H3467)",
+    "definition": "The comprehensive work of God to rescue sinners from judgment and bring them into eternal life (Romans 1:16; John 3:17)."
+  },
+  {
+    "term": "Prayer",
+    "synonyms": ["supplication", "intercession", "petition", "communion"],
+    "lemmas": "proseuchē (G4335), tĕpillâh (H8605)",
+    "definition": "Communication with God—both speaking and listening. Includes adoration, confession, thanksgiving, and supplication (1 Thessalonians 5:17; Philippians 4:6)."
+  },
+  {
+    "term": "Worship",
+    "synonyms": ["adoration", "praise", "reverence", "devotion"],
+    "lemmas": "proskuneō (G4352), shāchâh (H7812)",
+    "definition": "The act of ascribing worth to God through praise, thanksgiving, and obedient service (John 4:24; Psalm 95:6)."
+  },
+  {
+    "term": "Forgiveness",
+    "synonyms": ["pardon", "clemency", "absolution", "reconciliation"],
+    "lemmas": "aphesis (G859), sālach (H5545)",
+    "definition": "God's gracious act of removing sin's penalty and restoring relationship (1 John 1:9; Psalm 103:12)."
+  },
+  {
+    "term": "Love",
+    "synonyms": ["agape", "charity", "affection", "devotion"],
+    "lemmas": "agapē (G26), ʾahăbâh (H160)",
+    "definition": "Selfless, sacrificial love that seeks the good of others, exemplified by Christ's death on the cross (1 Corinthians 13:4-7; John 3:16)."
+  },
+  {
+    "term": "Hope",
+    "synonyms": ["expectation", "confidence", "assurance", "anticipation"],
+    "lemmas": "elpis (G1680), tiqvâh (H8615)",
+    "definition": "Confident expectation based on God's promises, especially the hope of eternal life (Romans 15:13; 1 Peter 1:3)."
+  },
+  {
+    "term": "Peace",
+    "synonyms": ["shalom", "tranquility", "harmony", "reconciliation"],
+    "lemmas": "eirēnē (G1515), shālôm (H7965)",
+    "definition": "Wholeness and well-being that comes from being right with God and others (John 14:27; Philippians 4:7)."
+  },
+  {
+    "term": "Joy",
+    "synonyms": ["gladness", "delight", "rejoicing", "happiness"],
+    "lemmas": "chara (G5479), śimchâh (H8057)",
+    "definition": "Deep, abiding happiness that comes from knowing God and experiencing His presence (Psalm 16:11; James 1:2)."
+  },
+  {
+    "term": "Mercy",
+    "synonyms": ["compassion", "pity", "kindness", "clemency"],
+    "lemmas": "eleos (G1656), rachămîm (H7356)",
+    "definition": "God's tender compassion toward those in need, withholding deserved punishment (Lamentations 3:22-23; Luke 6:36)."
+  },
+  {
+    "term": "Righteousness",
+    "synonyms": ["justice", "holiness", "integrity", "uprightness"],
+    "lemmas": "dikaiosynē (G1343), tsĕdâqâh (H6666)",
+    "definition": "Right standing before God and right living according to His standards (Romans 1:17; Matthew 5:6)."
+  },
+  {
+    "term": "Holiness",
+    "synonyms": ["sanctification", "purity", "consecration", "set apart"],
+    "lemmas": "hagiosynē (G42), qôdesh (H6944)",
+    "definition": "Being set apart for God's purposes and reflecting His pure, perfect character (1 Peter 1:15-16; Leviticus 20:26)."
+  },
+  {
+    "term": "Wisdom",
+    "synonyms": ["understanding", "insight", "discernment", "prudence"],
+    "lemmas": "sophia (G4678), chokmâh (H2451)",
+    "definition": "God-given ability to apply knowledge rightly and make sound judgments (James 1:5; Proverbs 9:10)."
+  },
+  {
+    "term": "Gratitude",
+    "synonyms": ["thanksgiving", "appreciation", "thankfulness", "recognition"],
+    "lemmas": "eucharistia (G2169), tôdâh (H8426)",
+    "definition": "Expressing thanks to God for His blessings and faithfulness (1 Thessalonians 5:18; Psalm 100:4)."
+  },
+  {
+    "term": "Humility",
+    "synonyms": ["meekness", "lowliness", "modesty", "servanthood"],
+    "lemmas": "tapeinophrosynē (G5012), ʿănâvâh (H6038)",
+    "definition": "Recognizing one's dependence on God and valuing others above oneself (Philippians 2:3-4; James 4:6)."
+  },
+  {
+    "term": "Patience",
+    "synonyms": ["endurance", "perseverance", "longsuffering", "steadfastness"],
+    "lemmas": "hypomonē (G5281), ʾerech ʾappayim (H750)",
+    "definition": "Bearing difficulties with calmness and trust in God's timing (James 1:3-4; Romans 5:3-4)."
+  },
+  {
+    "term": "Courage",
+    "synonyms": ["boldness", "strength", "valor", "fearlessness"],
+    "lemmas": "tharsos (G2294), ʾômets (H553)",
+    "definition": "Strength to face challenges with confidence in God's presence and power (Joshua 1:9; 2 Timothy 1:7)."
+  },
+  {
+    "term": "Compassion",
+    "synonyms": ["mercy", "pity", "sympathy", "tenderness"],
+    "lemmas": "splanchnizomai (G4697), rachăm (H7355)",
+    "definition": "Deep feeling of concern for others' suffering, leading to action (Colossians 3:12; Matthew 9:36)."
+  },
+  {
+    "term": "Generosity",
+    "synonyms": ["liberality", "giving", "benevolence", "charity"],
+    "lemmas": "haplotēs (G572), nâdîyb (H5081)",
+    "definition": "Willingness to give freely and abundantly, reflecting God's generous nature (2 Corinthians 9:6-7; Proverbs 11:25)."
+  },
+  {
+    "term": "Faithfulness",
+    "synonyms": ["loyalty", "steadfastness", "reliability", "constancy"],
+    "lemmas": "pistis (G4102), ʾemûnâh (H530)",
+    "definition": "Remaining true to God and others, keeping promises and commitments (Galatians 5:22; Lamentations 3:23)."
+  },
+  {
+    "term": "Repentance",
+    "synonyms": ["contrition", "remorse", "conversion", "turning"],
+    "lemmas": "metanoia (G3341), shûwb (H7725)",
+    "definition": "Turning away from sin and toward God, involving both sorrow and change (Acts 3:19; 2 Corinthians 7:10)."
+  },
+  {
+    "term": "Obedience",
+    "synonyms": ["compliance", "submission", "conformity", "allegiance"],
+    "lemmas": "hypakoē (G5218), shâmaʿ (H8085)",
+    "definition": "Willing submission to God's will and commands (John 14:15; 1 Samuel 15:22)."
+  },
+  {
+    "term": "Praise",
+    "synonyms": ["worship", "exaltation", "glorification", "adoration"],
+    "lemmas": "ainesis (G133), tĕhillâh (H8416)",
+    "definition": "Expressing admiration and gratitude to God for who He is and what He has done (Psalm 150:6; Hebrews 13:15)."
+  },
+  {
+    "term": "Intercession",
+    "synonyms": ["mediation", "petition", "supplication", "prayer"],
+    "lemmas": "enteuxis (G1783), pâgaʿ (H6293)",
+    "definition": "Praying on behalf of others, following Christ's example as our intercessor (1 Timothy 2:1; Romans 8:34)."
+  },
+  {
+    "term": "Confession",
+    "synonyms": ["acknowledgment", "admission", "declaration", "testimony"],
+    "lemmas": "homologeō (G3670), yâdâh (H3034)",
+    "definition": "Acknowledging sin before God and declaring faith in Christ (1 John 1:9; Romans 10:9-10)."
+  }
+] 
