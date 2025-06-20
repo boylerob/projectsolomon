@@ -1,0 +1,2026 @@
+[
+  {
+    "term": "Grace",
+    "synonyms": [
+      "favor",
+      "mercy",
+      "kindness",
+      "blessing"
+    ],
+    "lemmas": "charis (G5485)",
+    "definition": "Unmerited favor of God toward humanity, especially evident in salvation through Christ. Rooted in the idea of divine generosity, not earned merit."
+  },
+  {
+    "term": "Faith",
+    "synonyms": [
+      "trust",
+      "belief",
+      "conviction",
+      "assurance"
+    ],
+    "lemmas": "pistis (G4102)",
+    "definition": "Confident trust in God’s promises, character, and plan. A covenantal loyalty that underpins righteousness (Romans 4)."
+  },
+  {
+    "term": "Sin",
+    "synonyms": [
+      "transgression",
+      "iniquity",
+      "rebellion",
+      "wrongdoing"
+    ],
+    "lemmas": "hamartia (G266), peshaʿ (H6588)",
+    "definition": "Violation of divine law or falling short of God's standard. Includes willful rebellion and moral failure."
+  },
+  {
+    "term": "Salvation",
+    "synonyms": [
+      "deliverance",
+      "redemption",
+      "rescue",
+      "eternal life"
+    ],
+    "lemmas": "sōtēria (G4991), yēsha (H3468)",
+    "definition": "God’s act of rescuing from sin and death, fulfilled through Christ. Encompasses both justification and final glorification."
+  },
+  {
+    "term": "Obedience",
+    "synonyms": [
+      "submission",
+      "compliance",
+      "allegiance",
+      "faithfulness"
+    ],
+    "lemmas": "hypakoē (G5218), šāmaʿ (H8085)",
+    "definition": "Willful alignment with God’s revealed commands. In Scripture, obedience reflects covenant loyalty—seen not just in action but in heart posture. Christ’s obedience unto death is the model of ultimate discipleship (Philippians 2:8)."
+  },
+  {
+    "term": "Covenant",
+    "synonyms": [
+      "agreement",
+      "pact",
+      "promise",
+      "treaty"
+    ],
+    "lemmas": "diathēkē (G1242), berit (H1285)",
+    "definition": "A sacred relational bond initiated by God with individuals or communities. Covenants define the terms of divine-human interaction—foundational in the narratives of Abraham, Moses, David, and Christ."
+  },
+  {
+    "term": "Sanctification",
+    "synonyms": [
+      "purification",
+      "consecration",
+      "holiness",
+      "transformation"
+    ],
+    "lemmas": "hagiasmos (G38), qādāsh (H6942)",
+    "definition": "The progressive process by which believers are made holy. It follows justification and is fueled by the Holy Spirit, setting the Christian apart for divine purposes (1 Thessalonians 4:3)."
+  },
+  {
+    "term": "Glory",
+    "synonyms": [
+      "majesty",
+      "splendor",
+      "radiance",
+      "honor"
+    ],
+    "lemmas": "doxa (G1391), kābôd (H3519)",
+    "definition": "The visible and intrinsic majesty of God. In the Old Testament, associated with overwhelming presence; in the New, revealed fully in Christ. Glory is both God’s nature and what He bestows on those united with Him."
+  },
+  {
+    "term": "Wisdom",
+    "synonyms": [
+      "understanding",
+      "discernment",
+      "insight",
+      "prudence"
+    ],
+    "lemmas": "sophia (G4678), ḥokmāh (H2451)",
+    "definition": "The ability to live rightly in reverence toward God. Wisdom in Scripture is not mere intellect—it’s moral and spiritual orientation that produces righteous action (Proverbs 1:7)."
+  },
+  {
+    "term": "Truth",
+    "synonyms": [
+      "reality",
+      "veracity",
+      "reliability",
+      "certainty"
+    ],
+    "lemmas": "alētheia (G225), ʾemet (H571)",
+    "definition": "What aligns with God’s character, promises, and revelation. Jesus claims to be “the Truth” (John 14:6), anchoring truth as a person, not just a principle."
+  },
+  {
+    "term": "Creation",
+    "synonyms": [
+      "origin",
+      "formation",
+      "beginning",
+      "design"
+    ],
+    "lemmas": "ktisis (G2937), bārāʾ (H1254)",
+    "definition": "The divine act by which God brought the universe into existence. Genesis emphasizes intentionality and goodness; the New Testament affirms Christ as the agent of creation (John 1:3, Colossians 1:16)."
+  },
+  {
+    "term": "Law",
+    "synonyms": [
+      "commandments",
+      "Torah",
+      "instruction",
+      "statute"
+    ],
+    "lemmas": "nomos (G3551), tôrāh (H8451)",
+    "definition": "God’s revealed standard of righteousness. In the Old Testament, embodied in Mosaic Law; in the New, fulfilled in Christ. The law exposes sin and guides obedience (Romans 7:7)."
+  },
+  {
+    "term": "Atonement",
+    "synonyms": [
+      "reconciliation",
+      "covering",
+      "expiation",
+      "propitiation"
+    ],
+    "lemmas": "hilastērion (G2435), kāpar (H3722)",
+    "definition": "The work of Christ to reconcile sinners to God, primarily through His substitutionary death. Rooted in the sacrificial system and fulfilled in the cross (Leviticus 16, Romans 3:25)."
+  },
+  {
+    "term": "Sacrifice",
+    "synonyms": [
+      "offering",
+      "atonement",
+      "substitution",
+      "surrender"
+    ],
+    "lemmas": "thusia (G2378), zebach (H2077)",
+    "definition": "The giving up of something valuable as an act of worship, often for atonement. Christ’s death is the ultimate and final sacrifice, fulfilling the typology of the Old Testament system (Hebrews 10:10)."
+  },
+  {
+    "term": "Prayer",
+    "synonyms": [
+      "supplication",
+      "petition",
+      "intercession",
+      "communion"
+    ],
+    "lemmas": "proseuchē (G4335), tephillah (H8605)",
+    "definition": "Communication with God involving praise, confession, thanksgiving, and requests. Central to both individual piety and corporate worship (Philippians 4:6, Luke 11)."
+  },
+  {
+    "term": "Peace",
+    "synonyms": [
+      "shalom",
+      "harmony",
+      "tranquility",
+      "wholeness"
+    ],
+    "lemmas": "eirēnē (G1515), šālôm (H7965)",
+    "definition": "More than the absence of conflict—peace is the fullness of life under God’s blessing. Rooted in covenant and fulfilled in Christ (Isaiah 9:6, John 14:27)."
+  },
+  {
+    "term": "Kingdom",
+    "synonyms": [
+      "reign",
+      "dominion",
+      "sovereignty",
+      "realm"
+    ],
+    "lemmas": "basileia (G932), mamlākāh (H4467)",
+    "definition": "The active rule of God in heaven and on earth. Inaugurated by Christ’s first coming, consummated at His return. It defines the framework of the gospel (Matthew 4:17)."
+  },
+  {
+    "term": "Judgment",
+    "synonyms": [
+      "justice",
+      "verdict",
+      "reckoning",
+      "decision"
+    ],
+    "lemmas": "krisis (G2920), mišpāṭ (H4941)",
+    "definition": "God's assessment and response to human actions. Includes both temporal discipline and eternal destiny. Christ is the appointed judge (Acts 17:31)."
+  },
+  {
+    "term": "Holiness",
+    "synonyms": [
+      "purity",
+      "sanctity",
+      "sacredness",
+      "consecration"
+    ],
+    "lemmas": "hagiosynē (G42), qōdesh (H6944)",
+    "definition": "God’s absolute moral perfection, and His call for His people to be set apart. Holiness governs worship, ethics, and covenant loyalty (1 Peter 1:16)."
+  },
+  {
+    "term": "Election",
+    "synonyms": [
+      "choosing",
+      "predestination",
+      "selection",
+      "calling"
+    ],
+    "lemmas": "eklogē (G1589), bāḥar (H977)",
+    "definition": "God's sovereign choice of individuals or groups for a divine purpose—especially salvation. Emphasized in Romans 9 and Ephesians 1. Intertwined with covenant, grace, and foreknowledge."
+  },
+  {
+    "term": "Justification",
+    "synonyms": [
+      "acquittal",
+      "pardon",
+      "righteousness",
+      "vindication"
+    ],
+    "lemmas": "dikaiōsis (G1347), tsedeq (H6664)",
+    "definition": "The legal act of God declaring a sinner righteous on the basis of faith in Christ. Imputed righteousness (Romans 4), not earned merit."
+  },
+  {
+    "term": "Regeneration",
+    "synonyms": [
+      "rebirth",
+      "new birth",
+      "renewal",
+      "recreation"
+    ],
+    "lemmas": "palingenesia (G3824), ḥādāsh (H2318)",
+    "definition": "The act of the Holy Spirit giving spiritual life to the sinner. Also called being “born again” (John 3). The beginning of sanctification and transformation."
+  },
+  {
+    "term": "Atonement (Expanded)",
+    "synonyms": [
+      "reconciliation",
+      "appeasement",
+      "satisfaction",
+      "covering"
+    ],
+    "lemmas": "hilastērion (G2435), kāpar (H3722)",
+    "definition": "Christ’s substitutionary death that satisfies God’s justice and enables reconciliation. Foreshadowed in sacrificial rituals; fulfilled in the cross (Hebrews 9)."
+  },
+  {
+    "term": "Redemption",
+    "synonyms": [
+      "liberation",
+      "deliverance",
+      "ransom",
+      "rescue"
+    ],
+    "lemmas": "apolutrōsis (G629), gāʾal (H1350)",
+    "definition": "The act of buying back from bondage. In salvation, Christ pays the price for sinners with His blood (Ephesians 1:7). In OT, rooted in kinsman-redeemer law."
+  },
+  {
+    "term": "Adoption",
+    "synonyms": [
+      "sonship",
+      "inclusion",
+      "family",
+      "inheritance"
+    ],
+    "lemmas": "huiothesia (G5206)",
+    "definition": "The legal and spiritual placing of a believer into God's family. Adoption bestows rights of heirs and affirms intimacy with the Father (Romans 8:15–17)."
+  },
+  {
+    "term": "Sanctification (Expanded)",
+    "synonyms": [
+      "purification",
+      "consecration",
+      "transformation",
+      "spiritual growth"
+    ],
+    "lemmas": "hagiasmos (G38), qādāsh (H6942)",
+    "definition": "Ongoing spiritual formation by the Holy Spirit. Distinct from justification, it’s a process, not a status—marked by obedience, holiness, and Christlikeness."
+  },
+  {
+    "term": "Glorification",
+    "synonyms": [
+      "exaltation",
+      "perfection",
+      "immortality",
+      "heavenly reward"
+    ],
+    "lemmas": "doxazō (G1392)",
+    "definition": "The final state of redeemed humanity in full resurrection glory. Includes bodily transformation and sinless perfection (Romans 8:30; 1 Corinthians 15)."
+  },
+  {
+    "term": "Reconciliation",
+    "synonyms": [
+      "restoration",
+      "reunion",
+      "peace",
+      "harmony"
+    ],
+    "lemmas": "katallagē (G2643), kipper (H3722 - atone, overlap)",
+    "definition": "The relational result of atonement—God and humanity restored. Also a call for horizontal peace among believers (2 Corinthians 5:18–20)."
+  },
+  {
+    "term": "Second Coming",
+    "synonyms": [
+      "return of Christ",
+      "parousia",
+      "reappearing",
+      "glorious appearing"
+    ],
+    "lemmas": "parousia (G3952), epiphaneia (G2015)",
+    "definition": "The literal and visible return of Jesus Christ to earth. Central to Christian hope and judgment, as described in Matthew 24, Acts 1:11, and Revelation 19."
+  },
+  {
+    "term": "Resurrection of the Dead",
+    "synonyms": [
+      "bodily resurrection",
+      "rising again",
+      "awakening",
+      "restoration"
+    ],
+    "lemmas": "anastasis (G386)",
+    "definition": "The raising of the body after death. Includes Christ’s resurrection (firstfruits) and the future resurrection of all humans for judgment or glory (1 Corinthians 15)."
+  },
+  {
+    "term": "Final Judgment",
+    "synonyms": [
+      "Day of Judgment",
+      "divine verdict",
+      "reckoning",
+      "justice"
+    ],
+    "lemmas": "krisis (G2920), mishpat (H4941)",
+    "definition": "God’s ultimate judgment of all humanity based on faith, works, and grace. It culminates in eternal destinies (Revelation 20, Matthew 25)."
+  },
+  {
+    "term": "Heaven",
+    "synonyms": [
+      "paradise",
+      "eternal dwelling",
+      "kingdom of God",
+      "the presence of God"
+    ],
+    "lemmas": "ouranos (G3772), šāmayim (H8064)",
+    "definition": "The dwelling place of God and the redeemed. Described as a place of joy, worship, reward, and eternal fellowship with God (Revelation 21)."
+  },
+  {
+    "term": "Hell",
+    "synonyms": [
+      "eternal punishment",
+      "outer darkness",
+      "Gehenna",
+      "lake of fire"
+    ],
+    "lemmas": "geenna (G1067), Sheol (H7585)",
+    "definition": "The final destiny of the unrepentant—separation from God, marked by conscious judgment. Depicted with grave seriousness throughout Scripture (Luke 16, Revelation 20)."
+  },
+  {
+    "term": "Millennium",
+    "synonyms": [
+      "thousand-year reign",
+      "messianic kingdom",
+      "reign of Christ"
+    ],
+    "lemmas": "Not explicitly used outside chilia (G5507) in Revelation 20",
+    "definition": "A debated period of Christ’s reign before the final judgment. Views include premillennialism, amillennialism, and postmillennialism (Revelation 20:1–6)."
+  },
+  {
+    "term": "Tribulation",
+    "synonyms": [
+      "trial",
+      "affliction",
+      "persecution",
+      "distress"
+    ],
+    "lemmas": "thlipsis (G2347)",
+    "definition": "A time of great suffering prior to Christ’s return. May refer to both historical Christian persecution and future global distress (Matthew 24:21, Revelation 7:14)."
+  },
+  {
+    "term": "Rapture",
+    "synonyms": [
+      "catching away",
+      "gathering",
+      "being taken",
+      "ascent"
+    ],
+    "lemmas": "harpazō (G726)",
+    "definition": "The event where believers are caught up to meet Christ in the air. Central to pre-tribulational eschatology; based on 1 Thessalonians 4:17."
+  },
+  {
+    "term": "New Creation",
+    "synonyms": [
+      "new heavens and earth",
+      "restored cosmos",
+      "renewal"
+    ],
+    "lemmas": "kainē ktisis (G2537 + G2937)",
+    "definition": "The restored universe following final judgment—free from sin, death, and corruption. Prophesied in Isaiah 65 and Revelation 21."
+  },
+  {
+    "term": "Holy Spirit",
+    "synonyms": [
+      "Spirit of God",
+      "Comforter",
+      "Advocate",
+      "Counselor"
+    ],
+    "lemmas": "pneuma hagion (G4151 + G40), rûaḥ qōdeš (H7307 + H6944)",
+    "definition": "The third person of the Trinity—fully God, active in creation, regeneration, sanctification, and empowerment. Sent by Christ to indwell and guide believers (John 14–16, Acts 2)."
+  },
+  {
+    "term": "Baptism of the Holy Spirit",
+    "synonyms": [
+      "Spirit baptism",
+      "filling",
+      "anointing",
+      "outpouring"
+    ],
+    "lemmas": "baptizō (G907), pneuma (G4151)",
+    "definition": "The immersion of the believer into the body of Christ by the Spirit. Distinguished from water baptism, it often refers to empowerment for ministry (Acts 1:5, 1 Corinthians 12:13)."
+  },
+  {
+    "term": "Gifts of the Spirit",
+    "synonyms": [
+      "charisms",
+      "abilities",
+      "spiritual endowments",
+      "empowerments"
+    ],
+    "lemmas": "charismata (G5486)",
+    "definition": "Supernatural abilities distributed by the Spirit for the edification of the Church. Includes teaching, healing, prophecy, tongues, etc. (1 Corinthians 12–14, Romans 12)."
+  },
+  {
+    "term": "Fruit of the Spirit",
+    "synonyms": [
+      "character traits",
+      "virtues",
+      "qualities",
+      "moral outcomes"
+    ],
+    "lemmas": "karpos tou pneumatos (G2590 + G4151)",
+    "definition": "The ethical result of the Spirit’s work in a believer’s life: love, joy, peace, patience, etc. (Galatians 5:22–23). A marker of maturity, not giftedness."
+  },
+  {
+    "term": "Indwelling",
+    "synonyms": [
+      "residence",
+      "habitation",
+      "abiding",
+      "inner presence"
+    ],
+    "lemmas": "enoikeō (G1774)",
+    "definition": "The Spirit’s permanent presence in the believer, beginning at regeneration. Foundation of Christian assurance, power, and transformation (Romans 8:9–11)."
+  },
+  {
+    "term": "Anointing",
+    "synonyms": [
+      "consecration",
+      "appointment",
+      "empowerment",
+      "setting apart"
+    ],
+    "lemmas": "chrismatos (G5548), māšaḥ (H4886)",
+    "definition": "Symbol of being set apart and empowered by God. In the NT, all believers are “anointed” by the Spirit (1 John 2:20, 27), not just leaders or prophets."
+  },
+  {
+    "term": "Blasphemy of the Holy Spirit",
+    "synonyms": [
+      "unforgivable sin",
+      "rejection",
+      "slander",
+      "defiance"
+    ],
+    "lemmas": "blasphēmia (G988) + pneuma hagion (G4151)",
+    "definition": "A willful and final rejection of the Spirit’s testimony about Christ. Marked as unpardonable in the Gospels (Matthew 12:31–32), often interpreted as terminal unbelief."
+  },
+  {
+    "term": "Sealing of the Spirit",
+    "synonyms": [
+      "authentication",
+      "guarantee",
+      "security",
+      "ownership"
+    ],
+    "lemmas": "sphragizō (G4972)",
+    "definition": "The Spirit’s role in confirming salvation and belonging. A pledge of the believer’s inheritance until final redemption (Ephesians 1:13–14)."
+  },
+  {
+    "term": "Quenching the Spirit",
+    "synonyms": [
+      "resisting",
+      "stifling",
+      "suppressing",
+      "extinguishing"
+    ],
+    "lemmas": "sbennymi (G4570)",
+    "definition": "Hindering the Spirit’s activity through disobedience, unbelief, or neglect. A warning given to believers (1 Thessalonians 5:19)."
+  },
+  {
+    "term": "Christ",
+    "synonyms": [
+      "Messiah",
+      "Anointed One",
+      "Savior",
+      "Redeemer"
+    ],
+    "lemmas": "Christos (G5547), māšîaḥ (H4899)",
+    "definition": "The title for Jesus meaning “Anointed One,” identifying Him as the fulfillment of messianic prophecy. Central to Christian identity and redemptive hope."
+  },
+  {
+    "term": "Incarnation",
+    "synonyms": [
+      "embodiment",
+      "enfleshment",
+      "manifestation",
+      "God in flesh"
+    ],
+    "lemmas": "sarx (G4561), as used in ho logos sarx egeneto (John 1:14)",
+    "definition": "The eternal Son of God taking on human nature. Fully divine, fully human. A cornerstone doctrine (Philippians 2:6–8, John 1:14)."
+  },
+  {
+    "term": "Son of God",
+    "synonyms": [
+      "divine Son",
+      "eternal Son",
+      "Second Person",
+      "Word"
+    ],
+    "lemmas": "huios tou theou (G5207 + G2316)",
+    "definition": "Jesus' identity as the eternal, divine Son—unique in essence and intimacy with the Father. Affirmed at His baptism, transfiguration, and resurrection."
+  },
+  {
+    "term": "Son of Man",
+    "synonyms": [
+      "human one",
+      "messianic title",
+      "representative man"
+    ],
+    "lemmas": "huios tou anthrōpou (G5207 + G444), ben adam (H1121 + H120)",
+    "definition": "Jesus’ preferred self-title, emphasizing both His humanity and messianic role (Daniel 7, Mark 10:45). Links incarnation with authority and eschatology."
+  },
+  {
+    "term": "Messiah",
+    "synonyms": [
+      "deliverer",
+      "promised one",
+      "Christ",
+      "king"
+    ],
+    "lemmas": "māšîaḥ (H4899), Christos (G5547)",
+    "definition": "The promised savior-king of the Old Testament. Fulfilled in Jesus, who embodies Israel’s hope and God's redemptive plan."
+  },
+  {
+    "term": "Logos (Word)",
+    "synonyms": [
+      "reason",
+      "speech",
+      "message",
+      "divine expression"
+    ],
+    "lemmas": "logos (G3056)",
+    "definition": "A theological title for Christ in John 1—“the Word” through whom all things were made. Ties together divine rationality, revelation, and incarnation."
+  },
+  {
+    "term": "Mediator",
+    "synonyms": [
+      "go-between",
+      "advocate",
+      "intercessor",
+      "high priest"
+    ],
+    "lemmas": "mesitēs (G3316)",
+    "definition": "One who reconciles opposing parties. Christ is the sole mediator between God and man (1 Timothy 2:5), fulfilling priestly and legal roles."
+  },
+  {
+    "term": "Lamb of God",
+    "synonyms": [
+      "sacrifice",
+      "substitute",
+      "redeemer",
+      "paschal lamb"
+    ],
+    "lemmas": "amnos tou theou (G286 + G2316)",
+    "definition": "A title that identifies Jesus as the fulfillment of Passover imagery and Isaiah 53’s suffering servant. Represents innocence, sacrifice, and victory (John 1:29)."
+  },
+  {
+    "term": "High Priest",
+    "synonyms": [
+      "intercessor",
+      "mediator",
+      "advocate",
+      "holy representative"
+    ],
+    "lemmas": "archiereus (G749), kohen gadol (H3548 + H1419)",
+    "definition": "Jesus is the ultimate high priest—offering Himself as the perfect sacrifice and continually interceding for believers (Hebrews 4–10)."
+  },
+  {
+    "term": "Scripture",
+    "synonyms": [
+      "the Bible",
+      "sacred writings",
+      "Holy Writ",
+      "God’s Word"
+    ],
+    "lemmas": "graphē (G1124), kĕtāb (H3791)",
+    "definition": "The inspired and authoritative written Word of God. Comprises 66 books in the Protestant canon, revealing God’s character, will, and redemptive plan."
+  },
+  {
+    "term": "Inspiration",
+    "synonyms": [
+      "God-breathed",
+      "divine origin",
+      "spiritual authorship"
+    ],
+    "lemmas": "theopneustos (G2315)",
+    "definition": "The doctrine that God supernaturally guided the human authors of Scripture such that the final writings are His authoritative Word (2 Timothy 3:16)."
+  },
+  {
+    "term": "Inerrancy",
+    "synonyms": [
+      "truthfulness",
+      "perfection",
+      "freedom from error"
+    ],
+    "lemmas": "Theological concept; no single lemma—related to aletheia (truth)",
+    "definition": "Scripture in its original manuscripts is without error in all that it affirms. Rooted in God's character and affirmed by Christ’s use of Scripture."
+  },
+  {
+    "term": "Revelation",
+    "synonyms": [
+      "disclosure",
+      "unveiling",
+      "communication",
+      "manifestation"
+    ],
+    "lemmas": "apokalypsis (G602), galah (H1540)",
+    "definition": "God making Himself known—both generally through creation and specially through Scripture and Christ (Romans 1; Hebrews 1:1–3)."
+  },
+  {
+    "term": "Illumination",
+    "synonyms": [
+      "spiritual insight",
+      "enlightenment",
+      "divine guidance"
+    ],
+    "lemmas": "photizō (G5461)",
+    "definition": "The Holy Spirit’s work in helping believers understand and apply Scripture. Different from revelation, it operates within the text’s fixed meaning."
+  },
+  {
+    "term": "Canon",
+    "synonyms": [
+      "rule",
+      "standard",
+      "collection",
+      "recognized books"
+    ],
+    "lemmas": "kanōn (G2583)",
+    "definition": "The fixed set of inspired books recognized as Scripture. Formed through historical recognition of apostolic authorship and spiritual authority."
+  },
+  {
+    "term": "Sufficiency",
+    "synonyms": [
+      "completeness",
+      "fullness",
+      "adequacy"
+    ],
+    "lemmas": "Theological concept; related to arkeo (G714) – “to be enough”",
+    "definition": "Scripture contains all we need for salvation, godly living, and spiritual growth. It is not lacking in essential revelation."
+  },
+  {
+    "term": "Clarity",
+    "synonyms": [
+      "understandability",
+      "perspicuity",
+      "transparency"
+    ],
+    "lemmas": "Theological concept; echoes phōteinōs (clearly, plainly)",
+    "definition": "The Bible can be understood rightly by ordinary people through ordinary means, especially when read in faith and community."
+  },
+  {
+    "term": "Translation",
+    "synonyms": [
+      "rendering",
+      "version",
+      "interpretation",
+      "expression"
+    ],
+    "lemmas": "metaphrasis (not in NT), related verb hermēneuō (G2059)",
+    "definition": "The process of expressing the inspired text in different languages. Essential for global discipleship and faith transmission (Acts 2:6–11).\n\n⛪ Ecclesiology (Terms 81–90)"
+  },
+  {
+    "term": "Church",
+    "synonyms": [
+      "body of Christ",
+      "assembly",
+      "congregation",
+      "ekklesia"
+    ],
+    "lemmas": "ekklesia (G1577), qāhāl (H6951)",
+    "definition": "The gathered people of God—local and universal. Not a building, but a Spirit-indwelt body united by faith in Christ (Acts 2, Ephesians 4)."
+  },
+  {
+    "term": "Body of Christ",
+    "synonyms": [
+      "community of believers",
+      "spiritual organism",
+      "family"
+    ],
+    "lemmas": "sōma tou Christou (G4983 + G5547)",
+    "definition": "A metaphor for the Church as unified yet diverse, with Christ as the head. Emphasizes interdependence and mission (1 Corinthians 12)."
+  },
+  {
+    "term": "Bride of Christ",
+    "synonyms": [
+      "beloved",
+      "chosen people",
+      "covenant partner"
+    ],
+    "lemmas": "nymphē (G3565)",
+    "definition": "A metaphor for the Church’s intimate and covenantal relationship with Christ, awaiting full union at His return (Ephesians 5, Revelation 19)."
+  },
+  {
+    "term": "Fellowship",
+    "synonyms": [
+      "community",
+      "partnership",
+      "sharing",
+      "communion"
+    ],
+    "lemmas": "koinōnia (G2842)",
+    "definition": "Deep spiritual sharing in Christ, the Spirit, and the mission. Seen in prayer, generosity, and sacramental life (Acts 2:42, Philippians 1:5)."
+  },
+  {
+    "term": "Leadership",
+    "synonyms": [
+      "oversight",
+      "shepherding",
+      "governance",
+      "discipleship"
+    ],
+    "lemmas": "episkopē (G1984), poimēn (G4166), presbyteros (G4245)",
+    "definition": "God-ordained roles of spiritual guidance and accountability in the church—expressed through elders, overseers, and pastors (Titus 1:5–9)."
+  },
+  {
+    "term": "Pastor",
+    "synonyms": [
+      "shepherd",
+      "elder",
+      "overseer",
+      "minister"
+    ],
+    "lemmas": "poimēn (G4166)",
+    "definition": "A spiritual leader who feeds, protects, and guides a local church. Reflects Christ as the “Good Shepherd” (Ephesians 4:11, 1 Peter 5)."
+  },
+  {
+    "term": "Elder",
+    "synonyms": [
+      "overseer",
+      "presbyter",
+      "church leader"
+    ],
+    "lemmas": "presbyteros (G4245)",
+    "definition": "A mature and spiritually qualified leader tasked with governance, teaching, and care. Always plural in NT governance contexts."
+  },
+  {
+    "term": "Deacon",
+    "synonyms": [
+      "servant",
+      "minister",
+      "assistant",
+      "helper"
+    ],
+    "lemmas": "diakonos (G1249)",
+    "definition": "A role focused on practical service, often tied to care for the poor and support of elders. Acts 6 and 1 Timothy 3 outline their function."
+  },
+  {
+    "term": "Baptism",
+    "synonyms": [
+      "immersion",
+      "cleansing",
+      "initiation",
+      "sacrament"
+    ],
+    "lemmas": "baptizō (G907)",
+    "definition": "A public, symbolic act of union with Christ in death and resurrection. Commanded by Jesus and practiced in the early church (Romans 6, Matthew 28:19)."
+  },
+  {
+    "term": "Image of God",
+    "synonyms": [
+      "likeness",
+      "divine imprint",
+      "representation",
+      "reflection"
+    ],
+    "lemmas": "eikōn (G1504), ṣelem (H6754)",
+    "definition": "The unique quality of humanity that reflects God's nature—rationality, morality, creativity, and relationality. Basis for dignity and ethics (Genesis 1:26–27)."
+  },
+  {
+    "term": "Soul",
+    "synonyms": [
+      "self",
+      "personhood",
+      "inner being",
+      "consciousness"
+    ],
+    "lemmas": "psychē (G5590), nephesh (H5315)",
+    "definition": "The immaterial, personal essence of a human being. Distinct from body but integrated. Capable of relationship with God (Matthew 10:28)."
+  },
+  {
+    "term": "Spirit (of man)",
+    "synonyms": [
+      "breath",
+      "inner life",
+      "human essence",
+      "heart"
+    ],
+    "lemmas": "pneuma (G4151), rûaḥ (H7307)",
+    "definition": "The life-giving, God-aware part of a person—often used interchangeably with soul but emphasizing divine interaction (Ecclesiastes 12:7)."
+  },
+  {
+    "term": "Body",
+    "synonyms": [
+      "flesh",
+      "form",
+      "vessel",
+      "tent"
+    ],
+    "lemmas": "sōma (G4983), guph (H1472)",
+    "definition": "The physical aspect of humanity, created good and destined for resurrection. A temple of the Holy Spirit (1 Corinthians 6:19)."
+  },
+  {
+    "term": "Conscience",
+    "synonyms": [
+      "moral awareness",
+      "inner witness",
+      "sense of right/wrong"
+    ],
+    "lemmas": "suneidēsis (G4893)",
+    "definition": "The God-given faculty that discerns ethical truth and convicts of guilt or peace. Can be seared or renewed (Romans 2:15, 1 Timothy 4:2)."
+  },
+  {
+    "term": "Sin Nature",
+    "synonyms": [
+      "flesh",
+      "old self",
+      "depravity",
+      "fallen nature"
+    ],
+    "lemmas": "sarx (G4561), yetzer hara (rabbinic term for evil impulse)",
+    "definition": "The inherited bent toward sin in all humanity due to Adam’s fall. Total depravity doesn’t mean utter evil, but inability to save oneself (Romans 5:12, Ephesians 2:1–3)."
+  },
+  {
+    "term": "Total Depravity",
+    "synonyms": [
+      "corruption",
+      "fallen nature",
+      "spiritual deadness"
+    ],
+    "lemmas": "No single lemma; systematized from sarx, hamartia (G266)",
+    "definition": "Every part of human nature is affected by sin. No capacity for spiritual life apart from grace. Part of Reformed theology’s “T” in TULIP."
+  },
+  {
+    "term": "Original Sin",
+    "synonyms": [
+      "inherited sin",
+      "Adamic guilt",
+      "ancestral sin"
+    ],
+    "lemmas": "hamartia (G266), ʿāwōn (H5771)",
+    "definition": "The guilt and corruption passed from Adam to all humanity. Explains universal sinfulness and need for redemption (Psalm 51:5, Romans 5:12–19)."
+  },
+  {
+    "term": "Angels",
+    "synonyms": [
+      "messengers",
+      "ministering spirits",
+      "heavenly beings"
+    ],
+    "lemmas": "angelos (G32), malʾāk (H4397)",
+    "definition": "Created spiritual beings who serve God and minister to believers. Do not possess redemptive roles but often mediate revelation or protection (Hebrews 1:14)."
+  },
+  {
+    "term": "Demons",
+    "synonyms": [
+      "evil spirits",
+      "fallen angels",
+      "unclean spirits"
+    ],
+    "lemmas": "daimonion (G1140), shedim (H7700)",
+    "definition": "Angels who rebelled with Satan. They oppose God’s purposes, deceive, and oppress. Ultimately subject to Christ’s authority (Mark 5, Revelation 12)."
+  },
+  {
+    "term": "Satan",
+    "synonyms": [
+      "adversary",
+      "tempter",
+      "accuser",
+      "devil"
+    ],
+    "lemmas": "Satanas (G4567), śāṭān (H7854)",
+    "definition": "The chief enemy of God and His people. A created being who fell from heaven and now works to deceive and destroy. Defeated by Christ (Revelation 20)."
+  },
+  {
+    "term": "Temptation",
+    "synonyms": [
+      "testing",
+      "enticement",
+      "trial",
+      "lure"
+    ],
+    "lemmas": "peirasmos (G3986)",
+    "definition": "The opportunity or pressure to sin. Not itself sin, but an occasion for obedience or failure. Jesus was tempted but without sin (James 1, Hebrews 4:15)."
+  },
+  {
+    "term": "Possession",
+    "synonyms": [
+      "demonic control",
+      "spiritual oppression",
+      "inhabitation"
+    ],
+    "lemmas": "daimonizomai (G1139)",
+    "definition": "When a demon inhabits or exerts control over a person. Always portrayed as destructive; deliverance is possible only by Christ’s power (Mark 5, Luke 4)."
+  },
+  {
+    "term": "Guardian Angel",
+    "synonyms": [
+      "protector",
+      "assigned spirit",
+      "watcher"
+    ],
+    "lemmas": "angelos (G32)",
+    "definition": "A being assigned by God for individual protection or ministry. Though not systematized, supported in texts like Matthew 18:10 and Psalm 91."
+  },
+  {
+    "term": "Archangel",
+    "synonyms": [
+      "chief angel",
+      "heavenly warrior",
+      "leader"
+    ],
+    "lemmas": "archangelos (G743)",
+    "definition": "A leading angelic figure—most notably Michael (Jude 9, Revelation 12). Associated with war, announcement, and final judgment (1 Thessalonians 4:16)."
+  },
+  {
+    "term": "Cherubim",
+    "synonyms": [
+      "guardians",
+      "throne bearers",
+      "holy creatures"
+    ],
+    "lemmas": "cherub (H3742)",
+    "definition": "High-ranking angels depicted guarding sacred spaces (Genesis 3:24, Exodus 25). Symbolize God’s holiness and majesty—distinct from sentimental portrayals."
+  },
+  {
+    "term": "Seraphim",
+    "synonyms": [
+      "burning ones",
+      "worshipers",
+      "heavenly choir"
+    ],
+    "lemmas": "śerāphîm (H8314)",
+    "definition": "Fiery beings surrounding God's throne, singing “Holy, Holy, Holy” (Isaiah 6). Represent purity, worship, and the terrifying holiness of God."
+  },
+  {
+    "term": "Angel of the Lord",
+    "synonyms": [
+      "divine messenger",
+      "theophany",
+      "Christophany"
+    ],
+    "lemmas": "malʾāk Yahweh (H4397 + H3068)",
+    "definition": "A mysterious figure in the OT who speaks and acts as God. Often interpreted as a pre-incarnate appearance of Christ (Genesis 16, Exodus 3)."
+  },
+  {
+    "term": "Spiritual Warfare",
+    "synonyms": [
+      "battle",
+      "conflict",
+      "struggle",
+      "resistance"
+    ],
+    "lemmas": "machē (G3163), strateia (G4752)",
+    "definition": "The ongoing conflict between God’s kingdom and demonic forces. Involves prayer, truth, and the “armor of God” (Ephesians 6:10–18)."
+  },
+  {
+    "term": "Obedience",
+    "synonyms": [
+      "submission",
+      "compliance",
+      "faithfulness",
+      "surrender"
+    ],
+    "lemmas": "hypakoē (G5218), šāmaʿ (H8085)",
+    "definition": "Willingly aligning with God’s will and commands. Central to discipleship, covenant loyalty, and spiritual maturity (John 14:15; Romans 6:16)."
+  },
+  {
+    "term": "Humility",
+    "synonyms": [
+      "meekness",
+      "lowliness",
+      "submission",
+      "self-forgetfulness"
+    ],
+    "lemmas": "tapeinophrosynē (G5012), ʿānāw (H6035)",
+    "definition": "A posture of dependence and reverence toward God, marked by valuing others above oneself (Philippians 2:3; Micah 6:8)."
+  },
+  {
+    "term": "Compassion",
+    "synonyms": [
+      "mercy",
+      "empathy",
+      "kindness",
+      "pity"
+    ],
+    "lemmas": "splagchnizomai (G4697), raḥam (H7355)",
+    "definition": "Deep feeling and action for others’ suffering. A defining trait of Jesus’ ministry and a command to His followers (Matthew 9:36; Colossians 3:12)."
+  },
+  {
+    "term": "Kindness",
+    "synonyms": [
+      "gentleness",
+      "goodwill",
+      "charity",
+      "graciousness"
+    ],
+    "lemmas": "chrēstotēs (G5544), ḥesed (H2617 - mercy/lovingkindness)",
+    "definition": "Active good will expressed through loving deeds. Fruit of the Spirit and evidence of God’s character (Ephesians 4:32)."
+  },
+  {
+    "term": "Patience",
+    "synonyms": [
+      "endurance",
+      "long-suffering",
+      "perseverance",
+      "forbearance"
+    ],
+    "lemmas": "makrothymia (G3115), ʾerek apayim (H750)",
+    "definition": "The capacity to endure hardship or delay without anger or despair. Reflects God’s character and shapes Christian community (James 5:7–11)."
+  },
+  {
+    "term": "Integrity",
+    "synonyms": [
+      "honesty",
+      "wholeness",
+      "uprightness",
+      "truthfulness"
+    ],
+    "lemmas": "aplōtēs (G572), tōm (H8537)",
+    "definition": "Moral consistency rooted in fear of God. Walking blamelessly in public and private life (Proverbs 10:9; Titus 2:7–8)."
+  },
+  {
+    "term": "Generosity",
+    "synonyms": [
+      "giving",
+      "liberality",
+      "openhandedness",
+      "benevolence"
+    ],
+    "lemmas": "haplotēs (G572), nadab (H5068 - to offer freely)",
+    "definition": "Freely sharing what one has, reflecting God's grace and provision. Central to early church community life (2 Corinthians 9:6–8)."
+  },
+  {
+    "term": "Justice (Ethical)",
+    "synonyms": [
+      "fairness",
+      "righteousness",
+      "equity",
+      "moral rightness"
+    ],
+    "lemmas": "dikaiosynē (G1343), mishpat (H4941)",
+    "definition": "Living in right relationship with God and others. Seeks the good of the vulnerable and reflects the heart of God (Micah 6:8; Amos 5:24)."
+  },
+  {
+    "term": "Forgiveness (Ethical)",
+    "synonyms": [
+      "release",
+      "pardon",
+      "mercy",
+      "reconciliation"
+    ],
+    "lemmas": "aphesis (G859), nāśāʾ (H5375 - to lift, forgive)",
+    "definition": "Choosing to release others from the debt of wrongdoing. Rooted in God’s forgiveness of us, commanded as a Christian practice (Matthew 6:12–15)."
+  },
+  {
+    "term": "Discipleship",
+    "synonyms": [
+      "following",
+      "apprenticeship",
+      "obedience",
+      "training"
+    ],
+    "lemmas": "mathētēs (G3101)",
+    "definition": "A committed life of following Jesus in word, action, and purpose. Requires self-denial, learning, and perseverance (Luke 9:23; Matthew 28:19)."
+  },
+  {
+    "term": "Faithfulness",
+    "synonyms": [
+      "loyalty",
+      "reliability",
+      "trustworthiness",
+      "steadfastness"
+    ],
+    "lemmas": "pistis (G4102), ʾemunah (H530)",
+    "definition": "Staying true to God and His Word. A fruit of the Spirit and mark of godly character (Galatians 5:22; Lamentations 3:23)."
+  },
+  {
+    "term": "Evangelism",
+    "synonyms": [
+      "gospel-sharing",
+      "witnessing",
+      "proclamation",
+      "outreach"
+    ],
+    "lemmas": "euangelizō (G2097)",
+    "definition": "The act of declaring the good news of Jesus Christ with the goal of conversion and discipleship (Romans 10:14–15; Acts 1:8)."
+  },
+  {
+    "term": "Worship",
+    "synonyms": [
+      "praise",
+      "adoration",
+      "reverence",
+      "devotion"
+    ],
+    "lemmas": "proskuneō (G4352), shāchāh (H7812)",
+    "definition": "The honoring of God in spirit and truth through acts of praise, obedience, and reverence (John 4:23–24; Psalm 95)."
+  },
+  {
+    "term": "Sabbath",
+    "synonyms": [
+      "rest",
+      "holy day",
+      "cessation",
+      "renewal"
+    ],
+    "lemmas": "sabbaton (G4521), shabbāt (H7676)",
+    "definition": "A divinely instituted rhythm of rest and worship. Rooted in creation, practiced under Mosaic Law, and reinterpreted in Christ (Exodus 20; Hebrews 4)."
+  },
+  {
+    "term": "Stewardship",
+    "synonyms": [
+      "management",
+      "caretaking",
+      "responsibility",
+      "accountability"
+    ],
+    "lemmas": "oikonomia (G3622)",
+    "definition": "Managing God’s gifts (time, money, talent) for His purposes. Reflects kingdom values and eternal investment (Matthew 25:14–30; 1 Peter 4:10)."
+  },
+  {
+    "term": "Hospitality",
+    "synonyms": [
+      "welcome",
+      "kindness to strangers",
+      "generosity",
+      "care"
+    ],
+    "lemmas": "philoxenia (G5381)",
+    "definition": "Extending love to outsiders, especially the vulnerable. Required of leaders and patterned by Christ’s inclusivity (Romans 12:13; Hebrews 13:2)."
+  },
+  {
+    "term": "Confession",
+    "synonyms": [
+      "admission",
+      "acknowledgment",
+      "agreement",
+      "repentance"
+    ],
+    "lemmas": "homologeō (G3670), yādāh (H3034)",
+    "definition": "Verbal acknowledgment of sin or truth. Can be vertical (to God) or horizontal (to others), leading to cleansing and restoration (1 John 1:9; James 5:16)."
+  },
+  {
+    "term": "Prayer",
+    "synonyms": [
+      "supplication",
+      "petition",
+      "intercession",
+      "communion"
+    ],
+    "lemmas": "proseuchē (G4335), tephillah (H8605)",
+    "definition": "Intimate communication with God in praise, confession, thanksgiving, and request. A hallmark of Christ’s life and Christian maturity (Matthew 6:9–13; Philippians 4:6)."
+  },
+  {
+    "term": "Intercession",
+    "synonyms": [
+      "advocacy",
+      "mediation",
+      "pleading",
+      "prayer on behalf"
+    ],
+    "lemmas": "enteuxis (G1783), pāgaʿ (H6293)",
+    "definition": "Prayer on behalf of others—mirroring Christ’s ongoing heavenly ministry (Romans 8:34; 1 Timothy 2:1)."
+  },
+  {
+    "term": "Fasting",
+    "synonyms": [
+      "abstinence",
+      "self-denial",
+      "consecration",
+      "spiritual hunger"
+    ],
+    "lemmas": "nēsteuō (G3522), tsûm (H6684)",
+    "definition": "Voluntary abstaining from food for spiritual focus. Paired with prayer, repentance, or seeking guidance (Matthew 6:16–18; Ezra 8:21)."
+  },
+  {
+    "term": "Silence",
+    "synonyms": [
+      "stillness",
+      "quiet",
+      "solitude",
+      "nonverbal presence"
+    ],
+    "lemmas": "sigē (G4602), ḥāšāh (H2790)",
+    "definition": "A spiritual discipline of listening and reverent attentiveness to God. Found in lament, awe, and waiting (Psalm 62:1; Habakkuk 2:20)."
+  },
+  {
+    "term": "Solitude",
+    "synonyms": [
+      "retreat",
+      "aloneness",
+      "isolation",
+      "separation"
+    ],
+    "lemmas": "erēmos (G2048 - “desolate place”)",
+    "definition": "Withdrawing from noise and people to be with God. Practiced by Jesus (Mark 1:35), it fosters clarity, prayer, and spiritual renewal."
+  },
+  {
+    "term": "Accountability",
+    "synonyms": [
+      "responsibility",
+      "oversight",
+      "answerability",
+      "correction"
+    ],
+    "lemmas": "logos (G3056 - “word, account”), episkopē (G1984)",
+    "definition": "A commitment to spiritual transparency and mutual correction in community. Helps prevent drift and fosters growth (Galatians 6:1–2; Hebrews 13:17)."
+  },
+  {
+    "term": "Community",
+    "synonyms": [
+      "fellowship",
+      "body",
+      "unity",
+      "shared life"
+    ],
+    "lemmas": "koinōnia (G2842), ʿēdāh (H5712)",
+    "definition": "Life together in Christ. Not just proximity, but shared identity, mission, and care (Acts 2:42–47; 1 Corinthians 12)."
+  },
+  {
+    "term": "Encouragement",
+    "synonyms": [
+      "exhortation",
+      "uplift",
+      "support",
+      "comfort"
+    ],
+    "lemmas": "paraklēsis (G3874)",
+    "definition": "Spirit-filled words and presence that build up the soul. A vital ministry of the body (Hebrews 3:13; 1 Thessalonians 5:11)."
+  },
+  {
+    "term": "Discipline (Spiritual)",
+    "synonyms": [
+      "training",
+      "practice",
+      "formation",
+      "habit"
+    ],
+    "lemmas": "gymnasia (G1128), musar (H4148)",
+    "definition": "Intentional practices that shape the soul toward godliness (1 Timothy 4:7–8). Includes prayer, study, fasting, and service."
+  },
+  {
+    "term": "Suffering",
+    "synonyms": [
+      "affliction",
+      "hardship",
+      "pain",
+      "trial"
+    ],
+    "lemmas": "paschō (G3958), ʿānâ (H6031)",
+    "definition": "A reality in the fallen world that God uses for sanctification and testimony. Believers share in Christ’s sufferings (1 Peter 4:12–13; Romans 8:18)."
+  },
+  {
+    "term": "Endurance",
+    "synonyms": [
+      "perseverance",
+      "steadfastness",
+      "long-suffering",
+      "fortitude"
+    ],
+    "lemmas": "hypomonē (G5281)",
+    "definition": "The Spirit-empowered ability to remain faithful under pressure. Central to discipleship and crowned in eternity (James 1:12; Hebrews 12:1–2)."
+  },
+  {
+    "term": "Hope",
+    "synonyms": [
+      "expectation",
+      "trust",
+      "confidence",
+      "anticipation"
+    ],
+    "lemmas": "elpis (G1680)",
+    "definition": "Confident anticipation rooted in God’s promises and character. Not wishful thinking but assurance anchored in resurrection and return (Romans 5:2–5)."
+  },
+  {
+    "term": "Joy",
+    "synonyms": [
+      "gladness",
+      "rejoicing",
+      "delight",
+      "spiritual happiness"
+    ],
+    "lemmas": "chara (G5479), śimchah (H8057)",
+    "definition": "A deep sense of well-being rooted in relationship with God—not dependent on circumstances. Fruit of the Spirit (Philippians 4:4)."
+  },
+  {
+    "term": "Perseverance",
+    "synonyms": [
+      "faithfulness",
+      "constancy",
+      "grit",
+      "spiritual tenacity"
+    ],
+    "lemmas": "proskartereō (G4342), savlanut (Hebrew root for enduring)",
+    "definition": "Long obedience in the same direction. Finishing the race with trust and obedience (Romans 5:3–4; Revelation 2:10)."
+  },
+  {
+    "term": "Tribulation",
+    "synonyms": [
+      "trouble",
+      "anguish",
+      "suffering",
+      "distress"
+    ],
+    "lemmas": "thlipsis (G2347)",
+    "definition": "Pressure or affliction, often in persecution. Jesus promises it, yet promises peace within it (John 16:33)."
+  },
+  {
+    "term": "Mourning",
+    "synonyms": [
+      "grief",
+      "lament",
+      "sorrow",
+      "weeping"
+    ],
+    "lemmas": "pentheō (G3996), ʾābal (H56)",
+    "definition": "Deep sorrow, often over death or sin. Blessed in the kingdom, for it leads to comfort and nearness to God (Matthew 5:4; Psalm 34:18)."
+  },
+  {
+    "term": "Comfort",
+    "synonyms": [
+      "consolation",
+      "relief",
+      "peace",
+      "healing presence"
+    ],
+    "lemmas": "parakaleō (G3870), naḥam (H5162)",
+    "definition": "God’s tender reassurance amid sorrow. The Spirit is called the “Comforter.” Believers are called to comfort others (2 Corinthians 1:3–5)."
+  },
+  {
+    "term": "Testing",
+    "synonyms": [
+      "proving",
+      "refinement",
+      "trial",
+      "examination"
+    ],
+    "lemmas": "dokimazō (G1381), nāsāh (H5254)",
+    "definition": "God-ordained challenges to reveal and strengthen faith. Abraham, Job, and Jesus all underwent testing (Genesis 22; James 1:2–3)."
+  },
+  {
+    "term": "Providence",
+    "synonyms": [
+      "care",
+      "guidance",
+      "divine ordering",
+      "governance"
+    ],
+    "lemmas": "pronoia (G4307), conceptual; Hebraic roots in pāqad (H6485)",
+    "definition": "God’s sovereign, wise, and loving guidance of all creation toward His purposes. Includes preservation and concurrence (Genesis 50:20; Romans 8:28)."
+  },
+  {
+    "term": "Sovereignty",
+    "synonyms": [
+      "rule",
+      "authority",
+      "kingship",
+      "supremacy"
+    ],
+    "lemmas": "kurios (G2962), mamlākāh (H4467)",
+    "definition": "God's absolute right and power to do all that He wills. His sovereignty governs salvation, nations, and history (Daniel 4:35; Ephesians 1:11)."
+  },
+  {
+    "term": "Omnipotence",
+    "synonyms": [
+      "all-powerful",
+      "almighty",
+      "unlimited strength"
+    ],
+    "lemmas": "pantokratōr (G3841), šadday (H7706)",
+    "definition": "God possesses infinite power and is able to accomplish His will perfectly. No force can thwart Him (Revelation 19:6; Job 42:2)."
+  },
+  {
+    "term": "Omniscience",
+    "synonyms": [
+      "all-knowing",
+      "infinite knowledge",
+      "complete awareness"
+    ],
+    "lemmas": "oida (G1492), yadaʿ (H3045)",
+    "definition": "God knows all things past, present, and future—fully and effortlessly. He sees hearts and motives (Psalm 139; Hebrews 4:13)."
+  },
+  {
+    "term": "Omnipresence",
+    "synonyms": [
+      "everywhere",
+      "all-present",
+      "pervasive presence"
+    ],
+    "lemmas": "panourgos (conceptual only), šām (H8033 – “there”)",
+    "definition": "God is present in all places at all times. Not diffused, but fully present everywhere (Jeremiah 23:24; Psalm 139:7–10)."
+  },
+  {
+    "term": "Immutability",
+    "synonyms": [
+      "unchangeability",
+      "constancy",
+      "stability"
+    ],
+    "lemmas": "ametathetos (G276), shanah (H8138 – “to change”)",
+    "definition": "God does not change in essence, character, or promises. He is forever trustworthy and consistent (Malachi 3:6; Hebrews 13:8)."
+  },
+  {
+    "term": "Holiness",
+    "synonyms": [
+      "purity",
+      "separateness",
+      "transcendence",
+      "moral perfection"
+    ],
+    "lemmas": "hagiosynē (G42), qōdesh (H6944)",
+    "definition": "God’s utter moral purity and otherness. The core of His identity—revealed in judgment and mercy (Isaiah 6:3; Revelation 4:8)."
+  },
+  {
+    "term": "Love (Divine)",
+    "synonyms": [
+      "agapē",
+      "mercy",
+      "covenant loyalty",
+      "benevolence"
+    ],
+    "lemmas": "agapē (G26), ḥesed (H2617)",
+    "definition": "God’s self-giving, loyal affection toward His people. Not sentiment but action rooted in covenant (John 3:16; 1 John 4:8)."
+  },
+  {
+    "term": "Justice (Divine)",
+    "synonyms": [
+      "righteousness",
+      "moral equity",
+      "impartiality",
+      "judgment"
+    ],
+    "lemmas": "dikaiosynē (G1343), mishpat (H4941)",
+    "definition": "God’s perfect commitment to what is right. He rewards righteousness and punishes sin (Romans 3:25–26; Deuteronomy 32:4)."
+  },
+  {
+    "term": "Incarnation",
+    "synonyms": [
+      "enfleshment",
+      "embodiment",
+      "God in flesh"
+    ],
+    "lemmas": "sarx (G4561 – flesh), as in ho logos sarx egeneto (John 1:14)",
+    "definition": "The eternal Son of God taking on human nature. Fully divine and fully human, this act inaugurates redemption (Philippians 2:6–8; John 1:14)."
+  },
+  {
+    "term": "Crucifixion",
+    "synonyms": [
+      "death on a cross",
+      "execution",
+      "atoning death"
+    ],
+    "lemmas": "stauroō (G4717), tsālaq (H6731 – to hang on a tree)",
+    "definition": "Jesus' sacrificial death to atone for sin. Central to redemption, fulfillment of prophecy, and divine justice (Isaiah 53; Luke 23; Romans 5:8)."
+  },
+  {
+    "term": "Resurrection (of Christ)",
+    "synonyms": [
+      "rising from the dead",
+      "vindication",
+      "victory"
+    ],
+    "lemmas": "anastasis (G386)",
+    "definition": "The bodily return of Jesus from death—proof of divine power, acceptance of His sacrifice, and guarantee of future resurrection (1 Corinthians 15)."
+  },
+  {
+    "term": "Ascension",
+    "synonyms": [
+      "exaltation",
+      "elevation",
+      "heavenly enthronement"
+    ],
+    "lemmas": "anabainō (G305), ʿālâ (H5927)",
+    "definition": "Christ's return to heaven post-resurrection, where He reigns at the Father’s right hand and intercedes for us (Acts 1:9; Hebrews 7:25)."
+  },
+  {
+    "term": "Session",
+    "synonyms": [
+      "heavenly reign",
+      "seated authority",
+      "exaltation"
+    ],
+    "lemmas": "kathēmai (G2521), as in “seated at the right hand”",
+    "definition": "The theological term for Christ seated in glory—signifying completed atonement and ongoing intercession (Hebrews 1:3; Psalm 110:1)."
+  },
+  {
+    "term": "Return of Christ",
+    "synonyms": [
+      "Second Coming",
+      "appearing",
+      "parousia"
+    ],
+    "lemmas": "parousia (G3952), epiphaneia (G2015)",
+    "definition": "The literal, visible return of Jesus to judge, renew, and reign. A core Christian hope (Titus 2:13; Matthew 24:30)."
+  },
+  {
+    "term": "New Heavens and New Earth",
+    "synonyms": [
+      "renewed creation",
+      "paradise restored",
+      "eternal kingdom"
+    ],
+    "lemmas": "kainos ouranos kai kainē gē (G2537 + G3772 + G2537 + G1093)",
+    "definition": "God’s final act of cosmic renewal. No more sin, death, or curse—perfect communion restored (Isaiah 65:17; Revelation 21:1–5)."
+  },
+  {
+    "term": "Victory",
+    "synonyms": [
+      "triumph",
+      "conquest",
+      "overcoming",
+      "dominion"
+    ],
+    "lemmas": "nikē (G3529), gābar (H1396)",
+    "definition": "Christ’s triumph over sin, death, and Satan. Believers share in this victory through union with Him (1 Corinthians 15:57; Romans 8:37)."
+  },
+  {
+    "term": "Crown of Life",
+    "synonyms": [
+      "reward",
+      "eternal life",
+      "glory",
+      "inheritance"
+    ],
+    "lemmas": "stephanos zōēs (G4735 + G2222)",
+    "definition": "The promised reward for those who remain faithful under trial (James 1:12; Revelation 2:10)."
+  },
+  {
+    "term": "Faith",
+    "synonyms": [
+      "trust",
+      "belief",
+      "confidence",
+      "reliance"
+    ],
+    "lemmas": "pistis (G4102), ʾemunah (H530)",
+    "definition": "Confident trust in God’s character and promises—especially in Christ’s finished work. Both gift and response (Ephesians 2:8–9; Hebrews 11:1)."
+  },
+  {
+    "term": "Belief",
+    "synonyms": [
+      "acceptance",
+      "trust",
+      "conviction",
+      "assent"
+    ],
+    "lemmas": "pisteuō (G4100), ʾaman (H539)",
+    "definition": "Acknowledging the truth of God's revelation, leading to relational trust and obedience (John 3:16; Romans 10:9–10)."
+  },
+  {
+    "term": "Trust",
+    "synonyms": [
+      "confidence",
+      "security",
+      "dependence",
+      "reliance"
+    ],
+    "lemmas": "pepoithēsis (G4006), bāṭaḥ (H982)",
+    "definition": "Relying on God's character, promises, and provision—especially in uncertainty or adversity (Proverbs 3:5–6; Psalm 56:3)."
+  },
+  {
+    "term": "Obedience (Faith-Based)",
+    "synonyms": [
+      "submission",
+      "allegiance",
+      "response",
+      "discipleship"
+    ],
+    "lemmas": "hypakoē (G5218), šāmaʿ (H8085)",
+    "definition": "The outworking of genuine faith through action. Not legalism, but loving surrender to God's revealed will (Romans 1:5; James 2:26)."
+  },
+  {
+    "term": "Holiness (Lifestyle)",
+    "synonyms": [
+      "purity",
+      "sanctity",
+      "godliness",
+      "moral excellence"
+    ],
+    "lemmas": "hagiosynē (G42), qādôsh (H6918)",
+    "definition": "The pursuit of God’s character in daily life. Called and enabled by the Spirit (1 Peter 1:15–16; Hebrews 12:14)."
+  },
+  {
+    "term": "Godliness",
+    "synonyms": [
+      "reverence",
+      "piety",
+      "Christlikeness",
+      "spiritual maturity"
+    ],
+    "lemmas": "eusebeia (G2150)",
+    "definition": "A lifestyle shaped by awe of God, aligning belief with behavior. A major goal of spiritual formation (1 Timothy 4:7–8; Titus 2:12)."
+  },
+  {
+    "term": "Unity",
+    "synonyms": [
+      "harmony",
+      "oneness",
+      "agreement",
+      "fellowship"
+    ],
+    "lemmas": "henotēs (G1775), ʾechād (H259)",
+    "definition": "Spiritual and relational oneness rooted in shared faith and love. Grounded in the Trinity, expressed in the Church (John 17; Ephesians 4:3–6)."
+  },
+  {
+    "term": "Division",
+    "synonyms": [
+      "schism",
+      "disunity",
+      "discord",
+      "faction"
+    ],
+    "lemmas": "schisma (G4978), madon (H4066)",
+    "definition": "The tearing apart of Christian unity. Often caused by pride, false teaching, or worldliness (1 Corinthians 1:10–13; Titus 3:10)."
+  },
+  {
+    "term": "Fellowship",
+    "synonyms": [
+      "community",
+      "partnership",
+      "sharing",
+      "communion"
+    ],
+    "lemmas": "koinōnia (G2842)",
+    "definition": "Sharing life in Christ—relational, spiritual, and practical. Vital to the Church’s health and witness (Acts 2:42; Philippians 1:5)."
+  },
+  {
+    "term": "Judgment (Final)",
+    "synonyms": [
+      "verdict",
+      "reckoning",
+      "day of the Lord",
+      "evaluation"
+    ],
+    "lemmas": "krisis (G2920), mishpat (H4941)",
+    "definition": "God's climactic evaluation of human life—based on faith, works, and Christ’s mediation. Results in eternal destinies (Matthew 25; Revelation 20)."
+  },
+  {
+    "term": "Wrath",
+    "synonyms": [
+      "anger",
+      "divine justice",
+      "retribution",
+      "punishment"
+    ],
+    "lemmas": "orgē (G3709), ʾaph (H639)",
+    "definition": "God’s righteous opposition to sin. Not impulsive rage, but holy justice (Romans 1:18; Nahum 1:2–3)."
+  },
+  {
+    "term": "Fire (Judgment)",
+    "synonyms": [
+      "purification",
+      "destruction",
+      "holiness",
+      "wrath"
+    ],
+    "lemmas": "pyr (G4442), ʾēsh (H784)",
+    "definition": "Symbol and agent of divine judgment—and sometimes purification. Final fire tests works and reveals hearts (1 Corinthians 3:13; Hebrews 12:29)."
+  },
+  {
+    "term": "Fear of the Lord",
+    "synonyms": [
+      "reverence",
+      "awe",
+      "holy dread",
+      "worshipful respect"
+    ],
+    "lemmas": "phobos (G5401), yirʾāh (H3374)",
+    "definition": "A holy, affectionate reverence that leads to obedience and wisdom. Beginning of knowledge and cornerstone of worship (Proverbs 1:7; Acts 9:31)."
+  },
+  {
+    "term": "Zeal",
+    "synonyms": [
+      "passion",
+      "fervor",
+      "devotion",
+      "spiritual intensity"
+    ],
+    "lemmas": "zēlos (G2205), qinʾāh (H7068)",
+    "definition": "Eager pursuit of God’s glory and purposes. Can be holy (like Christ’s) or misdirected (Romans 10:2; John 2:17)."
+  },
+  {
+    "term": "Boldness",
+    "synonyms": [
+      "courage",
+      "confidence",
+      "fearlessness",
+      "clarity"
+    ],
+    "lemmas": "parrēsia (G3954)",
+    "definition": "Spirit-empowered confidence to speak and live for Christ. Mark of apostolic witness (Acts 4:31; Ephesians 6:19–20)."
+  },
+  {
+    "term": "Meekness",
+    "synonyms": [
+      "gentleness",
+      "strength under control",
+      "humility"
+    ],
+    "lemmas": "prautēs (G4240), ʿānāw (H6035)",
+    "definition": "Strength channeled by humility and trust in God. Commended by Christ and exalted in the Beatitudes (Matthew 5:5; Galatians 5:23)."
+  },
+  {
+    "term": "Discernment",
+    "synonyms": [
+      "perception",
+      "judgment",
+      "insight",
+      "wisdom"
+    ],
+    "lemmas": "diakrisis (G1253), bîn (H995)",
+    "definition": "The Spirit-enabled ability to distinguish truth from error. Essential for wise living and doctrinal integrity (1 John 4:1; Philippians 1:9–10)."
+  },
+  {
+    "term": "Calling",
+    "synonyms": [
+      "vocation",
+      "invitation",
+      "divine summons",
+      "purpose"
+    ],
+    "lemmas": "klēsis (G2821), qārāʾ (H7121)",
+    "definition": "God’s initiative to draw people into relationship and mission. Includes general (salvation) and specific (service) callings (Romans 8:28–30)."
+  },
+  {
+    "term": "Commission",
+    "synonyms": [
+      "mandate",
+      "sending",
+      "task",
+      "charge"
+    ],
+    "lemmas": "apostellō (G649), ṣāwāh (H6680)",
+    "definition": "God’s entrusting of His people with gospel proclamation and kingdom work. Most clearly expressed in the Great Commission (Matthew 28:18–20)."
+  },
+  {
+    "term": "Apostleship",
+    "synonyms": [
+      "sent one",
+      "delegate",
+      "foundational leader"
+    ],
+    "lemmas": "apostolos (G652)",
+    "definition": "A specific calling to be sent with Christ’s authority—especially the Twelve and Paul. Broader application in missionary and church-planting roles (Ephesians 4:11)."
+  },
+  {
+    "term": "Prophecy",
+    "synonyms": [
+      "divine speech",
+      "proclamation",
+      "foretelling",
+      "exhortation"
+    ],
+    "lemmas": "prophēteia (G4394), nābîʾ (H5030)",
+    "definition": "Speaking on behalf of God by the Spirit. May involve future insight, but primarily aimed at exhortation and revelation (1 Corinthians 14:3; Amos 3:7)."
+  },
+  {
+    "term": "Teaching",
+    "synonyms": [
+      "instruction",
+      "explanation",
+      "guidance",
+      "exegesis"
+    ],
+    "lemmas": "didaskalia (G1319), tôrāh (H8451)",
+    "definition": "Communicating truth clearly and faithfully. Central to discipleship and doctrinal formation (Matthew 28:20; 2 Timothy 2:2)."
+  },
+  {
+    "term": "Discipleship (Expanded)",
+    "synonyms": [
+      "spiritual growth",
+      "following",
+      "obedience",
+      "apprenticeship"
+    ],
+    "lemmas": "mathētēs (G3101)",
+    "definition": "Ongoing transformation into Christlikeness through relational learning, obedience, and mission (Luke 14:27; Colossians 1:28)."
+  },
+  {
+    "term": "Kingdom of God",
+    "synonyms": [
+      "reign",
+      "rule",
+      "dominion",
+      "divine order"
+    ],
+    "lemmas": "basileia tou theou (G932 + G2316)",
+    "definition": "The dynamic, redemptive reign of God—present in Christ, expanding through the Church, fulfilled in eternity (Mark 1:15; Luke 17:21)."
+  },
+  {
+    "term": "Gospel of the Kingdom",
+    "synonyms": [
+      "good news",
+      "proclamation",
+      "message of reign"
+    ],
+    "lemmas": "euangelion (G2098) + basileia (G932)",
+    "definition": "The good news that God reigns through Christ—bringing salvation, justice, and new creation (Matthew 24:14; Luke 4:43)."
+  },
+  {
+    "term": "Covenant People",
+    "synonyms": [
+      "chosen people",
+      "family of God",
+      "holy nation"
+    ],
+    "lemmas": "laos theou (G2992 + G2316), ʿam bĕrit (H5971 + H1285)",
+    "definition": "Those bound to God through His promises—first Israel, then the Church through Christ. Identity rooted in grace (1 Peter 2:9; Genesis 17)."
+  },
+  {
+    "term": "Body of Christ (Expanded)",
+    "synonyms": [
+      "spiritual organism",
+      "Church",
+      "unified believers"
+    ],
+    "lemmas": "sōma Christou (G4983 + G5547)",
+    "definition": "The collective, Spirit-empowered community of believers, with Christ as the Head. Expresses unity, diversity, and mission (1 Corinthians 12)."
+  },
+  {
+    "term": "Bride of Christ (Expanded)",
+    "synonyms": [
+      "beloved",
+      "covenant partner",
+      "redeemed people"
+    ],
+    "lemmas": "nymphē (G3565)",
+    "definition": "A metaphor for the Church’s love and loyalty to Christ. Points to future consummation and purity (Revelation 19:7; Ephesians 5:25–27)."
+  },
+  {
+    "term": "Priesthood of Believers",
+    "synonyms": [
+      "access to God",
+      "spiritual ministry",
+      "intercessors"
+    ],
+    "lemmas": "hiereus (G2409), kōhēn (H3548)",
+    "definition": "All believers are called to offer spiritual sacrifices and intercede. Direct access to God through Christ (1 Peter 2:5; Hebrews 10:19–22)."
+  },
+  {
+    "term": "Royal Inheritance",
+    "synonyms": [
+      "reward",
+      "possession",
+      "promise",
+      "future glory"
+    ],
+    "lemmas": "klēronomia (G2817), naḥălâ (H5159)",
+    "definition": "What believers receive as co-heirs with Christ—eternal life, resurrection, kingdom authority (Romans 8:17; 1 Peter 1:4)."
+  },
+  {
+    "term": "Heavenly Citizenship",
+    "synonyms": [
+      "identity",
+      "belonging",
+      "status",
+      "eternal residence"
+    ],
+    "lemmas": "politeuma (G4175)",
+    "definition": "Believers belong to God's eternal kingdom now. Our primary loyalty is to Christ's reign (Philippians 3:20; Hebrews 11:13–16)."
+  },
+  {
+    "term": "Spiritual Maturity",
+    "synonyms": [
+      "growth",
+      "fullness",
+      "completeness",
+      "Christlikeness"
+    ],
+    "lemmas": "teleios (G5046), tamîm (H8549)",
+    "definition": "The process and goal of being fully formed in Christ. Requires time, teaching, testing, and Spirit-fueled transformation (Hebrews 5:14; Ephesians 4:13)."
+  },
+  {
+    "term": "Fruitfulness",
+    "synonyms": [
+      "productivity",
+      "spiritual impact",
+      "growth",
+      "multiplication"
+    ],
+    "lemmas": "karpos (G2590), peri (H6529)",
+    "definition": "A life that bears visible outcomes of spiritual health—character, disciples, service (John 15:1–8; Galatians 5:22–23)."
+  },
+  {
+    "term": "Anointing (Expanded)",
+    "synonyms": [
+      "divine empowerment",
+      "spiritual seal",
+      "consecration"
+    ],
+    "lemmas": "chrismatos (G5548), māšaḥ (H4886)",
+    "definition": "A spiritual endowment by the Holy Spirit for calling or ministry. Present in every believer, intensified for specific tasks (1 John 2:20, 27)."
+  },
+  {
+    "term": "Watchfulness",
+    "synonyms": [
+      "vigilance",
+      "alertness",
+      "readiness",
+      "discernment"
+    ],
+    "lemmas": "grēgoreō (G1127), šāmar (H8104)",
+    "definition": "Remaining spiritually awake—especially in prayer and preparation for Christ’s return (Matthew 24:42; 1 Peter 5:8)."
+  },
+  {
+    "term": "Martyrdom",
+    "synonyms": [
+      "witness unto death",
+      "sacrifice",
+      "ultimate loyalty"
+    ],
+    "lemmas": "martys (G3144)",
+    "definition": "Dying for one’s faith in Christ. The supreme earthly testimony to eternal allegiance (Acts 7:59–60; Revelation 6:9)."
+  },
+  {
+    "term": "Reward",
+    "synonyms": [
+      "inheritance",
+      "crown",
+      "recompense",
+      "blessing"
+    ],
+    "lemmas": "misthos (G3408), śākār (H7939)",
+    "definition": "God's generous response to faithful service—not earned salvation, but an eternal gift of grace (Matthew 6:4; 1 Corinthians 3:14)."
+  },
+  {
+    "term": "Spiritual Warfare (Expanded)",
+    "synonyms": [
+      "battle",
+      "struggle",
+      "resistance",
+      "unseen conflict"
+    ],
+    "lemmas": "strateia (G4752), milchāmâ (H4421)",
+    "definition": "The cosmic struggle between God's kingdom and Satan. Believers fight with truth, righteousness, and prayer (Ephesians 6:10–18)."
+  },
+  {
+    "term": "Overcomer",
+    "synonyms": [
+      "conqueror",
+      "victorious one",
+      "faithful",
+      "endurer"
+    ],
+    "lemmas": "nikaō (G3528), gābar (H1396)",
+    "definition": "One who remains faithful through trial and temptation. Promised eternal reward and presence (Revelation 2–3; Romans 8:37)."
+  },
+  {
+    "term": "Sanctified Identity",
+    "synonyms": [
+      "new self",
+      "set-apart person",
+      "child of God"
+    ],
+    "lemmas": "hagios (G40), banîm (H1121 – sons)",
+    "definition": "The believer’s new nature in Christ—holy, beloved, secure. Lived out in tension with the old self (2 Corinthians 5:17; Colossians 3:12)."
+  },
+  {
+    "term": "Eternal Life (Expanded)",
+    "synonyms": [
+      "resurrection life",
+      "divine fellowship",
+      "unending union"
+    ],
+    "lemmas": "zōē aiōnios (G2222 + G166)",
+    "definition": "Life that begins now through union with Christ and continues forever in God's presence. Not just length but quality (John 17:3; 1 John 5:11)."
+  },
+  {
+    "term": "Glory (Final)",
+    "synonyms": [
+      "exaltation",
+      "splendor",
+      "radiance",
+      "divine presence"
+    ],
+    "lemmas": "doxa (G1391), kābôd (H3519)",
+    "definition": "The fullness of God's beauty revealed—and shared with believers. The goal of redemption and destiny of the saints (Romans 8:30; Revelation 21:23)."
+  },
+  {
+    "term": "Amen",
+    "synonyms": [
+      "truly",
+      "verily",
+      "let it be so",
+      "affirmation"
+    ],
+    "lemmas": "amēn (G281), ʾāmēn (H543)",
+    "definition": "A strong affirmation of truth. Used to seal prayers, promises, and doxologies. Christ is Himself called “the Amen” (Revelation 3:14; 2 Corinthians 1:20)."
+  }
+]

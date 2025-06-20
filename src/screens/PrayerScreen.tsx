@@ -8,8 +8,8 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-// Import the enhanced lexicon
-import enhancedLexicon from '../../assets/training_data/enhanced_lexicon.json';
+// Import the comprehensive lexicon
+import comprehensiveLexicon from '../../assets/training_data/solomon_lexicon_250_complete.json';
 
 interface Prayer {
   id: string;
@@ -91,15 +91,15 @@ const prayerCategories: PrayerCategory[] = [
   },
 ];
 
-// Function to generate theological prayers from lexicon
+// Function to generate theological prayers from comprehensive lexicon
 const generateTheologicalPrayers = (): Prayer[] => {
-  return (enhancedLexicon as LexiconTerm[]).map((term, index) => ({
+  return (comprehensiveLexicon as LexiconTerm[]).map((term, index) => ({
     id: `theological-${index + 1}`,
     title: `Prayer for ${term.term}`,
     category: 'theological',
-    text: `Lord, I come before You seeking to understand and experience ${term.term.toLowerCase()} in my life. ${term.definition} Help me to grow in this aspect of my faith and to reflect Your character more fully. May Your ${term.term.toLowerCase()} be evident in my thoughts, words, and actions. In Jesus' name, Amen.`,
+    text: `Heavenly Father, I come before You seeking to understand and experience ${term.term.toLowerCase()} in my life. ${term.definition} Help me to grow in this aspect of my faith and to reflect Your character more fully. May Your ${term.term.toLowerCase()} be evident in my thoughts, words, and actions. Teach me to walk in the way of ${term.term.toLowerCase()} and to share this blessing with others. In Jesus' name, Amen.`,
     scripture: `Biblical concept: ${term.term} - ${term.lemmas}`,
-    author: 'Based on theological lexicon',
+    author: 'Based on comprehensive theological lexicon',
   }));
 };
 
@@ -323,7 +323,7 @@ export const PrayerScreen = () => {
   const renderPrayerDetail = () => {
     // Find the corresponding lexicon term for theological prayers
     const lexiconTerm = selectedPrayer?.category === 'theological' 
-      ? (enhancedLexicon as LexiconTerm[]).find(term => 
+      ? (comprehensiveLexicon as LexiconTerm[]).find(term => 
           selectedPrayer.title.includes(term.term)
         )
       : null;
