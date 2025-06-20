@@ -1,0 +1,507 @@
+{
+  "metadata": {
+    "source": "https://biblevise.com/psalms-chapter-summaries/",
+    "lastUpdated": "2024-03-19",
+    "description": "Training data for Psalms chapter summaries and themes"
+  },
+  "allBooks": {
+    "oldTestament": [
+      {
+        "name": "Genesis",
+        "author": "Moses",
+        "yearWritten": "1445-1405 B.C.",
+        "genre": "The Law",
+        "chapters": 50,
+        "summary": "The Book of Genesis is the first book of the Bible, recording God's Creation, the fall of man, the choosing of a family to bless all nations, and the early years of the nation of Israel."
+      },
+      {
+        "name": "Exodus",
+        "author": "Moses",
+        "yearWritten": "1445-1405 B.C.",
+        "genre": "The Law",
+        "chapters": 40,
+        "summary": "In the Book of Exodus, God appoints Moses as the leader of the Israelites to rescue his chosen people from slavery in Egypt so they could travel to the Promised Land and makes a covenant with them at Mount Sinai."
+      },
+      {
+        "name": "Leviticus",
+        "author": "Moses",
+        "yearWritten": "1445-1405 B.C.",
+        "genre": "The Law",
+        "chapters": 27,
+        "summary": "In the Book of Leviticus, God gives Israel laws for worship and holy living. The book documents both God's holiness and the holiness He expects of His people."
+      },
+      {
+        "name": "Numbers",
+        "author": "Moses",
+        "yearWritten": "1445-1405 B.C.",
+        "genre": "The Law",
+        "chapters": 36,
+        "summary": "The Book of Numbers is the culmination of the story of Israel's exodus from oppression in Egypt and their journey wandering in the wilderness for 40 years because of their disobedience and lack of faith until they take possession of the land God promised their fathers."
+      },
+      {
+        "name": "Deuteronomy",
+        "author": "Moses",
+        "yearWritten": "1445-1405 B.C.",
+        "genre": "The Law",
+        "chapters": 34,
+        "summary": "The Book of Deuteronomy records Moses' farewell speech that recounts the law and exhorts Israel to love and obey God in the Promised Land."
+      },
+      {
+        "name": "Joshua",
+        "author": "Joshua",
+        "yearWritten": "1405-1385 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 24,
+        "summary": "The Book of Joshua explains Joshua leads Israel to conquer and settle in the Promised Land. The book displays God's faithfulness to his covenant with the Israelites to bring them into the land he promised to Abraham."
+      },
+      {
+        "name": "Judges",
+        "author": "Samuel",
+        "yearWritten": "1045-1000 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 21,
+        "summary": "In the Book of Judges, Israel falls into a cycle of sin, oppression, repentance, and ultimately, deliverance. God sent twelve 'judges' who were leaders in the tribes of Israel who were chosen to deliver the Israelites from their enemies."
+      },
+      {
+        "name": "Ruth",
+        "author": "Samuel",
+        "yearWritten": "1030-930 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 4,
+        "summary": "The Book of Ruth shares the story of a Moabite widow who shows loyalty to her mother-in-law Naomi and marries Boaz, becoming an ancestor of David and Jesus."
+      },
+      {
+        "name": "1 Samuel",
+        "author": "Prophets Samuel, Gad, and Nathan",
+        "yearWritten": "930-722 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 31,
+        "summary": "In the Book of 1 Samuel, the Prophet Samuel anoints Saul as Israel's first king but later rejects him and anoints David instead."
+      },
+      {
+        "name": "2 Samuel",
+        "author": "Prophets Samuel, Gad, and Nathan",
+        "yearWritten": "930-722 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 24,
+        "summary": "The Book of 2 Samuel continues the story about David becoming king of Israel and expanding his kingdom while facing troubles from his enemies and his own sins."
+      },
+      {
+        "name": "1 Kings",
+        "author": "Jeremiah",
+        "yearWritten": "560-538 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 22,
+        "summary": "In the Book of 1 Kings, King Solomon builds the temple and rules wisely, but after his death, the kingdom is divided into Israel and Judah."
+      },
+      {
+        "name": "2 Kings",
+        "author": "Jeremiah",
+        "yearWritten": "560-538 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 25,
+        "summary": "The Book of 2 Kings recounts how the kings of Israel and Judah mostly do evil in God's sight, leading to the destruction of both kingdoms by foreign powers."
+      },
+      {
+        "name": "1 Chronicles",
+        "author": "Ezra",
+        "yearWritten": "450-425 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 29,
+        "summary": "The Book of 1 Chronicles is a genealogy from Adam to David, followed by a history of David's reign over Israel."
+      },
+      {
+        "name": "2 Chronicles",
+        "author": "Ezra",
+        "yearWritten": "450-425 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 36,
+        "summary": "The Book of 2 Chronicles is a continuation of the previous book of the Bible. This book recounts the history of the kings of Judah from Solomon to the Babylonian exile, emphasizing their faithfulness or unfaithfulness to God."
+      },
+      {
+        "name": "Ezra",
+        "author": "Ezra",
+        "yearWritten": "440-300 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 10,
+        "summary": "In the Book of Ezra, a scribe and priest named Ezra leads a group of exiles to return to Jerusalem to restore the temple and the law."
+      },
+      {
+        "name": "Nehemiah",
+        "author": "Nehemiah",
+        "yearWritten": "445-400 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 13,
+        "summary": "The Book of Nehemiah shares how King Artaxerxes' cupbearer, Nehemiah, leads another group of exiles to rebuild the walls of Jerusalem and reform the people's spiritual life."
+      },
+      {
+        "name": "Esther",
+        "author": "Mordecai, Ezra, and Nehemiah",
+        "yearWritten": "450-330 B.C.",
+        "genre": "Historical Narrative",
+        "chapters": 10,
+        "summary": "In the Book of Esther, a Jewish woman named Esther becomes the queen of Persia and saves her people from a plot to exterminate them."
+      },
+      {
+        "name": "Job",
+        "author": "Job, Elihu, Moses, and Solomon",
+        "yearWritten": "Unknown (possibly 1440-950 B.C.)",
+        "genre": "Wisdom Literature",
+        "chapters": 42,
+        "summary": "The Book of Job shares the story about a righteous man named Job who suffers greatly at the hands of Satan, and questions God's justice, but ultimately trusts God's wisdom and sovereignty under all circumstances."
+      },
+      {
+        "name": "Psalms",
+        "author": "David, Asaph, Solomon, Heman, Ethan, Moses, and the Sons of Korah",
+        "yearWritten": "1500-450 B.C.",
+        "genre": "Poetry",
+        "chapters": 150,
+        "summary": "The Book of Psalms is a collection of 150 songs, prayers, and poems that express the emotions, experiences, and faith of God's people."
+      }
+    ],
+    "newTestament": [
+      {
+        "name": "Matthew",
+        "author": "Matthew",
+        "yearWritten": "50-70 A.D.",
+        "genre": "Gospel",
+        "chapters": 28,
+        "summary": "The Book of Matthew presents Jesus as the promised Messiah and King of the Jews, tracing His genealogy back to Abraham and showing how He fulfills Old Testament prophecies."
+      },
+      {
+        "name": "Mark",
+        "author": "Mark",
+        "yearWritten": "50-65 A.D.",
+        "genre": "Gospel",
+        "chapters": 16,
+        "summary": "The Book of Mark emphasizes Jesus' actions and miracles, presenting Him as a servant who came to give His life as a ransom for many."
+      },
+      {
+        "name": "Luke",
+        "author": "Luke",
+        "yearWritten": "60-80 A.D.",
+        "genre": "Gospel",
+        "chapters": 24,
+        "summary": "The Book of Luke provides a detailed account of Jesus' life, ministry, death, and resurrection, with special attention to His compassion for the poor and outcasts."
+      },
+      {
+        "name": "John",
+        "author": "John",
+        "yearWritten": "85-95 A.D.",
+        "genre": "Gospel",
+        "chapters": 21,
+        "summary": "The Book of John focuses on Jesus' divine nature and His relationship with God the Father, emphasizing that Jesus is the Word made flesh who brings eternal life."
+      },
+      {
+        "name": "Acts",
+        "author": "Luke",
+        "yearWritten": "60-80 A.D.",
+        "genre": "Historical Narrative",
+        "chapters": 28,
+        "summary": "The Book of Acts records the spread of the gospel from Jerusalem to Rome, showing how the Holy Spirit empowered the early church to fulfill Jesus' commission."
+      },
+      {
+        "name": "Romans",
+        "author": "Paul",
+        "yearWritten": "57-58 A.D.",
+        "genre": "Epistle",
+        "chapters": 16,
+        "summary": "The Book of Romans presents a systematic explanation of the gospel, explaining how God's righteousness is revealed through faith in Jesus Christ."
+      },
+      {
+        "name": "1 Corinthians",
+        "author": "Paul",
+        "yearWritten": "55-56 A.D.",
+        "genre": "Epistle",
+        "chapters": 16,
+        "summary": "The Book of 1 Corinthians addresses various problems in the Corinthian church, providing guidance on Christian living and church order."
+      },
+      {
+        "name": "2 Corinthians",
+        "author": "Paul",
+        "yearWritten": "55-56 A.D.",
+        "genre": "Epistle",
+        "chapters": 13,
+        "summary": "The Book of 2 Corinthians defends Paul's apostolic ministry and encourages the Corinthians to complete their collection for the poor in Jerusalem."
+      },
+      {
+        "name": "Galatians",
+        "author": "Paul",
+        "yearWritten": "48-55 A.D.",
+        "genre": "Epistle",
+        "chapters": 6,
+        "summary": "The Book of Galatians defends the gospel of grace against those who would add works to salvation, emphasizing that justification comes through faith alone."
+      },
+      {
+        "name": "Ephesians",
+        "author": "Paul",
+        "yearWritten": "60-62 A.D.",
+        "genre": "Epistle",
+        "chapters": 6,
+        "summary": "The Book of Ephesians explains the unity of the church in Christ and provides practical instructions for Christian living."
+      },
+      {
+        "name": "Philippians",
+        "author": "Paul",
+        "yearWritten": "60-62 A.D.",
+        "genre": "Epistle",
+        "chapters": 4,
+        "summary": "The Book of Philippians expresses joy in Christ despite suffering and encourages believers to have the mind of Christ."
+      },
+      {
+        "name": "Colossians",
+        "author": "Paul",
+        "yearWritten": "60-62 A.D.",
+        "genre": "Epistle",
+        "chapters": 4,
+        "summary": "The Book of Colossians emphasizes Christ's supremacy and sufficiency, warning against false teachings and encouraging godly living."
+      },
+      {
+        "name": "1 Thessalonians",
+        "author": "Paul",
+        "yearWritten": "50-51 A.D.",
+        "genre": "Epistle",
+        "chapters": 5,
+        "summary": "The Book of 1 Thessalonians encourages believers to live holy lives while waiting for Christ's return."
+      },
+      {
+        "name": "2 Thessalonians",
+        "author": "Paul",
+        "yearWritten": "51-52 A.D.",
+        "genre": "Epistle",
+        "chapters": 3,
+        "summary": "The Book of 2 Thessalonians corrects misunderstandings about the end times and encourages believers to remain faithful and diligent."
+      },
+      {
+        "name": "1 Timothy",
+        "author": "Paul",
+        "yearWritten": "62-66 A.D.",
+        "genre": "Epistle",
+        "chapters": 6,
+        "summary": "The Book of 1 Timothy provides instructions for church leadership and Christian living, emphasizing sound doctrine and godly conduct."
+      },
+      {
+        "name": "2 Timothy",
+        "author": "Paul",
+        "yearWritten": "66-67 A.D.",
+        "genre": "Epistle",
+        "chapters": 4,
+        "summary": "The Book of 2 Timothy is Paul's final letter, urging Timothy to remain faithful to the gospel and fulfill his ministry."
+      },
+      {
+        "name": "Titus",
+        "author": "Paul",
+        "yearWritten": "62-64 A.D.",
+        "genre": "Epistle",
+        "chapters": 3,
+        "summary": "The Book of Titus provides instructions for church organization and Christian living, emphasizing good works and sound doctrine."
+      },
+      {
+        "name": "Philemon",
+        "author": "Paul",
+        "yearWritten": "60-62 A.D.",
+        "genre": "Epistle",
+        "chapters": 1,
+        "summary": "The Book of Philemon is a personal letter appealing for forgiveness and acceptance of a runaway slave who had become a Christian."
+      },
+      {
+        "name": "Hebrews",
+        "author": "Unknown",
+        "yearWritten": "60-70 A.D.",
+        "genre": "Epistle",
+        "chapters": 13,
+        "summary": "The Book of Hebrews demonstrates Christ's superiority to the Old Testament system and encourages believers to persevere in faith."
+      },
+      {
+        "name": "James",
+        "author": "James",
+        "yearWritten": "45-50 A.D.",
+        "genre": "Epistle",
+        "chapters": 5,
+        "summary": "The Book of James emphasizes practical Christian living, showing how genuine faith produces good works."
+      },
+      {
+        "name": "1 Peter",
+        "author": "Peter",
+        "yearWritten": "60-65 A.D.",
+        "genre": "Epistle",
+        "chapters": 5,
+        "summary": "The Book of 1 Peter encourages believers to stand firm in their faith despite suffering and persecution."
+      },
+      {
+        "name": "2 Peter",
+        "author": "Peter",
+        "yearWritten": "65-68 A.D.",
+        "genre": "Epistle",
+        "chapters": 3,
+        "summary": "The Book of 2 Peter warns against false teachers and encourages growth in Christian character and knowledge."
+      },
+      {
+        "name": "1 John",
+        "author": "John",
+        "yearWritten": "85-95 A.D.",
+        "genre": "Epistle",
+        "chapters": 5,
+        "summary": "The Book of 1 John emphasizes the importance of love and obedience in the Christian life, while warning against false teachings."
+      },
+      {
+        "name": "2 John",
+        "author": "John",
+        "yearWritten": "85-95 A.D.",
+        "genre": "Epistle",
+        "chapters": 1,
+        "summary": "The Book of 2 John warns against false teachers and emphasizes the importance of love and truth."
+      },
+      {
+        "name": "3 John",
+        "author": "John",
+        "yearWritten": "85-95 A.D.",
+        "genre": "Epistle",
+        "chapters": 1,
+        "summary": "The Book of 3 John commends hospitality and warns against those who oppose the truth."
+      },
+      {
+        "name": "Jude",
+        "author": "Jude",
+        "yearWritten": "65-80 A.D.",
+        "genre": "Epistle",
+        "chapters": 1,
+        "summary": "The Book of Jude warns against false teachers and encourages believers to contend for the faith."
+      },
+      {
+        "name": "Revelation",
+        "author": "John",
+        "yearWritten": "90-95 A.D.",
+        "genre": "Apocalyptic",
+        "chapters": 22,
+        "summary": "The Book of Revelation reveals God's plan for the end of history and the ultimate victory of Christ over evil."
+      }
+    ]
+  },
+  "bookSections": [
+    {
+      "section": 1,
+      "chapters": "1-41",
+      "theme": "Praise and trust in God",
+      "content": "Contains psalms of praise, expressing gratitude and awe for God's creation, power, and faithfulness. Also includes psalms of lament, expressing personal struggles and pleading for God's help."
+    },
+    {
+      "section": 2,
+      "chapters": "42-72",
+      "theme": "The rule and justice of God",
+      "content": "Focuses on God's kingship, justice, and deliverance. Includes psalms expressing hope for God's intervention in times of injustice and suffering, as well as celebrations of God's righteous rule."
+    },
+    {
+      "section": 3,
+      "chapters": "73-89",
+      "theme": "The struggle with doubt and faith",
+      "content": "Explores challenges of maintaining faith in the face of suffering and injustice. Includes psalms grappling with questions about God's goodness and the prosperity of the wicked."
+    },
+    {
+      "section": 4,
+      "chapters": "90-106",
+      "theme": "Reflection on history and God's faithfulness",
+      "content": "Focuses on historical events and God's covenant with his people. Includes psalms of lament regarding past transgressions and expressions of praise for God's continued faithfulness."
+    },
+    {
+      "section": 5,
+      "chapters": "107-150",
+      "theme": "Praise and thanksgiving",
+      "content": "Dominated by psalms of praise and thanksgiving, celebrating God's goodness and faithfulness in various aspects of life. Includes calls to worship and expressions of joy for God's deliverance."
+    }
+  ],
+  "chapterSummaries": [
+    {
+      "chapter": 1,
+      "title": "The Way of the Righteous",
+      "summary": "Contrasts the path of the righteous, who delight in God's law and find prosperity, with the path of the wicked, who are destined for judgment.",
+      "keyThemes": ["righteousness", "wickedness", "judgment", "prosperity"],
+      "mainMessage": "Establishes the core themes of seeking God's guidance and the consequences of choosing righteousness or wickedness."
+    },
+    {
+      "chapter": 2,
+      "title": "God's Anointed King",
+      "summary": "Describes the futile rebellion of earthly powers against God and His chosen king. Affirms God's ultimate authority and His promise to protect His anointed one.",
+      "keyThemes": ["kingship", "authority", "protection", "rebellion"],
+      "mainMessage": "God's sovereignty and protection of His chosen ruler."
+    },
+    {
+      "chapter": 3,
+      "title": "Cry for Morning Deliverance",
+      "summary": "A prayer of confidence in God's protection amidst fear and danger. Expresses trust that God will answer the psalmist's cry and provide deliverance from enemies.",
+      "keyThemes": ["protection", "trust", "deliverance", "prayer"],
+      "mainMessage": "Confidence in God's protection and deliverance."
+    },
+    {
+      "chapter": 4,
+      "title": "Prayer for Relief and Right Thinking",
+      "summary": "Asks for God's favor and relief from distress, while reflecting on the emptiness of worldly pursuits. Acknowledges the importance of righteousness and trusting in God's peace.",
+      "keyThemes": ["prayer", "peace", "righteousness", "trust"],
+      "mainMessage": "Finding peace and satisfaction in God rather than worldly pursuits."
+    },
+    {
+      "chapter": 5,
+      "title": "Plea for Guidance and Protection",
+      "summary": "Appeals to God for protection against deceitful foes and expresses confidence in His just judgment. Reaffirms the psalmist's devotion and trust in God's presence and guidance.",
+      "keyThemes": ["guidance", "protection", "justice", "devotion"],
+      "mainMessage": "Trusting in God's guidance and protection against enemies."
+    },
+    {
+      "chapter": 6,
+      "title": "Plea for Mercy in Illness",
+      "summary": "A lament filled with anguish and a plea for God's mercy and healing during a time of suffering. Expresses the psalmist's deep weariness and fear of death.",
+      "keyThemes": ["mercy", "healing", "suffering", "death"],
+      "mainMessage": "Crying out to God for mercy and healing in times of physical and emotional distress."
+    },
+    {
+      "chapter": 7,
+      "title": "Plea for Vindication and Justice",
+      "summary": "Proclaims the psalmist's innocence and asks God to act as a righteous judge against wicked persecutors. Expresses confidence that God will ultimately vindicate the righteous.",
+      "keyThemes": ["justice", "vindication", "innocence", "persecution"],
+      "mainMessage": "Trusting in God's justice and vindication of the righteous."
+    },
+    {
+      "chapter": 8,
+      "title": "Awe at God's Creation",
+      "summary": "Celebrates God's majesty and glory as seen in His creation, specifically focusing on the unique place of humanity within the divine order. Expresses wonder and gratitude for God's power.",
+      "keyThemes": ["creation", "majesty", "humanity", "wonder"],
+      "mainMessage": "Celebrating God's majesty in creation and humanity's special place in it."
+    },
+    {
+      "chapter": 9,
+      "title": "Thanksgiving for God's Judgment",
+      "summary": "Praises God for His just rule and defense of the oppressed. Celebrates the downfall of the wicked and anticipates the establishment of God's righteous reign.",
+      "keyThemes": ["thanksgiving", "justice", "oppression", "righteousness"],
+      "mainMessage": "Giving thanks for God's just judgment and protection of the oppressed."
+    },
+    {
+      "chapter": 10,
+      "title": "A Cry Against the Arrogant",
+      "summary": "Laments the oppression of the poor and helpless at the hands of the wicked. Appeals to God to intervene and bring justice to a world filled with violence and deceit.",
+      "keyThemes": ["oppression", "justice", "arrogance", "violence"],
+      "mainMessage": "Crying out against injustice and oppression, trusting in God's intervention."
+    }
+  ],
+  "thematicConnections": {
+    "praise": {
+      "chapters": [8, 19, 29, 33, 47, 96, 98, 100, 103, 104, 105, 106, 111, 113, 114, 115, 117, 135, 136, 145, 146, 147, 148, 149, 150],
+      "description": "Psalms that focus on praising God for His attributes, works, and character"
+    },
+    "lament": {
+      "chapters": [3, 4, 5, 6, 7, 10, 13, 17, 22, 25, 26, 27, 28, 31, 35, 38, 39, 40, 41, 42, 43, 44, 51, 54, 55, 56, 57, 59, 60, 61, 63, 64, 69, 70, 71, 74, 77, 79, 80, 83, 85, 86, 88, 89, 90, 94, 102, 109, 120, 123, 126, 130, 137, 140, 141, 142, 143],
+      "description": "Psalms expressing sorrow, grief, or complaint, often in the context of suffering or persecution"
+    },
+    "wisdom": {
+      "chapters": [1, 14, 15, 19, 32, 34, 37, 49, 73, 78, 90, 91, 92, 94, 111, 112, 119, 127, 128, 133],
+      "description": "Psalms that teach practical wisdom and understanding about life and God's ways"
+    },
+    "royal": {
+      "chapters": [2, 18, 20, 21, 45, 72, 89, 101, 110, 132, 144],
+      "description": "Psalms related to kingship, either celebrating God's kingship or the human king"
+    },
+    "thanksgiving": {
+      "chapters": [9, 18, 30, 32, 34, 40, 65, 66, 67, 75, 92, 107, 116, 118, 124, 136, 138],
+      "description": "Psalms expressing gratitude to God for His deliverance and blessings"
+    }
+  }
+} 
