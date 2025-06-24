@@ -8,8 +8,14 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   ScrollView,
+  Modal,
+  Alert,
+  Dimensions,
 } from 'react-native';
-import { BibleSearchService, SearchFilters } from '../services/BibleSearchService';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import DropDownPicker from 'react-native-dropdown-picker';
+import LocalBibleDataService, { SearchFilters } from '../services/LocalBibleDataService';
+import { BibleVerse, BookMetadata } from '../services/LocalBibleDataService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import SolomonChatModal from '../components/SolomonChatModal';
 
@@ -162,15 +168,23 @@ export default function BibleStudyScreen() {
   const [selectedBook, setSelectedBook] = useState<string>('Genesis');
   const [selectedChapter, setSelectedChapter] = useState<number>(1);
   const [lemma, setLemma] = useState('');
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
   const [useVerbForms, setUseVerbForms] = useState(false);
   const [isSearchingAllBooks, setIsSearchingAllBooks] = useState(false);
   const [filterError, setFilterError] = useState<string | null>(null);
   const [currentVerses, setCurrentVerses] = useState<any[]>([]);
   const [isLoadingVerses, setIsLoadingVerses] = useState(true);
   const [solomonVisible, setSolomonVisible] = useState(false);
+  
+  // Dropdown states
+  const [bookOpen, setBookOpen] = useState(false);
+  const [bookValue, setBookValue] = useState<string>('Genesis');
+  const [bookItems, setBookItems] = useState<{label: string, value: string}[]>([]);
 
-  const bibleService = BibleSearchService.getInstance();
+  // New state for modal visibility
+  const [filtersModalVisible, setFiltersModalVisible] = useState(false);
+
+  const bibleService = LocalBibleDataService;
 
   useEffect(() => {
     loadBooks();
@@ -185,6 +199,16 @@ export default function BibleStudyScreen() {
     }
   }, [selectedBook, selectedChapter]);
 
+  // Update dropdown items when books/chapters change
+  useEffect(() => {
+    setBookItems(books.map(book => ({ label: book, value: book })));
+  }, [books]);
+
+  // Sync dropdown values with selected values
+  useEffect(() => {
+    setBookValue(selectedBook);
+  }, [selectedBook]);
+
   const saveSession = async (book: string, chapter: number) => {
     try {
       await AsyncStorage.setItem('lastBook', book);
@@ -197,7 +221,7 @@ export default function BibleStudyScreen() {
   const loadVerses = async (book: string, chapter: number) => {
     setIsLoadingVerses(true);
     try {
-      const verses = await bibleService.getVerses(book, chapter);
+      const verses = bibleService.getChapterVerses(book, chapter.toString());
       setCurrentVerses(verses);
       saveSession(book, chapter);
     } catch (error) {
@@ -212,7 +236,7 @@ export default function BibleStudyScreen() {
     setIsLoadingFilters(true);
     setFilterError(null);
     try {
-      const availableBooks = await bibleService.getBooks();
+      const availableBooks = Object.keys(bibleService.getAllBooks());
       setBooks(availableBooks);
     } catch (error) {
       console.error('Error loading books:', error);
@@ -226,8 +250,8 @@ export default function BibleStudyScreen() {
     setIsLoadingFilters(true);
     setFilterError(null);
     try {
-      const availableChapters = await bibleService.getChapters(book);
-      setChapters(availableChapters);
+      const availableChapters = bibleService.getBookChapters(book);
+      setChapters(availableChapters.map(ch => parseInt(ch)));
     } catch (error) {
       console.error('Error loading chapters:', error);
       setFilterError('Failed to load chapters. Please try again.');
@@ -249,12 +273,10 @@ export default function BibleStudyScreen() {
       
       // Only apply book/chapter filters if they are explicitly set
       if (selectedBook && selectedBook !== '') filters.book = selectedBook;
-      if (selectedChapter !== null && selectedChapter !== 1) filters.chapter = selectedChapter;
-      if (lemma.trim()) filters.lemma = lemma.trim();
-      if (useVerbForms) filters.useVerbForms = true;
+      if (selectedChapter !== null && selectedChapter !== 1) filters.chapter = selectedChapter.toString();
 
       console.log('Searching with filters:', filters);
-      const results = await bibleService.searchVerses(searchQuery, filters);
+      const results = bibleService.search(searchQuery, filters);
       console.log('Search results:', results.length);
       setSearchResults(results);
       
@@ -283,7 +305,7 @@ export default function BibleStudyScreen() {
         const filters: SearchFilters = {};
         if (newBook) filters.book = newBook;
 
-        const results = await bibleService.searchVerses(searchQuery, filters);
+        const results = bibleService.search(searchQuery, filters);
         setSearchResults(results);
       } catch (error) {
         console.error('Error searching verses:', error);
@@ -307,9 +329,9 @@ export default function BibleStudyScreen() {
       try {
         const filters: SearchFilters = {};
         if (selectedBook) filters.book = selectedBook;
-        if (newChapter) filters.chapter = newChapter;
+        if (newChapter) filters.chapter = newChapter.toString();
 
-        const results = await bibleService.searchVerses(searchQuery, filters);
+        const results = bibleService.search(searchQuery, filters);
         setSearchResults(results);
       } catch (error) {
         console.error('Error searching verses:', error);
@@ -339,7 +361,7 @@ export default function BibleStudyScreen() {
     setIsSearchingAllBooks(true);
     try {
       const filters: SearchFilters = {};
-      const results = await bibleService.searchVerses(searchQuery, filters);
+      const results = bibleService.search(searchQuery, filters);
       setSearchResults(results);
     } catch (error) {
       console.error('Error searching verses:', error);
@@ -353,7 +375,7 @@ export default function BibleStudyScreen() {
   const renderVerse = ({ item }: { item: any }) => {
     if (searchQuery.trim()) {
       // Search result rendering
-      const { reference, text, matches, author, yearWritten, genre } = item;
+      const { reference, text, matches, book } = item;
       let parts = [];
       let lastIndex = 0;
       
@@ -382,8 +404,13 @@ export default function BibleStudyScreen() {
         parts = [{ text, isMatch: false }];
       }
 
-      const authorText = Array.isArray(author) ? author.join(', ') : author;
-      const authorInfo = `${authorText} (${yearWritten}) - ${genre}`;
+      // Get book metadata from the service
+      const bookMetadata = bibleService.getBookMetadata(book);
+      if (!bookMetadata) {
+        return null;
+      }
+      const authorText = bookMetadata.author || 'Unknown';
+      const authorInfo = `${authorText} (${bookMetadata.yearWritten || 'Unknown'}) - ${bookMetadata.genre || 'Unknown'}`;
 
       return (
         <View style={styles.searchResultContainer}>
@@ -426,30 +453,41 @@ export default function BibleStudyScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.bookScroll}>
+      <View style={styles.bookScroll}>
         {isLoadingFilters ? (
           <ActivityIndicator size="small" color="#007AFF" style={styles.filterLoader} />
         ) : (
-          books.map((book) => (
-            <TouchableOpacity
-              key={book}
-              style={[
-                styles.filterButton,
-                selectedBook === book && styles.selectedFilter
-              ]}
-              onPress={() => handleBookSelect(book)}
-            >
-              <Text style={[
-                styles.filterButtonText,
-                selectedBook === book && styles.selectedFilterText
-              ]}>{book}</Text>
-            </TouchableOpacity>
-          ))
+          <DropDownPicker
+            open={bookOpen}
+            value={bookValue}
+            items={bookItems}
+            setOpen={setBookOpen}
+            setValue={setBookValue}
+            setItems={setBookItems}
+            placeholder="Select a book"
+            style={styles.dropdownStyle}
+            dropDownContainerStyle={styles.dropdownContainerStyle}
+            textStyle={styles.dropdownTextStyle}
+            labelStyle={styles.dropdownTextSelected}
+            selectedItemLabelStyle={styles.dropdownTextSelected}
+            onSelectItem={(item) => {
+              if (item && item.value) {
+                handleBookSelect(item.value);
+              }
+            }}
+            zIndex={3000}
+            zIndexInverse={1000}
+          />
         )}
-      </ScrollView>
+      </View>
 
       {selectedBook && (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chapterScroll}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.chapterScroll}
+          contentContainerStyle={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+        >
           {isLoadingFilters ? (
             <ActivityIndicator size="small" color="#007AFF" style={styles.filterLoader} />
           ) : (
@@ -490,10 +528,10 @@ export default function BibleStudyScreen() {
       </View>
       <View style={styles.filterRow}>
         <TouchableOpacity
-          style={[styles.filterButton, { backgroundColor: '#f9e79f', borderColor: '#f7ca18' }]}
+          style={[styles.filterButton, styles.searchAllButton]}
           onPress={() => setSolomonVisible(true)}
         >
-          <Text style={[styles.filterButtonText, { color: '#7d6608', fontWeight: 'bold' }]}>Ask Solomon</Text>
+          <Text style={[styles.filterButtonText, styles.searchAllButtonText]}>Ask Solomon</Text>
         </TouchableOpacity>
       </View>
       <SolomonChatModal visible={solomonVisible} onClose={() => setSolomonVisible(false)} />
@@ -522,7 +560,7 @@ export default function BibleStudyScreen() {
             styles.filterButton,
             showFilters && styles.selectedFilter
           ]}
-          onPress={() => setShowFilters(!showFilters)}
+          onPress={() => setFiltersModalVisible(true)}
         >
           <Text style={[
             styles.filterButtonText,
@@ -531,7 +569,25 @@ export default function BibleStudyScreen() {
         </TouchableOpacity>
       </View>
 
-      {showFilters && renderFilterSection()}
+      {/* Render the filter section inside a Modal */}
+      <Modal
+        visible={filtersModalVisible}
+        animationType="slide"
+        transparent={true}
+        onRequestClose={() => setFiltersModalVisible(false)}
+      >
+        <View style={styles.filtersModalOverlay}>
+          <View style={styles.filtersModalContent}>
+            {renderFilterSection()}
+            <TouchableOpacity
+              style={styles.closeModalButton}
+              onPress={() => setFiltersModalVisible(false)}
+            >
+              <Text style={styles.closeModalButtonText}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
 
       {isLoading ? (
         <ActivityIndicator size="large" color="#007AFF" style={styles.loader} />
@@ -636,32 +692,34 @@ const styles = StyleSheet.create({
   },
   bookScroll: {
     marginBottom: 12,
-    maxHeight: 50,
   },
   chapterScroll: {
     marginBottom: 12,
     maxHeight: 50,
   },
   filterButton: {
-    paddingHorizontal: 12,
+    paddingHorizontal: 18,
     paddingVertical: 8,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 16,
+    backgroundColor: '#F3F3F5',
+    borderRadius: 20,
     marginRight: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
+    borderWidth: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   selectedFilter: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#fff',
     borderColor: '#007AFF',
+    borderWidth: 2,
   },
   filterButtonText: {
-    color: '#333',
-    fontSize: 14,
-    fontWeight: '500',
+    color: '#222',
+    fontSize: 16,
+    fontWeight: '700',
   },
   selectedFilterText: {
-    color: '#fff',
+    color: '#007AFF',
+    fontWeight: '700',
   },
   lemmaInput: {
     height: 40,
@@ -686,22 +744,33 @@ const styles = StyleSheet.create({
   },
   verseContainer: {
     flexDirection: 'row',
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    alignItems: 'flex-start',
+    paddingVertical: 6,
+    paddingHorizontal: 0,
+    backgroundColor: 'transparent',
+    borderBottomWidth: 0,
   },
   verseNumber: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#007AFF',
-    width: 30,
-    marginRight: 8,
+    fontSize: 12,
+    color: '#888',
+    fontWeight: '400',
+    marginRight: 2,
+    marginTop: 2,
+    lineHeight: 20,
+    textAlignVertical: 'top',
+    position: 'relative',
+    top: -4,
   },
   verseText: {
     flex: 1,
-    fontSize: 16,
-    color: '#333',
-    lineHeight: 24,
+    fontSize: 18,
+    color: '#222',
+    lineHeight: 28,
+    fontFamily: 'serif',
+    fontWeight: '400',
+    letterSpacing: 0.1,
+    textAlign: 'left',
+    backgroundColor: 'transparent',
   },
   highlightedText: {
     backgroundColor: '#FFEB3B',
@@ -748,21 +817,23 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   bookHeader: {
-    backgroundColor: '#f8f8f8',
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    backgroundColor: 'transparent',
+    padding: 0,
+    borderBottomWidth: 0,
     marginBottom: 8,
   },
   bookTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 4,
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#222',
+    textAlign: 'center',
+    marginBottom: 0,
   },
   chapterTitle: {
     fontSize: 18,
-    color: '#666',
+    color: '#888',
+    textAlign: 'center',
+    fontWeight: '500',
   },
   searchResultContainer: {
     padding: 16,
@@ -850,5 +921,64 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
     marginBottom: 2,
+  },
+  dropdownStyle: {
+    backgroundColor: '#fff',
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 8,
+    minHeight: 40,
+    textAlign: 'center',
+  },
+  dropdownContainerStyle: {
+    backgroundColor: '#fff',
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  dropdownTextStyle: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#333',
+  },
+  dropdownTextSelected: {
+    color: '#007AFF',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  filtersModalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  filtersModalContent: {
+    width: '90%',
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  closeModalButton: {
+    marginTop: 16,
+    alignSelf: 'center',
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+    backgroundColor: '#007AFF',
+    borderRadius: 8,
+  },
+  closeModalButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 }); 
