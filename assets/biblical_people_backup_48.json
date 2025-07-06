@@ -1,0 +1,515 @@
+{
+  "metadata": {
+    "description": "Comprehensive biblical people database for immediate response lookup",
+    "version": "2.0",
+    "lastUpdated": "2024-12-19",
+    "totalPeople": 48,
+    "categories": ["patriarchs", "kings", "prophets", "disciples", "messiah", "authors", "minor_prophets", "apostles"]
+  },
+  "people": {
+    "Adam": {
+      "name": "Adam",
+      "category": "patriarchs",
+      "role": "First Man",
+      "keyStories": ["Creation", "Garden of Eden", "Fall of Man"],
+      "keyVerses": ["Genesis 1:26-27", "Genesis 2:7", "Genesis 3:1-24"],
+      "themes": ["creation", "fall", "sin", "redemption"],
+      "immediateResponses": [
+        "Adam was the first man created by God, placed in the Garden of Eden. He and Eve were the first humans to sin, bringing death into the world.",
+        "Adam represents humanity's fall from grace, but also God's plan of redemption through Jesus Christ."
+      ]
+    },
+    "Noah": {
+      "name": "Noah",
+      "category": "patriarchs", 
+      "role": "Righteous Man, Ark Builder",
+      "keyStories": ["Building the Ark", "The Great Flood", "Covenant with God"],
+      "keyVerses": ["Genesis 6:9", "Genesis 7:1-24", "Genesis 9:1-17"],
+      "themes": ["righteousness", "faith", "obedience", "covenant"],
+      "immediateResponses": [
+        "Noah was a righteous man who found favor with God. He built an ark to save his family and animals from the great flood.",
+        "Noah's faith and obedience saved humanity from extinction, and God made a covenant never to destroy the earth by flood again."
+      ]
+    },
+    "Abraham": {
+      "name": "Abraham",
+      "category": "patriarchs",
+      "role": "Father of Faith", 
+      "keyStories": ["Call to Leave Ur", "Covenant with God", "Isaac's Birth", "Sacrifice of Isaac"],
+      "keyVerses": ["Genesis 12:1-3", "Genesis 15:6", "Genesis 22:1-18"],
+      "themes": ["faith", "covenant", "promise", "obedience"],
+      "immediateResponses": [
+        "Abraham is called the father of faith. God promised to make him a great nation and bless all peoples through his descendants.",
+        "Abraham's faith was counted as righteousness. He obeyed God even when asked to sacrifice his son Isaac."
+      ]
+    },
+    "Moses": {
+      "name": "Moses",
+      "category": "prophets",
+      "role": "Lawgiver, Deliverer",
+      "keyStories": ["Burning Bush", "Ten Plagues", "Red Sea", "Ten Commandments"],
+      "keyVerses": ["Exodus 3:1-15", "Exodus 14:1-31", "Exodus 20:1-17"],
+      "themes": ["deliverance", "law", "leadership", "faith"],
+      "immediateResponses": [
+        "Moses was chosen by God to deliver Israel from Egypt. He received the Ten Commandments and led the people for 40 years in the wilderness.",
+        "Moses was the greatest prophet of the Old Testament, speaking face to face with God. He wrote the first five books of the Bible."
+      ]
+    },
+    "David": {
+      "name": "David",
+      "category": "kings",
+      "role": "King of Israel, Man After God's Heart",
+      "keyStories": ["Goliath", "Anointing", "Bathsheba", "Psalms"],
+      "keyVerses": ["1 Samuel 16:1-13", "1 Samuel 17:1-58", "Psalm 51:1-19"],
+      "themes": ["courage", "repentance", "worship", "leadership"],
+      "immediateResponses": [
+        "David was a shepherd boy who became Israel's greatest king. He defeated Goliath and wrote many of the Psalms.",
+        "David was called 'a man after God's own heart' despite his sins. His story shows God's grace and the importance of repentance."
+      ]
+    },
+    "Solomon": {
+      "name": "Solomon",
+      "category": "kings",
+      "role": "Wisest King, Temple Builder",
+      "keyStories": ["Wisdom from God", "Building Temple", "Queen of Sheba"],
+      "keyVerses": ["1 Kings 3:5-14", "1 Kings 6:1-38", "Proverbs 1:1"],
+      "themes": ["wisdom", "wealth", "temple", "worship"],
+      "immediateResponses": [
+        "Solomon was the wisest king who ever lived. He built God's temple in Jerusalem and wrote Proverbs, Ecclesiastes, and Song of Solomon.",
+        "Solomon asked God for wisdom instead of wealth, and God gave him both. However, his many wives led him away from God."
+      ]
+    },
+    "Elijah": {
+      "name": "Elijah",
+      "category": "prophets",
+      "role": "Prophet of Fire",
+      "keyStories": ["Raven Feeding", "Mount Carmel", "Still Small Voice", "Chariot of Fire"],
+      "keyVerses": ["1 Kings 17:1-24", "1 Kings 18:1-46", "2 Kings 2:1-12"],
+      "themes": ["faith", "miracles", "courage", "God's voice"],
+      "immediateResponses": [
+        "Elijah was a powerful prophet who performed many miracles. He defeated the prophets of Baal on Mount Carmel and was taken to heaven in a chariot of fire.",
+        "Elijah's story shows God's power and provision. He was fed by ravens and heard God's still small voice."
+      ]
+    },
+    "Isaiah": {
+      "name": "Isaiah",
+      "category": "prophets",
+      "role": "Major Prophet",
+      "keyStories": ["Call to Prophesy", "Immanuel Prophecy", "Suffering Servant"],
+      "keyVerses": ["Isaiah 6:1-8", "Isaiah 7:14", "Isaiah 53:1-12"],
+      "themes": ["holiness", "messiah", "suffering", "redemption"],
+      "immediateResponses": [
+        "Isaiah was a major prophet who wrote the longest prophetic book. He prophesied about the coming Messiah and the suffering servant.",
+        "Isaiah's prophecies about Jesus are incredibly detailed, including His virgin birth and suffering. He is quoted more in the New Testament than any other prophet."
+      ]
+    },
+    "Jesus": {
+      "name": "Jesus",
+      "category": "messiah",
+      "role": "Son of God, Savior",
+      "keyStories": ["Birth", "Miracles", "Sermon on Mount", "Crucifixion", "Resurrection"],
+      "keyVerses": ["John 3:16", "Matthew 28:18-20", "Luke 2:1-20"],
+      "themes": ["love", "salvation", "grace", "forgiveness", "resurrection"],
+      "immediateResponses": [
+        "Jesus is the Son of God who came to earth to save us from our sins. He died on the cross and rose from the dead to give us eternal life.",
+        "Jesus performed many miracles, taught about God's kingdom, and showed us how to love God and others. He is the Messiah promised in the Old Testament."
+      ]
+    },
+    "Paul": {
+      "name": "Paul",
+      "category": "apostles",
+      "role": "Apostle to the Gentiles",
+      "keyStories": ["Conversion on Road", "Missionary Journeys", "Shipwreck", "Prison Letters"],
+      "keyVerses": ["Acts 9:1-31", "Romans 1:16-17", "Philippians 4:13"],
+      "themes": ["conversion", "grace", "mission", "suffering", "faith"],
+      "immediateResponses": [
+        "Paul was a persecutor of Christians who became the greatest missionary. He was converted on the road to Damascus and wrote most of the New Testament letters.",
+        "Paul traveled throughout the Roman Empire spreading the gospel. He suffered much but said 'I can do all things through Christ who strengthens me.'"
+      ]
+    },
+    "Joshua": {
+      "name": "Joshua",
+      "category": "prophets",
+      "role": "Successor to Moses, Conqueror",
+      "keyStories": ["Spying Canaan", "Crossing Jordan", "Fall of Jericho", "Sun Stands Still"],
+      "keyVerses": ["Joshua 1:1-9", "Joshua 6:1-27", "Joshua 10:12-14"],
+      "themes": ["leadership", "courage", "obedience", "conquest"],
+      "immediateResponses": [
+        "Joshua was Moses' successor who led Israel into the Promised Land. He conquered Jericho and many other cities.",
+        "Joshua's famous words were 'As for me and my house, we will serve the Lord.' He was a great military leader and faithful servant of God."
+      ]
+    },
+    "Samuel": {
+      "name": "Samuel",
+      "category": "prophets",
+      "role": "Prophet, Judge, King-Maker",
+      "keyStories": ["Birth to Hannah", "Call as Prophet", "Anointing Saul", "Anointing David"],
+      "keyVerses": ["1 Samuel 1:1-28", "1 Samuel 3:1-21", "1 Samuel 16:1-13"],
+      "themes": ["prayer", "prophecy", "leadership", "obedience"],
+      "immediateResponses": [
+        "Samuel was a prophet and judge who anointed both Saul and David as kings. He was dedicated to God by his mother Hannah.",
+        "Samuel heard God's voice as a child and became one of Israel's greatest prophets. He established the monarchy in Israel."
+      ]
+    },
+    "Jeremiah": {
+      "name": "Jeremiah",
+      "category": "prophets",
+      "role": "Weeping Prophet",
+      "keyStories": ["Call to Prophesy", "Potter's House", "New Covenant", "Fall of Jerusalem"],
+      "keyVerses": ["Jeremiah 1:1-10", "Jeremiah 18:1-12", "Jeremiah 31:31-34"],
+      "themes": ["judgment", "repentance", "new covenant", "suffering"],
+      "immediateResponses": [
+        "Jeremiah was called the 'weeping prophet' because he prophesied the destruction of Jerusalem. He also prophesied about the new covenant.",
+        "Jeremiah's ministry was difficult - he was rejected and persecuted. He also wrote Lamentations, showing that God's mercies are new every morning."
+      ]
+    },
+    "Daniel": {
+      "name": "Daniel",
+      "category": "prophets",
+      "role": "Prophet in Exile",
+      "keyStories": ["Lion's Den", "Fiery Furnace", "Handwriting on Wall", "Visions of Future"],
+      "keyVerses": ["Daniel 1:1-21", "Daniel 3:1-30", "Daniel 6:1-28"],
+      "themes": ["faithfulness", "courage", "visions", "end times"],
+      "immediateResponses": [
+        "Daniel was a young man taken to Babylon who remained faithful to God. He was thrown in the lion's den but God protected him.",
+        "Daniel interpreted dreams and had visions of future kingdoms. His prophecies about the end times are still being fulfilled today."
+      ]
+    },
+    "Ezra": {
+      "name": "Ezra",
+      "category": "prophets",
+      "role": "Priest, Scribe, Reformer",
+      "keyStories": ["Return from Exile", "Reading the Law", "Rebuilding Temple", "Religious Reform"],
+      "keyVerses": ["Ezra 7:1-10", "Nehemiah 8:1-12", "Ezra 9:1-15"],
+      "themes": ["restoration", "obedience", "teaching", "reform"],
+      "immediateResponses": [
+        "Ezra was a priest and scribe who led the return from Babylonian exile. He helped rebuild the temple and restore proper worship.",
+        "Ezra was skilled in the Law of Moses and taught it to the people. He led religious reforms and helped restore Israel's spiritual life."
+      ]
+    },
+    "Nehemiah": {
+      "name": "Nehemiah",
+      "category": "prophets",
+      "role": "Cupbearer, Wall Builder",
+      "keyStories": ["Cupbearer to King", "Rebuilding Walls", "Opposition", "Religious Reform"],
+      "keyVerses": ["Nehemiah 1:1-11", "Nehemiah 2:1-20", "Nehemiah 6:1-16"],
+      "themes": ["leadership", "prayer", "perseverance", "restoration"],
+      "immediateResponses": [
+        "Nehemiah was the cupbearer to the Persian king who led the rebuilding of Jerusalem's walls. He faced opposition but completed the task.",
+        "Nehemiah's story shows the power of prayer and leadership. He organized the people to rebuild the walls in just 52 days."
+      ]
+    },
+    "Matthew": {
+      "name": "Matthew",
+      "category": "disciples",
+      "role": "Tax Collector, Gospel Writer",
+      "keyStories": ["Call to Follow Jesus", "Writing Gospel", "Missionary Work"],
+      "keyVerses": ["Matthew 9:9-13", "Matthew 1:1-17", "Matthew 28:18-20"],
+      "themes": ["conversion", "gospel", "mission", "grace"],
+      "immediateResponses": [
+        "Matthew was a tax collector who became one of Jesus' disciples. He wrote the first Gospel, emphasizing Jesus as the Messiah.",
+        "Matthew's Gospel shows how Jesus fulfilled Old Testament prophecies. He was a despised tax collector who found grace in Jesus."
+      ]
+    },
+    "Mark": {
+      "name": "Mark",
+      "category": "disciples",
+      "role": "Gospel Writer, Missionary",
+      "keyStories": ["Writing Gospel", "Missionary with Paul", "Desertion and Restoration"],
+      "keyVerses": ["Mark 1:1", "Acts 12:12", "2 Timothy 4:11"],
+      "themes": ["gospel", "mission", "restoration", "service"],
+      "immediateResponses": [
+        "Mark wrote the shortest Gospel, emphasizing Jesus' actions and miracles. He was a companion of both Peter and Paul.",
+        "Mark's Gospel is fast-paced and action-oriented. He was restored to ministry after initially deserting Paul on a missionary journey."
+      ]
+    },
+    "Luke": {
+      "name": "Luke",
+      "category": "disciples",
+      "role": "Physician, Gospel Writer",
+      "keyStories": ["Writing Gospel and Acts", "Traveling with Paul", "Medical Background"],
+      "keyVerses": ["Luke 1:1-4", "Acts 1:1", "Colossians 4:14"],
+      "themes": ["gospel", "history", "compassion", "mission"],
+      "immediateResponses": [
+        "Luke was a physician who wrote the Gospel of Luke and the book of Acts. He was a companion of the apostle Paul.",
+        "Luke's Gospel emphasizes Jesus' compassion and includes many stories about women and the poor. He wrote the most detailed account of Jesus' life."
+      ]
+    },
+    "John": {
+      "name": "John",
+      "category": "disciples",
+      "role": "Beloved Disciple, Gospel Writer",
+      "keyStories": ["Following Jesus", "Writing Gospel and Letters", "Revelation", "Exile to Patmos"],
+      "keyVerses": ["John 1:1-18", "John 3:16", "Revelation 1:1-3"],
+      "themes": ["love", "light", "life", "truth"],
+      "immediateResponses": [
+        "John was Jesus' closest disciple, called 'the beloved disciple.' He wrote the Gospel of John, three letters, and Revelation.",
+        "John's Gospel emphasizes Jesus' divinity and love. He was the only disciple to die of old age, exiled to the island of Patmos."
+      ]
+    },
+    "Peter": {
+      "name": "Peter",
+      "category": "apostles",
+      "role": "Apostle, Rock",
+      "keyStories": ["Walking on Water", "Confession of Christ", "Denial", "Pentecost"],
+      "keyVerses": ["Matthew 16:13-20", "Matthew 26:69-75", "Acts 2:1-41"],
+      "themes": ["faith", "repentance", "leadership", "boldness"],
+      "immediateResponses": [
+        "Peter was one of Jesus' closest disciples, a fisherman who became a bold preacher. He denied Jesus three times but was restored.",
+        "Peter was the first to confess Jesus as the Christ. Jesus called him 'the rock' and he preached at Pentecost."
+      ]
+    },
+    "James": {
+      "name": "James",
+      "category": "apostles",
+      "role": "Half-Brother of Jesus, Church Leader",
+      "keyStories": ["Family of Jesus", "Church Leadership", "Writing Epistle", "Martyrdom"],
+      "keyVerses": ["James 1:1", "James 2:14-26", "Acts 15:13-21"],
+      "themes": ["faith", "works", "wisdom", "practical Christianity"],
+      "immediateResponses": [
+        "James was Jesus' half-brother who became a leader in the Jerusalem church. He wrote the book of James emphasizing faith and works.",
+        "James was known as 'James the Just' for his righteous life. He was martyred in Jerusalem around 62 AD."
+      ]
+    },
+    "Jude": {
+      "name": "Jude",
+      "category": "apostles",
+      "role": "Half-Brother of Jesus, Letter Writer",
+      "keyStories": ["Family of Jesus", "Writing Epistle", "Contending for Faith"],
+      "keyVerses": ["Jude 1:1", "Jude 1:3", "Jude 1:20-25"],
+      "themes": ["faith", "contending", "apostasy", "mercy"],
+      "immediateResponses": [
+        "Jude was Jesus' half-brother who wrote a short letter warning against false teachers and encouraging believers to contend for the faith.",
+        "Jude's letter is a powerful call to stand firm in the faith and show mercy to those who doubt."
+      ]
+    },
+    "Hosea": {
+      "name": "Hosea",
+      "category": "minor_prophets",
+      "role": "Prophet of Love",
+      "keyStories": ["Marriage to Gomer", "Prophecy of Restoration", "God's Unfailing Love"],
+      "keyVerses": ["Hosea 1:1-11", "Hosea 3:1-5", "Hosea 11:1-11"],
+      "themes": ["love", "faithfulness", "restoration", "marriage"],
+      "immediateResponses": [
+        "Hosea was a prophet whose marriage to an unfaithful wife illustrated God's love for unfaithful Israel.",
+        "Hosea's life and message show God's incredible love and faithfulness even when His people are unfaithful."
+      ]
+    },
+    "Joel": {
+      "name": "Joel",
+      "category": "minor_prophets",
+      "role": "Prophet of the Day of the Lord",
+      "keyStories": ["Locust Plague", "Call to Repentance", "Promise of Restoration"],
+      "keyVerses": ["Joel 1:1-20", "Joel 2:12-17", "Joel 2:28-32"],
+      "themes": ["repentance", "judgment", "restoration", "Holy Spirit"],
+      "immediateResponses": [
+        "Joel prophesied about a locust plague and called Israel to repentance. He also prophesied about the coming of the Holy Spirit.",
+        "Joel's message about the Day of the Lord and the outpouring of the Holy Spirit was fulfilled at Pentecost."
+      ]
+    },
+    "Amos": {
+      "name": "Amos",
+      "category": "minor_prophets",
+      "role": "Prophet of Justice",
+      "keyStories": ["Shepherd Called to Prophesy", "Judgment on Nations", "Call for Justice"],
+      "keyVerses": ["Amos 1:1", "Amos 5:24", "Amos 9:11-15"],
+      "themes": ["justice", "righteousness", "judgment", "restoration"],
+      "immediateResponses": [
+        "Amos was a shepherd and fig farmer called to prophesy against Israel's social injustice and religious hypocrisy.",
+        "Amos famously said 'Let justice roll down like waters, and righteousness like an ever-flowing stream.'"
+      ]
+    },
+    "Obadiah": {
+      "name": "Obadiah",
+      "category": "minor_prophets",
+      "role": "Prophet Against Edom",
+      "keyStories": ["Judgment on Edom", "Pride and Fall", "Restoration of Israel"],
+      "keyVerses": ["Obadiah 1:1-21"],
+      "themes": ["pride", "judgment", "restoration", "justice"],
+      "immediateResponses": [
+        "Obadiah wrote the shortest book in the Old Testament, prophesying judgment against Edom for their pride and mistreatment of Israel.",
+        "Obadiah's message shows that God judges pride and will restore His people."
+      ]
+    },
+    "Jonah": {
+      "name": "Jonah",
+      "category": "minor_prophets",
+      "role": "Prophet to Nineveh",
+      "keyStories": ["Running from God", "Swallowed by Fish", "Preaching to Nineveh", "Anger at God's Mercy"],
+      "keyVerses": ["Jonah 1:1-17", "Jonah 3:1-10", "Jonah 4:1-11"],
+      "themes": ["obedience", "mercy", "repentance", "mission"],
+      "immediateResponses": [
+        "Jonah was a prophet who tried to run from God's call to preach to Nineveh. He was swallowed by a great fish and eventually obeyed.",
+        "Jonah's story shows God's mercy and the importance of obedience. The people of Nineveh repented and God spared them."
+      ]
+    },
+    "Micah": {
+      "name": "Micah",
+      "category": "minor_prophets",
+      "role": "Prophet of Bethlehem",
+      "keyStories": ["Prophecy of Bethlehem", "Judgment and Restoration", "Requirements of God"],
+      "keyVerses": ["Micah 5:2", "Micah 6:8", "Micah 7:18-20"],
+      "themes": ["justice", "mercy", "humility", "messiah"],
+      "immediateResponses": [
+        "Micah prophesied that the Messiah would be born in Bethlehem. He also gave the famous requirement: 'Do justice, love mercy, walk humbly with God.'",
+        "Micah's prophecy about Bethlehem was fulfilled when Jesus was born there. His message emphasizes God's justice and mercy."
+      ]
+    },
+    "Nahum": {
+      "name": "Nahum",
+      "category": "minor_prophets",
+      "role": "Prophet Against Nineveh",
+      "keyStories": ["Judgment on Nineveh", "God's Wrath", "Comfort for Judah"],
+      "keyVerses": ["Nahum 1:1-15", "Nahum 3:1-19"],
+      "themes": ["judgment", "wrath", "comfort", "justice"],
+      "immediateResponses": [
+        "Nahum prophesied the destruction of Nineveh, the capital of Assyria. His message brought comfort to Judah who had suffered under Assyrian oppression.",
+        "Nahum's prophecy shows that God is slow to anger but will not leave the guilty unpunished."
+      ]
+    },
+    "Habakkuk": {
+      "name": "Habakkuk",
+      "category": "minor_prophets",
+      "role": "Prophet of Faith",
+      "keyStories": ["Questioning God", "God's Answer", "Faith in Difficult Times"],
+      "keyVerses": ["Habakkuk 1:1-4", "Habakkuk 2:4", "Habakkuk 3:17-19"],
+      "themes": ["faith", "justice", "trust", "praise"],
+      "immediateResponses": [
+        "Habakkuk questioned God about why evil was allowed to prosper. God answered that 'the righteous shall live by faith.'",
+        "Habakkuk's famous statement 'the righteous shall live by faith' is quoted three times in the New Testament."
+      ]
+    },
+    "Zephaniah": {
+      "name": "Zephaniah",
+      "category": "minor_prophets",
+      "role": "Prophet of the Day of the Lord",
+      "keyStories": ["Judgment on Nations", "Day of the Lord", "Restoration of Remnant"],
+      "keyVerses": ["Zephaniah 1:1-18", "Zephaniah 3:9-20"],
+      "themes": ["judgment", "day of the Lord", "restoration", "praise"],
+      "immediateResponses": [
+        "Zephaniah prophesied about the coming Day of the Lord, a time of judgment and restoration.",
+        "Zephaniah's message balances God's judgment with His promise to restore and rejoice over His people."
+      ]
+    },
+    "Haggai": {
+      "name": "Haggai",
+      "category": "minor_prophets",
+      "role": "Prophet of Temple Rebuilding",
+      "keyStories": ["Call to Rebuild Temple", "Encouragement", "Future Glory"],
+      "keyVerses": ["Haggai 1:1-15", "Haggai 2:1-9"],
+      "themes": ["priorities", "obedience", "encouragement", "glory"],
+      "immediateResponses": [
+        "Haggai encouraged the people to rebuild the temple after their return from exile. He helped them set proper priorities.",
+        "Haggai's message was about putting God first and rebuilding His house. He promised that the glory of the new temple would be greater than the old."
+      ]
+    },
+    "Zechariah": {
+      "name": "Zechariah",
+      "category": "minor_prophets",
+      "role": "Prophet of Visions",
+      "keyStories": ["Eight Visions", "Messianic Prophecies", "Encouragement for Rebuilding"],
+      "keyVerses": ["Zechariah 1:1-17", "Zechariah 9:9", "Zechariah 14:1-21"],
+      "themes": ["visions", "messiah", "restoration", "end times"],
+      "immediateResponses": [
+        "Zechariah had eight visions encouraging the people to rebuild the temple. He also prophesied about the coming Messiah.",
+        "Zechariah's prophecy about the Messiah riding on a donkey was fulfilled when Jesus entered Jerusalem on Palm Sunday."
+      ]
+    },
+    "Malachi": {
+      "name": "Malachi",
+      "category": "minor_prophets",
+      "role": "Last Old Testament Prophet",
+      "keyStories": ["Rebuking Priests", "Tithing", "Day of the Lord", "Elijah's Return"],
+      "keyVerses": ["Malachi 1:1-14", "Malachi 3:8-12", "Malachi 4:5-6"],
+      "themes": ["worship", "tithing", "judgment", "preparation"],
+      "immediateResponses": [
+        "Malachi was the last prophet of the Old Testament. He rebuked the people for their poor worship and failure to tithe.",
+        "Malachi prophesied that Elijah would return before the Day of the Lord, which was fulfilled in John the Baptist."
+      ]
+    },
+    "Ezekiel": {
+      "name": "Ezekiel",
+      "category": "prophets",
+      "role": "Prophet in Exile",
+      "keyStories": ["Wheel Vision", "Dry Bones", "New Temple", "Watchman"],
+      "keyVerses": ["Ezekiel 1:1-28", "Ezekiel 37:1-14", "Ezekiel 40:1-48"],
+      "themes": ["visions", "restoration", "watchman", "glory"],
+      "immediateResponses": [
+        "Ezekiel was a prophet in Babylonian exile who had many dramatic visions, including the valley of dry bones.",
+        "Ezekiel's vision of dry bones coming to life symbolizes Israel's restoration. He also saw detailed visions of a new temple."
+      ]
+    },
+    "Agur": {
+      "name": "Agur",
+      "category": "authors",
+      "role": "Wisdom Writer",
+      "keyStories": ["Writing Proverbs", "Humility", "Wisdom Sayings"],
+      "keyVerses": ["Proverbs 30:1-33"],
+      "themes": ["wisdom", "humility", "contentment", "knowledge"],
+      "immediateResponses": [
+        "Agur was a wisdom writer who contributed to the book of Proverbs. He wrote chapter 30, emphasizing humility and contentment.",
+        "Agur's wisdom shows the importance of humility and knowing our limitations before God."
+      ]
+    },
+    "Lemuel": {
+      "name": "Lemuel",
+      "category": "authors",
+      "role": "King, Wisdom Writer",
+      "keyStories": ["Writing Proverbs", "Mother's Teaching", "Virtuous Woman"],
+      "keyVerses": ["Proverbs 31:1-31"],
+      "themes": ["wisdom", "leadership", "virtue", "motherhood"],
+      "immediateResponses": [
+        "Lemuel was a king who wrote the final chapter of Proverbs, including the famous description of a virtuous woman.",
+        "Lemuel's writing shows the influence of his mother's teaching and emphasizes the value of a virtuous woman."
+      ]
+    },
+    "Gad": {
+      "name": "Gad",
+      "category": "prophets",
+      "role": "Prophet, Historian",
+      "keyStories": ["David's Prophet", "Contributing to Samuel", "Historical Records"],
+      "keyVerses": ["1 Samuel 22:5", "2 Samuel 24:11-19", "1 Chronicles 29:29"],
+      "themes": ["prophecy", "history", "guidance", "repentance"],
+      "immediateResponses": [
+        "Gad was a prophet who served King David and helped write the historical books of Samuel.",
+        "Gad guided David and helped record the history of Israel's monarchy."
+      ]
+    },
+    "Nathan": {
+      "name": "Nathan",
+      "category": "prophets",
+      "role": "Prophet to David",
+      "keyStories": ["Confronting David", "Temple Prophecy", "Solomon's Succession"],
+      "keyVerses": ["2 Samuel 7:1-17", "2 Samuel 12:1-15", "1 Kings 1:11-53"],
+      "themes": ["prophecy", "confrontation", "repentance", "succession"],
+      "immediateResponses": [
+        "Nathan was a prophet who courageously confronted David about his sin with Bathsheba. He also prophesied about the temple.",
+        "Nathan's confrontation of David shows the prophet's role in holding leaders accountable and calling for repentance."
+      ]
+    },
+    "Silvanus": {
+      "name": "Silvanus",
+      "category": "apostles",
+      "role": "Missionary Companion",
+      "keyStories": ["Traveling with Paul", "Co-authoring Letters", "Church Leadership"],
+      "keyVerses": ["1 Thessalonians 1:1", "2 Thessalonians 1:1", "1 Peter 5:12"],
+      "themes": ["mission", "leadership", "partnership", "service"],
+      "immediateResponses": [
+        "Silvanus (also called Silas) was a missionary companion of Paul and helped write several New Testament letters.",
+        "Silvanus was a faithful missionary and church leader who worked alongside both Paul and Peter."
+      ]
+    },
+    "Timothy": {
+      "name": "Timothy",
+      "category": "apostles",
+      "role": "Young Pastor, Paul's Son in Faith",
+      "keyStories": ["Conversion", "Traveling with Paul", "Pastoring Ephesus", "Receiving Letters"],
+      "keyVerses": ["1 Timothy 1:1-2", "2 Timothy 1:1-7", "Philippians 2:19-24"],
+      "themes": ["youth", "leadership", "faithfulness", "mentoring"],
+      "immediateResponses": [
+        "Timothy was a young pastor whom Paul called his 'son in the faith.' Paul wrote two letters to him about church leadership.",
+        "Timothy's story shows how God can use young people in ministry. Paul encouraged him to 'let no one despise your youth.'"
+      ]
+    }
+  }
+}

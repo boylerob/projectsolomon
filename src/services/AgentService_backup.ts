@@ -2,7 +2,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import KnowledgeEnhancementService from './KnowledgeEnhancementService';
 import LexiconService, { LexiconResponse } from './LexiconService';
-import QuestionParserService, { ParsedQuestion, QuestionAnalysis } from './QuestionParserService';
 
 // Types for the enhanced agent system
 export interface UserContext {
@@ -36,8 +35,6 @@ export interface AgentResponse {
   confidence: number;
   followUpQuestions: string[];
   immediateResponse?: ImmediateResponse;
-  questionAnalysis?: QuestionAnalysis; // NEW: Include question analysis
-  processingTime?: number; // NEW: Track processing time
 }
 
 export interface ImmediateResponse {
@@ -71,7 +68,6 @@ export interface AgentConfig {
 }
 
 class AgentService {
-  private questionParser: typeof QuestionParserService;
   private userContext: UserContext | null = null;
   private lexiconService: LexiconService;
   private config: AgentConfig = {
@@ -85,7 +81,6 @@ class AgentService {
 
   constructor() {
     this.lexiconService = new LexiconService();
-    this.questionParser = QuestionParserService;
   }
 
   // Initialize user context
@@ -131,8 +126,8 @@ class AgentService {
     }
   }
 
-  // ENHANCED: Get immediate response with question analysis
-  async getImmediateResponse(question: string, analysis?: QuestionAnalysis): Promise<ImmediateResponse> {
+  // NEW: Get immediate response using the three-tier lexicon system
+  async getImmediateResponse(question: string): Promise<ImmediateResponse> {
     if (!this.userContext) {
       await this.initializeUserContext();
     }
@@ -176,7 +171,7 @@ class AgentService {
     };
   }
 
-  // ENHANCED: New optimal flow with immediate parsing
+  // Enhanced question asking with immediate response + AI processing
   async askQuestion(
     question: string,
     mode: 'chat' | 'summary' | 'deep' = 'chat',
@@ -186,35 +181,21 @@ class AgentService {
       await this.initializeUserContext();
     }
 
-    // STEP 1: Immediately parse and categorize locally (milliseconds)
-    const parsedQuestion = this.questionParser.parseQuestion(question, {
-      conversationHistory: this.userContext!.recentQuestions,
-      spiritualMaturity: this.userContext!.spiritualMaturity,
-      recentTopics: this.userContext!.studyTopics
-    });
+    // Get immediate response first
+    const immediateResponse = await this.getImmediateResponse(question);
 
-    console.log('Question Analysis:', this.questionParser.getAnalysisSummary(parsedQuestion));
-
-    // STEP 2: Get immediate response based on categorization
-    const immediateResponse = await this.getImmediateResponse(question, parsedQuestion.analysis);
-
-    // STEP 3: If factual question or biblical person, return complete response immediately
-    if (parsedQuestion.analysis.responseStrategy === 'immediate_answer' && immediateResponse.isComplete) {
-      return this.createCompleteResponse(question, immediateResponse, parsedQuestion);
+    // If the immediate response is complete (factual or clarification), 
+    // we can return early or provide a simplified AI response
+    if (immediateResponse.isComplete) {
+      return this.createCompleteResponse(question, immediateResponse);
     }
 
-    // STEP 4: For non-factual questions, start AI processing in background
-    // Return immediate acknowledgment first, then enhance with AI
-    const initialResponse = this.createInitialResponse(question, immediateResponse, parsedQuestion);
-    
-    // Start AI processing in background (non-blocking)
-    this.processWithAIInBackground(question, mode, additionalContext, immediateResponse, parsedQuestion);
-    
-    return initialResponse;
+    // Otherwise, proceed with full AI processing
+    return this.processWithAI(question, mode, additionalContext, immediateResponse);
   }
 
-  // ENHANCED: Create complete response with question analysis
-  private createCompleteResponse(question: string, immediateResponse: ImmediateResponse, parsedQuestion?: ParsedQuestion): AgentResponse {
+  // Create a complete response for factual/clarification questions
+  private createCompleteResponse(question: string, immediateResponse: ImmediateResponse): AgentResponse {
     const response: AgentResponse = {
       content: immediateResponse.text,
       scriptureReferences: immediateResponse.immediateAnswer ? this.extractScriptureReferences(immediateResponse.text) : [],
@@ -232,48 +213,6 @@ class AgentService {
     };
 
     return response;
-  }
-
-  // NEW: Create initial response for conversational questions
-  private createInitialResponse(
-    question: string,
-    immediateResponse: ImmediateResponse,
-    parsedQuestion: ParsedQuestion
-  ): AgentResponse {
-    return {
-      content: immediateResponse.text,
-      scriptureReferences: [],
-      personalApplication: 'I\'m processing your question to provide a thoughtful response...',
-      responseType: 'guidance',
-      confidence: parsedQuestion.analysis.confidence,
-      followUpQuestions: [],
-      immediateResponse,
-      questionAnalysis: parsedQuestion.analysis,
-      processingTime: Date.now()
-    };
-  }
-
-  // NEW: Process AI in background for enhanced responses
-  private async processWithAIInBackground(
-    question: string,
-    mode: string,
-    additionalContext: string | undefined,
-    immediateResponse: ImmediateResponse,
-    parsedQuestion: ParsedQuestion
-  ): Promise<void> {
-    try {
-      const enhancedResponse = await this.processWithAI(question, mode, additionalContext, immediateResponse);
-      enhancedResponse.questionAnalysis = parsedQuestion.analysis;
-      enhancedResponse.processingTime = Date.now();
-      
-      // Update session history with enhanced response
-      await this.updateSessionHistory(question, enhancedResponse);
-      
-      // Here you could emit an event or use a callback to update the UI
-      console.log('AI processing complete for question:', question);
-    } catch (error) {
-      console.error('Error in background AI processing:', error);
-    }
   }
 
   // Process question with AI (for conversational responses)
@@ -499,35 +438,6 @@ class AgentService {
   // Get current configuration
   getConfig(): AgentConfig {
     return { ...this.config };
-  }
-
-  // NEW: Get question analysis for debugging and insights
-  async analyzeQuestion(question: string): Promise<QuestionAnalysis> {
-    if (!this.userContext) {
-      await this.initializeUserContext();
-    }
-
-    const parsedQuestion = this.questionParser.parseQuestion(question, {
-      conversationHistory: this.userContext!.recentQuestions,
-      spiritualMaturity: this.userContext!.spiritualMaturity,
-      recentTopics: this.userContext!.studyTopics
-    });
-
-    return parsedQuestion.analysis;
-  }
-
-  // NEW: Get processing insights
-  getProcessingInsights(): string[] {
-    const insights: string[] = [];
-    
-    if (this.userContext?.recentQuestions.length) {
-      const recentQuestions = this.userContext.recentQuestions.length > 5 ? 
-        this.userContext.recentQuestions.slice(-5) : 
-        this.userContext.recentQuestions;
-      insights.push(`Recent questions: ${recentQuestions.join(', ')}`);
-    }
-    
-    return insights;
   }
 }
 

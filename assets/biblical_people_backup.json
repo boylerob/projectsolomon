@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "description": "Biblical people database for immediate response lookup",
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "totalPeople": 10,
+    "categories": ["patriarchs", "kings", "prophets", "disciples", "messiah"]
+  },
+  "people": {
+    "Adam": {
+      "name": "Adam",
+      "category": "patriarchs",
+      "role": "First Man",
+      "keyStories": ["Creation", "Garden of Eden", "Fall of Man"],
+      "keyVerses": ["Genesis 1:26-27", "Genesis 2:7", "Genesis 3:1-24"],
+      "themes": ["creation", "fall", "sin", "redemption"],
+      "immediateResponses": [
+        "Adam was the first man created by God, placed in the Garden of Eden. He and Eve were the first humans to sin, bringing death into the world.",
+        "Adam represents humanity's fall from grace, but also God's plan of redemption through Jesus Christ."
+      ]
+    },
+    "Noah": {
+      "name": "Noah",
+      "category": "patriarchs", 
+      "role": "Righteous Man, Ark Builder",
+      "keyStories": ["Building the Ark", "The Great Flood", "Covenant with God"],
+      "keyVerses": ["Genesis 6:9", "Genesis 7:1-24", "Genesis 9:1-17"],
+      "themes": ["righteousness", "faith", "obedience", "covenant"],
+      "immediateResponses": [
+        "Noah was a righteous man who found favor with God. He built an ark to save his family and animals from the great flood.",
+        "Noah's faith and obedience saved humanity from extinction, and God made a covenant never to destroy the earth by flood again."
+      ]
+    },
+    "Abraham": {
+      "name": "Abraham",
+      "category": "patriarchs",
+      "role": "Father of Faith", 
+      "keyStories": ["Call to Leave Ur", "Covenant with God", "Isaac's Birth", "Sacrifice of Isaac"],
+      "keyVerses": ["Genesis 12:1-3", "Genesis 15:6", "Genesis 22:1-18"],
+      "themes": ["faith", "covenant", "promise", "obedience"],
+      "immediateResponses": [
+        "Abraham is called the father of faith. God promised to make him a great nation and bless all peoples through his descendants.",
+        "Abraham's faith was counted as righteousness. He obeyed God even when asked to sacrifice his son Isaac."
+      ]
+    },
+    "Moses": {
+      "name": "Moses",
+      "category": "prophets",
+      "role": "Lawgiver, Deliverer",
+      "keyStories": ["Burning Bush", "Ten Plagues", "Red Sea", "Ten Commandments"],
+      "keyVerses": ["Exodus 3:1-15", "Exodus 14:1-31", "Exodus 20:1-17"],
+      "themes": ["deliverance", "law", "leadership", "faith"],
+      "immediateResponses": [
+        "Moses was chosen by God to deliver Israel from Egypt. He received the Ten Commandments and led the people for 40 years in the wilderness.",
+        "Moses was the greatest prophet of the Old Testament, speaking face to face with God. He wrote the first five books of the Bible."
+      ]
+    },
+    "David": {
+      "name": "David",
+      "category": "kings",
+      "role": "King of Israel, Man After God's Heart",
+      "keyStories": ["Goliath", "Anointing", "Bathsheba", "Psalms"],
+      "keyVerses": ["1 Samuel 16:1-13", "1 Samuel 17:1-58", "Psalm 51:1-19"],
+      "themes": ["courage", "repentance", "worship", "leadership"],
+      "immediateResponses": [
+        "David was a shepherd boy who became Israel's greatest king. He defeated Goliath and wrote many of the Psalms.",
+        "David was called 'a man after God's own heart' despite his sins. His story shows God's grace and the importance of repentance."
+      ]
+    },
+    "Solomon": {
+      "name": "Solomon",
+      "category": "kings",
+      "role": "Wisest King, Temple Builder",
+      "keyStories": ["Wisdom from God", "Building Temple", "Queen of Sheba"],
+      "keyVerses": ["1 Kings 3:5-14", "1 Kings 6:1-38", "Proverbs 1:1"],
+      "themes": ["wisdom", "wealth", "temple", "worship"],
+      "immediateResponses": [
+        "Solomon was the wisest king who ever lived. He built God's temple in Jerusalem and wrote Proverbs, Ecclesiastes, and Song of Solomon.",
+        "Solomon asked God for wisdom instead of wealth, and God gave him both. However, his many wives led him away from God."
+      ]
+    },
+    "Elijah": {
+      "name": "Elijah",
+      "category": "prophets",
+      "role": "Prophet of Fire",
+      "keyStories": ["Raven Feeding", "Mount Carmel", "Still Small Voice", "Chariot of Fire"],
+      "keyVerses": ["1 Kings 17:1-24", "1 Kings 18:1-46", "2 Kings 2:1-12"],
+      "themes": ["faith", "miracles", "courage", "God's voice"],
+      "immediateResponses": [
+        "Elijah was a powerful prophet who performed many miracles. He defeated the prophets of Baal on Mount Carmel and was taken to heaven in a chariot of fire.",
+        "Elijah's story shows God's power and provision. He was fed by ravens and heard God's still small voice."
+      ]
+    },
+    "Isaiah": {
+      "name": "Isaiah",
+      "category": "prophets",
+      "role": "Major Prophet",
+      "keyStories": ["Call to Prophesy", "Immanuel Prophecy", "Suffering Servant"],
+      "keyVerses": ["Isaiah 6:1-8", "Isaiah 7:14", "Isaiah 53:1-12"],
+      "themes": ["holiness", "messiah", "suffering", "redemption"],
+      "immediateResponses": [
+        "Isaiah was a major prophet who wrote the longest prophetic book. He prophesied about the coming Messiah and the suffering servant.",
+        "Isaiah's prophecies about Jesus are incredibly detailed, including His virgin birth and suffering. He is quoted more in the New Testament than any other prophet."
+      ]
+    },
+    "Jesus": {
+      "name": "Jesus",
+      "category": "messiah",
+      "role": "Son of God, Savior",
+      "keyStories": ["Birth", "Miracles", "Sermon on Mount", "Crucifixion", "Resurrection"],
+      "keyVerses": ["John 3:16", "Matthew 28:18-20", "Luke 2:1-20"],
+      "themes": ["love", "salvation", "grace", "forgiveness", "resurrection"],
+      "immediateResponses": [
+        "Jesus is the Son of God who came to earth to save us from our sins. He died on the cross and rose from the dead to give us eternal life.",
+        "Jesus performed many miracles, taught about God's kingdom, and showed us how to love God and others. He is the Messiah promised in the Old Testament."
+      ]
+    },
+    "Paul": {
+      "name": "Paul",
+      "category": "apostles",
+      "role": "Apostle to the Gentiles",
+      "keyStories": ["Conversion on Road", "Missionary Journeys", "Prison Letters"],
+      "keyVerses": ["Acts 9:1-31", "Romans 1:16-17", "Philippians 4:13"],
+      "themes": ["conversion", "grace", "mission", "suffering", "faith"],
+      "immediateResponses": [
+        "Paul was a persecutor of Christians who became the greatest missionary. He was converted on the road to Damascus and wrote most of the New Testament letters.",
+        "Paul traveled throughout the Roman Empire spreading the gospel. He suffered much but said 'I can do all things through Christ who strengthens me.'"
+      ]
+    }
+  }
+}
