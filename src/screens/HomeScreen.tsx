@@ -6,7 +6,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 type RootStackParamList = {
   Home: undefined;
   BibleStudy: undefined;
-  Meditation: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -30,12 +29,7 @@ export const HomeScreen = () => {
 
           
 
-          <TouchableOpacity 
-            style={styles.button}
-            onPress={() => navigation.navigate('Meditation')}
-          >
-            <Text style={styles.buttonText}>Meditation</Text>
-          </TouchableOpacity>
+          
         </View>
       </View>
     </SafeAreaView>

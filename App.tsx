@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { HomeScreen } from './src/screens/HomeScreen';
 import BibleStudyScreen from './src/screens/BibleStudyScreen';
-import { MeditationScreen } from './src/screens/MeditationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,13 +32,7 @@ export default function App() {
           }}
         />
 
-        <Stack.Screen 
-          name="Meditation" 
-          component={MeditationScreen}
-          options={{
-            title: 'Meditation',
-          }}
-        />
+
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
