@@ -192,16 +192,7 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
     );
   };
 
-  const renderPrayerPrompt = () => {
-    if (!response?.prayerPrompt) return null;
 
-    return (
-      <View style={styles.prayerSection}>
-        <Text style={styles.sectionTitle}>🙏 Prayer</Text>
-        <Text style={styles.prayerText}>{response.prayerPrompt}</Text>
-      </View>
-    );
-  };
 
   const renderFurtherStudy = () => {
     if (!response?.furtherStudy || response.furtherStudy.length === 0) return null;
@@ -365,7 +356,6 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
 
                 {renderScriptureReferences()}
                 {renderPersonalApplication()}
-                {renderPrayerPrompt()}
                 {renderFurtherStudy()}
                 {renderFollowUpQuestions()}
                 {renderResponseRating()}
@@ -618,18 +608,7 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 20,
   },
-  prayerSection: {
-    marginBottom: 15,
-    paddingTop: 15,
-    borderTopWidth: 1,
-    borderTopColor: '#e9ecef',
-  },
-  prayerText: {
-    fontSize: 14,
-    color: '#333',
-    fontStyle: 'italic',
-    lineHeight: 20,
-  },
+
   studySection: {
     marginBottom: 15,
     paddingTop: 15,

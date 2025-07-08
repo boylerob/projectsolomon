@@ -9,7 +9,6 @@ export interface UserContext {
   spiritualMaturity: 'beginner' | 'intermediate' | 'advanced';
   preferredTranslation: string;
   studyTopics: string[];
-  prayerRequests: string[];
   recentQuestions: string[];
   sessionHistory: ConversationSession[];
   preferredTone?: 'friendly' | 'scholarly' | 'pastoral' | 'casual';
@@ -30,9 +29,8 @@ export interface AgentResponse {
   content: string;
   scriptureReferences: ScriptureReference[];
   personalApplication: string;
-  prayerPrompt?: string;
   furtherStudy?: StudyRecommendation[];
-  responseType: 'teaching' | 'encouragement' | 'guidance' | 'correction' | 'prayer';
+  responseType: 'teaching' | 'encouragement' | 'guidance' | 'correction';
   confidence: number;
   followUpQuestions: string[];
   immediateResponse?: ImmediateResponse;
@@ -65,7 +63,6 @@ export interface AgentConfig {
   apiUrl: string;
   contextLevel: 'minimal' | 'standard' | 'comprehensive';
   responseStyle: 'conversational' | 'scholarly' | 'pastoral';
-  includePrayerPrompts: boolean;
   includePersonalApplication: boolean;
   includeFurtherStudy: boolean;
 }
@@ -78,7 +75,6 @@ class AgentService {
     apiUrl: 'https://us-central1-book-guide-7ef1e.cloudfunctions.net/api/ask',
     contextLevel: 'comprehensive',
     responseStyle: 'pastoral',
-    includePrayerPrompts: true,
     includePersonalApplication: true,
     includeFurtherStudy: true,
   };
@@ -106,7 +102,6 @@ class AgentService {
       spiritualMaturity: 'beginner',
       preferredTranslation: 'ASV',
       studyTopics: [],
-      prayerRequests: [],
       recentQuestions: [],
       sessionHistory: [],
     };
@@ -221,9 +216,7 @@ class AgentService {
       personalApplication: immediateResponse.type === 'factual' ? 
         "This information comes directly from the Bible and can help you in your study." : 
         "Take time to reflect on this question and how it applies to your situation.",
-      prayerPrompt: immediateResponse.type === 'factual' ? 
-        "Thank you, Lord, for Your Word and the wisdom it provides." :
-        "Lord, help me to understand what You want me to learn from this question.",
+
       furtherStudy: [],
       responseType: immediateResponse.type === 'factual' ? 'teaching' : 'guidance',
       confidence: 1.0,
@@ -364,7 +357,7 @@ class AgentService {
       content: rawResponse,
       scriptureReferences: this.extractScriptureReferences(rawResponse),
       personalApplication: await this.generatePersonalApplication(rawResponse, originalQuestion),
-      prayerPrompt: this.generatePrayerPrompt(rawResponse, originalQuestion),
+
       furtherStudy: await this.generateStudyRecommendations(rawResponse, originalQuestion),
       responseType: this.determineResponseType(rawResponse, originalQuestion),
       confidence: 0.85, // This would be calculated based on response quality
@@ -402,10 +395,7 @@ class AgentService {
     return KnowledgeEnhancementService.generatePersonalizedApplication(question, response, this.userContext);
   }
 
-  // Generate prayer prompts
-  private generatePrayerPrompt(response: string, question: string): string {
-    return "Lord, help me to understand and apply Your truth in my life. Give me wisdom and strength to live according to Your Word. Amen.";
-  }
+
 
   // Generate study recommendations
   private async generateStudyRecommendations(response: string, question: string): Promise<StudyRecommendation[]> {
@@ -419,9 +409,7 @@ class AgentService {
     const lowerResponse = response.toLowerCase();
     const lowerQuestion = question.toLowerCase();
     
-    if (lowerQuestion.includes('pray') || lowerResponse.includes('pray')) {
-      return 'prayer';
-    } else if (lowerQuestion.includes('help') || lowerQuestion.includes('struggle')) {
+    if (lowerQuestion.includes('help') || lowerQuestion.includes('struggle')) {
       return 'encouragement';
     } else if (lowerQuestion.includes('teach') || lowerQuestion.includes('explain')) {
       return 'teaching';

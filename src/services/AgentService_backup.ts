@@ -8,7 +8,6 @@ export interface UserContext {
   spiritualMaturity: 'beginner' | 'intermediate' | 'advanced';
   preferredTranslation: string;
   studyTopics: string[];
-  prayerRequests: string[];
   recentQuestions: string[];
   sessionHistory: ConversationSession[];
   preferredTone?: 'friendly' | 'scholarly' | 'pastoral' | 'casual';
@@ -29,9 +28,8 @@ export interface AgentResponse {
   content: string;
   scriptureReferences: ScriptureReference[];
   personalApplication: string;
-  prayerPrompt?: string;
   furtherStudy?: StudyRecommendation[];
-  responseType: 'teaching' | 'encouragement' | 'guidance' | 'correction' | 'prayer';
+  responseType: 'teaching' | 'encouragement' | 'guidance' | 'correction';
   confidence: number;
   followUpQuestions: string[];
   immediateResponse?: ImmediateResponse;
