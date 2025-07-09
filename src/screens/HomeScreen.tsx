@@ -16,7 +16,7 @@ const { width } = Dimensions.get('window');
 
 export const HomeScreen = () => {
   const [question, setQuestion] = useState('');
-  const [mode, setMode] = useState<'chat' | 'summary' | 'deep'>('chat');
+  // const [mode, setMode] = useState<'chat' | 'summary' | 'deep'>('chat');
   const [response, setResponse] = useState<AgentResponse | null>(null);
   const [immediateResponse, setImmediateResponse] = useState<ImmediateResponse | null>(null);
   const [loading, setLoading] = useState(false);
@@ -25,11 +25,11 @@ export const HomeScreen = () => {
   const [userContext, setUserContext] = useState<UserContext | null>(null);
   const [showFollowUps, setShowFollowUps] = useState(false);
 
-  const modes = [
-    { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
-    { label: 'Summary', value: 'summary' as const, description: 'Structured overview with key points' },
-    { label: 'Deep', value: 'deep' as const, description: 'Comprehensive study with detailed analysis' },
-  ];
+  // const modes = [
+  //   { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
+  //   { label: 'Summary', value: 'summary' as const, description: 'Structured overview with key points' },
+  //   { label: 'Deep', value: 'deep' as const, description: 'Comprehensive study with detailed analysis' },
+  // ];
 
   useEffect(() => {
     initializeContext();
@@ -62,7 +62,7 @@ export const HomeScreen = () => {
 
       // If the immediate response is complete, we're done
       if (immediate.isComplete) {
-        const completeResponse = await AgentService.askQuestion(question, mode);
+        const completeResponse = await AgentService.askQuestion(question, 'chat'); // Default to chat mode for immediate response
         setResponse(completeResponse);
         setShowFollowUps(true);
         return;
@@ -70,7 +70,7 @@ export const HomeScreen = () => {
 
       // Otherwise, show AI processing
       setAiLoading(true);
-      const agentResponse = await AgentService.askQuestion(question, mode);
+      const agentResponse = await AgentService.askQuestion(question, 'chat'); // Default to chat mode for full response
       setResponse(agentResponse);
       setShowFollowUps(true);
     } catch (err: any) {
@@ -241,6 +241,7 @@ export const HomeScreen = () => {
 
       <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
         {/* Mode Selection */}
+        {/*
         <View style={styles.modeSection}>
           <Text style={styles.modeTitle}>Response Type</Text>
           <View style={styles.modeRow}>
@@ -267,6 +268,7 @@ export const HomeScreen = () => {
             ))}
           </View>
         </View>
+        */}
 
         {/* Question Input */}
         <View style={styles.inputSection}>

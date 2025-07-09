@@ -27,20 +27,23 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
   additionalContext 
 }) => {
   const [question, setQuestion] = useState('');
-  const [mode, setMode] = useState<'chat' | 'summary' | 'deep'>('chat');
+  // Remove mode state and mode selection UI
+  // const [mode, setMode] = useState<'chat' | 'summary' | 'deep'>('chat');
   const [response, setResponse] = useState<AgentResponse | null>(null);
   const [immediateResponse, setImmediateResponse] = useState<ImmediateResponse | null>(null);
+  const [secondImmediateResponse, setSecondImmediateResponse] = useState<ImmediateResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiLoading, setAiLoading] = useState(false);
   const [error, setError] = useState('');
   const [userContext, setUserContext] = useState<UserContext | null>(null);
   const [showFollowUps, setShowFollowUps] = useState(false);
 
-  const modes = [
-    { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
-    { label: 'Summary', value: 'summary' as const, description: 'Structured overview with key points' },
-    { label: 'Deep', value: 'deep' as const, description: 'Comprehensive study with detailed analysis' },
-  ];
+  // Remove the modes array and mode selection UI
+  // const modes = [
+  //   { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
+  //   { label: 'Summary', value: 'summary' as const, description: 'Structured overview with key points' },
+  //   { label: 'Deep', value: 'deep' as const, description: 'Comprehensive study with detailed analysis' },
+  // ];
 
   useEffect(() => {
     if (visible) {
@@ -65,33 +68,56 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
     setError('');
     setResponse(null);
     setImmediateResponse(null);
+    setSecondImmediateResponse(null);
     setShowFollowUps(false);
 
     try {
-      // Get immediate response first
+      // STEP 1: Get first immediate response (welcome)
       const immediate = await AgentService.getImmediateResponse(question);
       setImmediateResponse(immediate);
       setLoading(false);
 
-      // If the immediate response is complete, we're done
+      // If the immediate response is complete (factual answer), we're done
       if (immediate.isComplete) {
-        const completeResponse = await AgentService.askQuestion(question, mode, additionalContext);
+        const completeResponse = await AgentService.askQuestion(question);
         setResponse(completeResponse);
         setShowFollowUps(true);
         return;
       }
 
-      // Otherwise, show AI processing
-      setAiLoading(true);
-      const agentResponse = await AgentService.askQuestion(question, mode, additionalContext);
-      setResponse(agentResponse);
-      setShowFollowUps(true);
+      // STEP 2: Start Gemini processing IMMEDIATELY (in parallel)
+      const geminiPromise = AgentService.askQuestion(question);
+
+      // STEP 3: Get second immediate response (acknowledgment) for natural conversation flow
+      if (immediate.type === 'conversational') {
+        // Small delay to simulate natural conversation cadence
+        setTimeout(async () => {
+          const secondImmediate = await AgentService.getSecondImmediateResponse(question, immediate);
+          if (secondImmediate) {
+            setSecondImmediateResponse(secondImmediate);
+            
+            // STEP 4: Show processing indicator and wait for Gemini results
+            setTimeout(async () => {
+              setAiLoading(true);
+              try {
+                const agentResponse = await geminiPromise; // Use the already-started promise
+                setResponse(agentResponse);
+                setShowFollowUps(true);
+              } catch (err: any) {
+                setError('Error contacting Solomon. Please try again.');
+                console.error('Error asking question:', err);
+              } finally {
+                setAiLoading(false);
+              }
+            }, 1200); // Wait 1.2 seconds after second response before showing results
+          }
+        }, 800); // 800ms delay for natural cadence
+      }
     } catch (err: any) {
       setError('Error contacting Solomon. Please try again.');
       console.error('Error asking question:', err);
     } finally {
       setLoading(false);
-      setAiLoading(false);
     }
   };
 
@@ -102,65 +128,7 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
     setTimeout(() => askSolomon(), 100);
   };
 
-  const rateResponse = async (rating: number) => {
-    if (response) {
-      try {
-        await AgentService.rateResponse(response.content, rating);
-        Alert.alert('Thank you!', 'Your feedback helps Solomon improve.');
-      } catch (error) {
-        console.error('Error rating response:', error);
-      }
-    }
-  };
-
-  const closeModal = () => {
-    setQuestion('');
-    setResponse(null);
-    setImmediateResponse(null);
-    setError('');
-    setLoading(false);
-    setAiLoading(false);
-    setShowFollowUps(false);
-    onClose();
-  };
-
-  const renderImmediateResponse = () => {
-    if (!immediateResponse) return null;
-
-    const getResponseTypeColor = () => {
-      switch (immediateResponse.type) {
-        case 'factual': return '#17a2b8';
-        case 'conversational': return '#28a745';
-        case 'clarification': return '#ffc107';
-        default: return '#6c757d';
-      }
-    };
-
-    const getResponseTypeText = () => {
-      switch (immediateResponse.type) {
-        case 'factual': return 'Factual Answer';
-        case 'conversational': return 'Processing...';
-        case 'clarification': return 'Clarification';
-        default: return 'Response';
-      }
-    };
-
-    return (
-      <View style={styles.immediateResponseContainer}>
-        <View style={[styles.responseTypeBadge, { backgroundColor: getResponseTypeColor() }]}>
-          <Text style={styles.responseTypeText}>{getResponseTypeText()}</Text>
-        </View>
-        <Text style={styles.immediateResponseText}>{immediateResponse.text}</Text>
-        
-        {aiLoading && immediateResponse.type === 'conversational' && (
-          <View style={styles.aiProcessingContainer}>
-            <ActivityIndicator size="small" color="#4B0082" />
-            <Text style={styles.aiProcessingText}>Solomon is thinking deeper about this...</Text>
-          </View>
-        )}
-      </View>
-    );
-  };
+  // Remove the renderResponseRating function and all references to it
 
   const renderScriptureReferences = () => {
     if (!response?.scriptureReferences || response.scriptureReferences.length === 0) {
@@ -234,26 +202,61 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
     );
   };
 
-  const renderResponseRating = () => {
-    if (!response) return null;
+  // In the render section, remove any call to renderResponseRating or feedback UI
+
+  // Restore closeModal function
+  const closeModal = () => {
+    setQuestion('');
+    setResponse(null);
+    setImmediateResponse(null);
+    setSecondImmediateResponse(null);
+    setError('');
+    setLoading(false);
+    setAiLoading(false);
+    setShowFollowUps(false);
+    onClose();
+  };
+
+  // Restore renderImmediateResponse function
+  const renderImmediateResponse = () => {
+    if (!immediateResponse) return null;
+
+    const getResponseTypeColor = () => {
+      switch (immediateResponse.type) {
+        case 'factual': return '#17a2b8';
+        case 'conversational': return '#28a745';
+        case 'clarification': return '#ffc107';
+        default: return '#6c757d';
+      }
+    };
+
+    const getResponseTypeText = () => {
+      switch (immediateResponse.type) {
+        case 'factual': return 'Factual Answer';
+        case 'conversational': return 'Processing...';
+        case 'clarification': return 'Clarification';
+        default: return 'Response';
+      }
+    };
 
     return (
-      <View style={styles.ratingSection}>
-        <Text style={styles.ratingTitle}>Was this helpful?</Text>
-        <View style={styles.ratingButtons}>
-          <TouchableOpacity
-            style={[styles.ratingButton, styles.thumbsDown]}
-            onPress={() => rateResponse(1)}
-          >
-            <Text style={styles.ratingButtonText}>👎</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.ratingButton, styles.thumbsUp]}
-            onPress={() => rateResponse(5)}
-          >
-            <Text style={styles.ratingButtonText}>👍</Text>
-          </TouchableOpacity>
+      <View style={styles.immediateResponseContainer}>
+        <View style={[styles.responseTypeBadge, { backgroundColor: getResponseTypeColor() }]}> 
+          <Text style={styles.responseTypeText}>{getResponseTypeText()}</Text>
         </View>
+        <Text style={styles.immediateResponseText}>{immediateResponse.text}</Text>
+        {/* Render second immediate response if available */}
+        {secondImmediateResponse && (
+          <View style={styles.secondImmediateResponseContainer}>
+            <Text style={styles.secondImmediateResponseText}>{secondImmediateResponse.text}</Text>
+          </View>
+        )}
+        {aiLoading && immediateResponse.type === 'conversational' && (
+          <View style={styles.aiProcessingContainer}>
+            <ActivityIndicator size="small" color="#4B0082" />
+            <Text style={styles.aiProcessingText}>Solomon is thinking deeper about this...</Text>
+          </View>
+        )}
       </View>
     );
   };
@@ -273,61 +276,28 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
           </View>
 
           <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
-            {/* Mode Selection */}
-            <View style={styles.modeSection}>
-              <Text style={styles.modeTitle}>Response Type</Text>
-              <View style={styles.modeRow}>
-                {modes.map((m) => (
-                  <TouchableOpacity
-                    key={m.value}
-                    style={[styles.modeButton, mode === m.value && styles.modeButtonActive]}
-                    onPress={() => setMode(m.value)}
-                    disabled={loading}
-                  >
-                    <Text style={[
-                      styles.modeButtonText, 
-                      mode === m.value && styles.modeButtonTextActive
-                    ]}>
-                      {m.label}
-                    </Text>
-                    <Text style={[
-                      styles.modeDescription,
-                      mode === m.value && styles.modeDescriptionActive
-                    ]}>
-                      {m.description}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </View>
-
+            {/* Remove mode selection UI */}
             {/* Question Input */}
             <View style={styles.inputSection}>
               <TextInput
                 style={styles.input}
-                placeholder="What would you like to ask Solomon?"
+                placeholder="Ask Solomon anything..."
                 value={question}
                 onChangeText={setQuestion}
-                editable={!loading}
-                multiline
+                onSubmitEditing={askSolomon}
+                editable={!loading && !aiLoading}
                 maxLength={500}
-                textAlignVertical="top"
+                multiline
+                returnKeyType="send"
               />
-              <Text style={styles.charCount}>{question.length}/500</Text>
-            </View>
-
-            {/* Ask Button */}
-            <TouchableOpacity
-              style={[styles.askButton, (!question.trim() || loading) && styles.askButtonDisabled]}
-              onPress={askSolomon}
-              disabled={loading || !question.trim()}
-            >
-              {loading ? (
-                <ActivityIndicator size="small" color="#fff" />
-              ) : (
+              <TouchableOpacity
+                style={styles.askButton}
+                onPress={askSolomon}
+                disabled={loading || aiLoading || !question.trim()}
+              >
                 <Text style={styles.askButtonText}>Ask Solomon</Text>
-              )}
-            </TouchableOpacity>
+              </TouchableOpacity>
+            </View>
 
             {/* Loading State */}
             {loading && (
@@ -358,7 +328,6 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
                 {renderPersonalApplication()}
                 {renderFurtherStudy()}
                 {renderFollowUpQuestions()}
-                {renderResponseRating()}
               </View>
             )}
           </ScrollView>
@@ -532,6 +501,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
     lineHeight: 24,
+  },
+  secondImmediateResponseContainer: {
+    marginTop: 8,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#e9ecef',
+  },
+  secondImmediateResponseText: {
+    fontSize: 14,
+    color: '#666',
+    fontStyle: 'italic',
   },
   aiProcessingContainer: {
     flexDirection: 'row',

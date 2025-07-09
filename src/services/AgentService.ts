@@ -3,6 +3,7 @@ import axios from 'axios';
 import KnowledgeEnhancementService from './KnowledgeEnhancementService';
 import LexiconService, { LexiconResponse } from './LexiconService';
 import QuestionParserService, { ParsedQuestion, QuestionAnalysis } from './QuestionParserService';
+import { LocalLLMService, ClarificationContext } from './LocalLLMService';
 
 // Types for the enhanced agent system
 export interface UserContext {
@@ -71,6 +72,11 @@ class AgentService {
   private questionParser: typeof QuestionParserService;
   private userContext: UserContext | null = null;
   private lexiconService: LexiconService;
+  private localLLM: LocalLLMService;
+  private pendingClarification: {
+    originalQuestion: string;
+    originalResponse: string;
+  } | null = null;
   private config: AgentConfig = {
     apiUrl: 'https://us-central1-book-guide-7ef1e.cloudfunctions.net/api/ask',
     contextLevel: 'comprehensive',
@@ -82,6 +88,79 @@ class AgentService {
   constructor() {
     this.lexiconService = new LexiconService();
     this.questionParser = QuestionParserService;
+    this.localLLM = new LocalLLMService();
+    this.initializeLocalLLM();
+  }
+
+  private async initializeLocalLLM() {
+    await this.localLLM.initialize();
+  }
+
+  /**
+   * Check if a question is likely a clarification response
+   */
+  private isClarificationQuestion(question: string): boolean {
+    // Simple heuristics to detect clarification responses
+    const clarificationIndicators = [
+      'yes', 'no', 'that\'s right', 'exactly', 'focus on', 'context', 'explain',
+      'more detail', 'specifically', 'in terms of', 'regarding', 'about'
+    ];
+    
+    const lowerQuestion = question.toLowerCase();
+    return clarificationIndicators.some(indicator => lowerQuestion.includes(indicator)) ||
+           question.length < 50; // Short responses are often clarifications
+  }
+
+  /**
+   * Handle clarification using local LLM
+   */
+  private async handleClarification(clarification: string): Promise<AgentResponse> {
+    if (!this.pendingClarification) {
+      throw new Error('No pending clarification context found');
+    }
+
+    try {
+      const context: ClarificationContext = {
+        originalQuestion: this.pendingClarification.originalQuestion,
+        originalResponse: this.pendingClarification.originalResponse,
+        userClarification: clarification
+      };
+
+      // Use local LLM to refine the response
+      const localLLMResponse = await this.localLLM.processClarification(context);
+      
+      // Create refined response
+      const refinedResponse: AgentResponse = {
+        content: localLLMResponse.refinedResponse,
+        scriptureReferences: this.extractScriptureReferences(localLLMResponse.refinedResponse),
+        personalApplication: 'This refined response incorporates your clarification to provide more targeted guidance.',
+        responseType: 'teaching',
+        confidence: localLLMResponse.confidence,
+        followUpQuestions: [],
+        processingTime: localLLMResponse.processingTime
+      };
+
+      // Clear pending clarification
+      this.pendingClarification = null;
+      
+      console.log('Clarification processed using Local LLM');
+      return refinedResponse;
+    } catch (error) {
+      console.error('Error processing clarification:', error);
+      
+      // Fallback: return original response with clarification note
+      const fallbackResponse: AgentResponse = {
+        content: `${this.pendingClarification!.originalResponse}\n\nNote: I understand you want to clarify: "${clarification}". Let me provide a more focused response.`,
+        scriptureReferences: this.extractScriptureReferences(this.pendingClarification!.originalResponse),
+        personalApplication: 'Consider how this clarification helps you better understand the topic.',
+        responseType: 'guidance',
+        confidence: 0.7,
+        followUpQuestions: []
+      };
+      
+      this.pendingClarification = null;
+      return fallbackResponse;
+    }
   }
 
   // Initialize user context
@@ -171,6 +250,44 @@ class AgentService {
     };
   }
 
+  // NEW: Get second immediate response (acknowledgment) for natural conversation flow
+  async getSecondImmediateResponse(question: string, firstResponse?: ImmediateResponse): Promise<ImmediateResponse | null> {
+    if (!this.userContext) {
+      await this.initializeUserContext();
+    }
+
+    // Only provide second response if first was a welcome
+    if (!firstResponse || firstResponse.type !== 'conversational') {
+      return null;
+    }
+
+    // Convert AgentService UserContext to LexiconService UserContext
+    const lexiconUserContext = {
+      spiritualMaturity: this.userContext!.spiritualMaturity,
+      conversationHistory: this.userContext!.recentQuestions,
+      isFirstQuestion: false, // This is now the second response
+      recentTopics: this.userContext!.studyTopics,
+      preferredTone: this.userContext!.preferredTone,
+      interactionStyle: this.userContext!.interactionStyle,
+      recentPhrases: this.userContext!.recentPhrases,
+    };
+
+    // Get acknowledgment response
+    const acknowledgmentResponse = this.lexiconService.getResponse(question, lexiconUserContext);
+
+    // Only return if it's an acknowledgment type
+    if (acknowledgmentResponse.category === 'acknowledgment') {
+      return {
+        text: acknowledgmentResponse.text,
+        type: 'conversational',
+        immediateAnswer: acknowledgmentResponse.immediateAnswer,
+        isComplete: false, // This is just an acknowledgment, not a complete answer
+      };
+    }
+
+    return null;
+  }
+
   // ENHANCED: New optimal flow with immediate parsing
   async askQuestion(
     question: string,
@@ -179,6 +296,11 @@ class AgentService {
   ): Promise<AgentResponse> {
     if (!this.userContext) {
       await this.initializeUserContext();
+    }
+
+    // Check if this is a clarification for a pending question
+    if (this.pendingClarification && this.isClarificationQuestion(question)) {
+      return this.handleClarification(question);
     }
 
     // STEP 1: Immediately parse and categorize locally (milliseconds)
@@ -258,6 +380,12 @@ class AgentService {
       const enhancedResponse = await this.processWithAI(question, mode, additionalContext, immediateResponse);
       enhancedResponse.questionAnalysis = parsedQuestion.analysis;
       enhancedResponse.processingTime = Date.now();
+      
+      // Store for potential clarification refinement
+      this.pendingClarification = {
+        originalQuestion: question,
+        originalResponse: enhancedResponse.content
+      };
       
       // Update session history with enhanced response
       await this.updateSessionHistory(question, enhancedResponse);
