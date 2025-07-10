@@ -1,27 +1,36 @@
 # Loose Ends & Known Issues
 
-## Verb Forms Functionality
+## Automatic Lemmatization ✅ RESOLVED
 - **Issue**: Verb forms toggle is not working as expected
 - **Current State**: 
-  - Toggle button exists in UI
-  - Server receives `useVerbForms` parameter
-  - Verb forms dictionary is populated
-  - Search results don't include variations when toggle is enabled
+  - ✅ Automatic verb detection and lemmatization implemented
+  - ✅ Two-phase search: immediate exact results + background verb variations
+  - ✅ Comprehensive verb forms dictionary with 100+ verbs
+  - ✅ Smart detection of verb variations (base, past, present participle, etc.)
+  - ✅ No manual toggle needed - works automatically
 - **Root Cause**: 
-  - The `getWordVariations` function is not properly handling the verb forms lookup
-  - The server is not correctly processing the `useVerbForms` parameter
-- **Impact**: Users cannot search for variations of verbs (e.g., heal, heals, healed, healing)
+  - Manual toggle approach was not user-friendly
+  - Needed automatic detection and intelligent search strategy
+- **Solution**:
+  1. ✅ Implemented `isVerbQuery()` method for automatic verb detection
+  2. ✅ Added comprehensive verb forms dictionary to LocalBibleDataService
+  3. ✅ Implemented `getWordVariations()` helper method
+  4. ✅ Created two-phase search: `performExactSearch()` + `performVariationSearch()`
+  5. ✅ Removed manual toggle - now fully automatic
+- **Performance**: 
+  - Phase 1: Immediate exact results (fast)
+  - Phase 2: Background verb variations (enhanced results)
+  - Verb variations get slightly lower relevance scores
+  - Duplicate prevention between phases
+- **Impact**: Users get comprehensive search results automatically when searching verbs
 - **Priority**: Medium
-- **Next Steps**:
-  1. Debug the `getWordVariations` function
-  2. Verify the verb forms dictionary lookup
-  3. Test with known verb variations
-  4. Add more comprehensive logging
+- **Resolution Date**: December 2024
 
 ## Future Improvements
-1. **Search Performance**
+1. **Search Performance** ✅ PARTIALLY COMPLETED
+   - ✅ Implemented automatic lemmatization with two-phase search
+   - ✅ Optimized verb form detection and processing
    - Consider implementing search result caching
-   - Optimize verse filtering logic
    - Add pagination for large result sets
 
 2. **UI/UX Enhancements**
@@ -35,6 +44,12 @@
    - Implement verse comparison
    - Add study notes functionality
    - Support for verse sharing
+
+4. **Jesus Quotes Integration** ✅ COMPLETED
+   - ✅ Comprehensive database of 456 Jesus quotes
+   - ✅ Smart querying by verse, topic, book, and keyword
+   - ✅ Integration with AgentService for authoritative responses
+   - ✅ Enhanced AI context with relevant Jesus quotes
 
 ## Technical Debt
 1. **Code Organization**

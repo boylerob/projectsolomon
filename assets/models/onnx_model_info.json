@@ -1,0 +1,14 @@
+{
+  "model_name": "tinyllama_bible_refinement",
+  "format": "onnx",
+  "input_shape": [
+    1,
+    512
+  ],
+  "output_shape": [
+    1,
+    512
+  ],
+  "file_size": "~1.1GB",
+  "status": "ready_for_conversion"
+}

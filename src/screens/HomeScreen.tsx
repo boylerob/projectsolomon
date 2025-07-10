@@ -24,6 +24,9 @@ export const HomeScreen = () => {
   const [error, setError] = useState('');
   const [userContext, setUserContext] = useState<UserContext | null>(null);
   const [showFollowUps, setShowFollowUps] = useState(false);
+  const [isSolomonAsked, setIsSolomonAsked] = useState(false);
+  const [conversationHistory, setConversationHistory] = useState<Array<{question: string, response: string}>>([]);
+  const [followUpQuestion, setFollowUpQuestion] = useState('');
 
   // const modes = [
   //   { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
@@ -46,6 +49,7 @@ export const HomeScreen = () => {
 
   const askSolomon = async () => {
     if (!question.trim()) return;
+    setIsSolomonAsked(true);
     
     setLoading(true);
     setAiLoading(false);
@@ -82,11 +86,40 @@ export const HomeScreen = () => {
     }
   };
 
+  const askFollowUp = async () => {
+    if (!followUpQuestion.trim()) return;
+    
+    // Add to conversation history
+    const newEntry = {
+      question: followUpQuestion,
+      response: 'Processing...'
+    };
+    setConversationHistory([...conversationHistory, newEntry]);
+    
+    try {
+      const followUpResponse = await AgentService.askQuestion(followUpQuestion, 'chat');
+      
+      // Update the conversation history with the actual response
+      setConversationHistory(prev => 
+        prev.map((entry, index) => 
+          index === prev.length - 1 
+            ? { ...entry, response: followUpResponse.content }
+            : entry
+        )
+      );
+      
+      setFollowUpQuestion('');
+    } catch (err: any) {
+      setError('Error asking follow-up question. Please try again.');
+      console.error('Error asking follow-up:', err);
+    }
+  };
+
   const handleFollowUpQuestion = (followUpQuestion: string) => {
-    setQuestion(followUpQuestion);
+    setFollowUpQuestion(followUpQuestion);
     setShowFollowUps(false);
     // Auto-ask the follow-up question
-    setTimeout(() => askSolomon(), 100);
+    setTimeout(() => askFollowUp(), 100);
   };
 
   const rateResponse = async (rating: number) => {
@@ -240,63 +273,44 @@ export const HomeScreen = () => {
       </View>
 
       <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        {/* Mode Selection */}
-        {/*
-        <View style={styles.modeSection}>
-          <Text style={styles.modeTitle}>Response Type</Text>
-          <View style={styles.modeRow}>
-            {modes.map((m) => (
-              <TouchableOpacity
-                key={m.value}
-                style={[styles.modeButton, mode === m.value && styles.modeButtonActive]}
-                onPress={() => setMode(m.value)}
-                disabled={loading}
-              >
-                <Text style={[
-                  styles.modeButtonText, 
-                  mode === m.value && styles.modeButtonTextActive
-                ]}>
-                  {m.label}
-                </Text>
-                <Text style={[
-                  styles.modeDescription,
-                  mode === m.value && styles.modeDescriptionActive
-                ]}>
-                  {m.description}
-                </Text>
-              </TouchableOpacity>
-            ))}
+        {/* Initial Question Input - Only show if not asked yet */}
+        {!isSolomonAsked && (
+          <>
+            <View style={styles.inputSection}>
+              <TextInput
+                style={styles.input}
+                placeholder="What would you like to ask Solomon?"
+                value={question}
+                onChangeText={setQuestion}
+                editable={!loading}
+                multiline
+                maxLength={500}
+                textAlignVertical="top"
+              />
+              <Text style={styles.charCount}>{question.length}/500</Text>
+            </View>
+
+            <TouchableOpacity
+              style={[styles.askButton, (!question.trim() || loading) && styles.askButtonDisabled]}
+              onPress={askSolomon}
+              disabled={loading || !question.trim()}
+            >
+              {loading ? (
+                <ActivityIndicator size="small" color="#fff" />
+              ) : (
+                <Text style={styles.askButtonText}>Ask Solomon</Text>
+              )}
+            </TouchableOpacity>
+          </>
+        )}
+
+        {/* Anchor Question Headline */}
+        {isSolomonAsked && question && (
+          <View style={styles.anchorQuestionContainer}>
+            <Text style={styles.anchorQuestionLabel}>Your Question:</Text>
+            <Text style={styles.anchorQuestionText}>{question}</Text>
           </View>
-        </View>
-        */}
-
-        {/* Question Input */}
-        <View style={styles.inputSection}>
-          <TextInput
-            style={styles.input}
-            placeholder="What would you like to ask Solomon?"
-            value={question}
-            onChangeText={setQuestion}
-            editable={!loading}
-            multiline
-            maxLength={500}
-            textAlignVertical="top"
-          />
-          <Text style={styles.charCount}>{question.length}/500</Text>
-        </View>
-
-        {/* Ask Button */}
-        <TouchableOpacity
-          style={[styles.askButton, (!question.trim() || loading) && styles.askButtonDisabled]}
-          onPress={askSolomon}
-          disabled={loading || !question.trim()}
-        >
-          {loading ? (
-            <ActivityIndicator size="small" color="#fff" />
-          ) : (
-            <Text style={styles.askButtonText}>Ask Solomon</Text>
-          )}
-        </TouchableOpacity>
+        )}
 
         {/* Loading State */}
         {loading && (
@@ -313,21 +327,56 @@ export const HomeScreen = () => {
           </View>
         ) : null}
 
-        {/* Immediate Response */}
-        {renderImmediateResponse()}
-
-        {/* Full AI Response */}
+        {/* Initial Response */}
         {response && (
-          <View style={styles.responseContainer}>
-            <View style={styles.mainResponse}>
-              <Text style={styles.responseText}>{response.content}</Text>
-            </View>
-
+          <View style={styles.initialResponseContainer}>
+            <Text style={styles.responseText}>{response.content}</Text>
             {renderScriptureReferences()}
-            {renderPersonalApplication()}
             {renderFurtherStudy()}
             {renderFollowUpQuestions()}
-            {renderResponseRating()}
+          </View>
+        )}
+
+        {/* Conversation History */}
+        {conversationHistory.length > 0 && (
+          <View style={styles.conversationContainer}>
+            <Text style={styles.conversationTitle}>Conversation</Text>
+            {conversationHistory.map((entry, index) => (
+              <View key={index} style={styles.conversationEntry}>
+                <View style={styles.questionBubble}>
+                  <Text style={styles.questionText}>{entry.question}</Text>
+                </View>
+                <View style={styles.responseBubble}>
+                  <Text style={styles.responseText}>{entry.response}</Text>
+                </View>
+              </View>
+            ))}
+          </View>
+        )}
+
+        {/* Follow-up Q&A Section */}
+        {isSolomonAsked && (
+          <View style={styles.followUpSection}>
+            <Text style={styles.followUpTitle}>Ask a follow-up question:</Text>
+            <View style={styles.followUpInputContainer}>
+              <TextInput
+                style={styles.followUpInput}
+                placeholder="Type your follow-up question..."
+                value={followUpQuestion}
+                onChangeText={setFollowUpQuestion}
+                multiline
+                maxLength={300}
+                returnKeyType="send"
+                onSubmitEditing={askFollowUp}
+              />
+              <TouchableOpacity
+                style={[styles.followUpSubmitButton, (!followUpQuestion.trim()) && styles.followUpSubmitButtonDisabled]}
+                onPress={askFollowUp}
+                disabled={!followUpQuestion.trim()}
+              >
+                <Text style={styles.followUpSubmitButtonText}>Ask</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         )}
       </ScrollView>
@@ -591,6 +640,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#e9ecef',
   },
+  followUpTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 10,
+  },
   followUpButton: {
     backgroundColor: '#e3f2fd',
     padding: 10,
@@ -632,5 +687,104 @@ const styles = StyleSheet.create({
   },
   ratingButtonText: {
     fontSize: 18,
+  },
+  anchorQuestionContainer: {
+    backgroundColor: '#f0f7f4',
+    padding: 15,
+    borderRadius: 8,
+    marginBottom: 15,
+    borderLeftWidth: 4,
+    borderLeftColor: '#28a745',
+  },
+  anchorQuestionLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 5,
+  },
+  anchorQuestionText: {
+    fontSize: 16,
+    color: '#28a745',
+    fontStyle: 'italic',
+  },
+  initialResponseContainer: {
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 15,
+    borderWidth: 1,
+    borderColor: '#e9ecef',
+  },
+  conversationContainer: {
+    backgroundColor: '#f8f9fa',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 15,
+    borderWidth: 1,
+    borderColor: '#e9ecef',
+  },
+  conversationTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#4B0082',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  conversationEntry: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  questionBubble: {
+    backgroundColor: '#e3f2fd',
+    padding: 10,
+    borderRadius: 10,
+    borderBottomLeftRadius: 0,
+    maxWidth: '80%',
+  },
+  questionText: {
+    fontSize: 14,
+    color: '#1976d2',
+    fontWeight: '600',
+  },
+  responseBubble: {
+    backgroundColor: '#f8f9fa',
+    padding: 10,
+    borderRadius: 10,
+    borderBottomRightRadius: 0,
+    maxWidth: '80%',
+    borderWidth: 1,
+    borderColor: '#e9ecef',
+  },
+  followUpInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    marginTop: 10,
+  },
+  followUpInput: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    padding: 10,
+    fontSize: 14,
+    backgroundColor: '#fafafa',
+    marginRight: 10,
+    minHeight: 40,
+  },
+  followUpSubmitButton: {
+    backgroundColor: '#4B0082',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  followUpSubmitButtonDisabled: {
+    backgroundColor: '#ccc',
+  },
+  followUpSubmitButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: '600',
   },
 }); 

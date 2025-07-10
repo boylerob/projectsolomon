@@ -17,6 +17,7 @@ export class LocalLLMService {
   private model: any = null;
   private isInitialized: boolean = false;
   private modelPath: string = 'assets/models/tinyllama_bible_refinement.onnx';
+  private tokenizerPath: string = 'assets/models/tinyllama/';
 
   /**
    * Initialize the local LLM service
@@ -25,18 +26,26 @@ export class LocalLLMService {
     try {
       console.log('Initializing Local LLM Service...');
       
-      // Check if model exists
-      const modelExists = await FileSystem.getInfoAsync(this.modelPath);
-      if (!modelExists.exists) {
-        console.warn('TinyLlama model not found. Local LLM will be disabled.');
+      // Check if tokenizer exists
+      const tokenizerExists = await FileSystem.getInfoAsync(this.tokenizerPath);
+      if (!tokenizerExists.exists) {
+        console.warn('TinyLlama tokenizer not found. Local LLM will be disabled.');
         return;
       }
 
-      // TODO: Load ONNX model
+      // Check if model exists (placeholder for now)
+      const modelExists = await FileSystem.getInfoAsync(this.modelPath);
+      if (!modelExists.exists) {
+        console.warn('TinyLlama model not found. Using fallback mode.');
+        this.isInitialized = true; // Still initialize for fallback
+        return;
+      }
+
+      // TODO: Load ONNX model when available
       // this.model = await this.loadONNXModel();
       
       this.isInitialized = true;
-      console.log('Local LLM Service initialized successfully');
+      console.log('Local LLM Service initialized successfully (fallback mode)');
     } catch (error) {
       console.error('Failed to initialize Local LLM Service:', error);
       this.isInitialized = false;

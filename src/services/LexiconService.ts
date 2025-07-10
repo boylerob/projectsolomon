@@ -1,6 +1,7 @@
 import responseLexicon from '../../assets/response-lexicon.json';
 import clarificationLexicon from '../../assets/clarification-lexicon.json';
 import ImmediateAnswerService, { ImmediateAnswer } from './ImmediateAnswerService';
+import { BiblicalAuthorityService } from './AgentService';
 
 export interface LexiconResponse {
   text: string;
@@ -42,6 +43,7 @@ interface PhraseScore {
     diversity: number;
     userPreference: number;
     temporal: number;
+    biblicalAuthority: number;
   };
 }
 
@@ -49,12 +51,14 @@ export class LexiconService {
   private responseLexicon: any;
   private clarificationLexicon: any;
   private immediateAnswerService: ImmediateAnswerService;
+  private biblicalAuthorityService: BiblicalAuthorityService;
   private recentPhrases: string[] = []; // Track recent phrases across sessions
 
   constructor() {
     this.responseLexicon = responseLexicon;
     this.clarificationLexicon = clarificationLexicon;
     this.immediateAnswerService = new ImmediateAnswerService();
+    this.biblicalAuthorityService = new BiblicalAuthorityService();
   }
 
   /**
@@ -210,44 +214,38 @@ export class LexiconService {
   }
 
   /**
-   * Gets an immediate response using smart weighting system
+   * Helper to check if a phrase is a direct saying of Jesus
+   * This can be improved by tagging phrases in the lexicon or by keyword/context
+   */
+  private isJesusSaying(phrase: LexiconPhrase): boolean {
+    // Check for explicit context or tag
+    if (phrase.context && phrase.context.includes('jesus') || phrase.context.includes('messiah')) {
+      return true;
+    }
+    // Heuristic: check for red-letter keywords (e.g., "Jesus said", "Truly, truly", etc.)
+    const lowerText = phrase.text.toLowerCase();
+    if (lowerText.startsWith('jesus said') || lowerText.startsWith('truly, truly') || lowerText.startsWith('verily, verily')) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Gets an immediate response using smart weighting system, prioritizing Jesus's words
    */
   private getImmediateResponse(question: string, userContext: UserContext): LexiconResponse {
-    const category = this.selectBestCategory(question, userContext);
-    const phrases = this.responseLexicon.categories[category]?.phrases || [];
-    
-    if (phrases.length === 0) {
-      return {
-        text: this.responseLexicon.fallbackResponses.default,
-        type: 'immediate',
-        category: 'fallback',
-        tone: 'neutral',
-        maturity: ['beginner', 'intermediate', 'advanced'],
-        context: ['default'],
-        confidence: 0.5
-      };
-    }
-    
-    // Filter phrases based on user context
-    const filteredPhrases = phrases.filter((phrase: LexiconPhrase) => 
-      phrase.maturity.includes(userContext.spiritualMaturity) &&
-      this.matchesContext(phrase.context, userContext)
-    );
-    
-    // If no filtered phrases, use all phrases
-    const availablePhrases = filteredPhrases.length > 0 ? filteredPhrases : phrases;
-    
+    const availablePhrases = this.responseLexicon.responses;
+    // Prioritize Jesus's words if available
+    const jesusPhrases = availablePhrases.filter((phrase: LexiconPhrase) => this.isJesusSaying(phrase));
+    let phrasesToScore = jesusPhrases.length > 0 ? jesusPhrases : availablePhrases;
     // Score and select the best phrase
-    const scoredPhrases = this.scorePhrases(availablePhrases, question, userContext);
+    const scoredPhrases = this.scorePhrases(phrasesToScore, question, userContext);
     const selectedPhrase = this.selectBestPhrase(scoredPhrases);
-    
-    // Update recent phrases tracking
     this.updateRecentPhrases(selectedPhrase.phrase.text);
-    
     return {
       text: selectedPhrase.phrase.text,
       type: 'immediate',
-      category,
+      category: this.selectBestCategory(question, userContext),
       tone: selectedPhrase.phrase.tone,
       maturity: selectedPhrase.phrase.maturity,
       context: selectedPhrase.phrase.context,
@@ -265,13 +263,15 @@ export class LexiconService {
       const diversity = this.calculateDiversityScore(phrase, userContext);
       const userPreference = this.calculateUserPreferenceScore(phrase, userContext);
       const temporal = this.calculateTemporalScore(phrase, userContext);
+      const biblicalAuthority = this.calculateBiblicalAuthorityScore(phrase, question);
       
       const totalScore = (
-        relevance * 0.35 +      // 35% weight for relevance
-        contextual * 0.25 +     // 25% weight for context
-        diversity * 0.20 +      // 20% weight for diversity
+        relevance * 0.30 +      // 30% weight for relevance
+        contextual * 0.20 +     // 20% weight for context
+        diversity * 0.15 +      // 15% weight for diversity
         userPreference * 0.15 + // 15% weight for user preference
-        temporal * 0.05         // 5% weight for temporal factors
+        temporal * 0.05 +       // 5% weight for temporal factors
+        biblicalAuthority * 0.15 // 15% weight for biblical authority
       );
       
       return {
@@ -282,7 +282,8 @@ export class LexiconService {
           contextual,
           diversity,
           userPreference,
-          temporal
+          temporal,
+          biblicalAuthority
         }
       };
     });
@@ -455,6 +456,87 @@ export class LexiconService {
   }
 
   /**
+   * Calculates biblical authority score based on sources mentioned in the phrase
+   */
+  private calculateBiblicalAuthorityScore(phrase: LexiconPhrase, question: string): number {
+    // Extract potential biblical sources from the phrase and question
+    const sources = this.extractBiblicalSources(phrase.text + ' ' + question);
+    
+    if (sources.length === 0) {
+      return 0.5; // Default score for non-biblical content
+    }
+    
+    // Calculate authority weight using the biblical authority service
+    const authorityWeight = this.biblicalAuthorityService.calculateAuthorityWeight(sources);
+    
+    // Boost score for high-authority sources
+    const highestSource = this.biblicalAuthorityService.getHighestAuthoritySource(sources);
+    if (highestSource && this.biblicalAuthorityService.isHighAuthority(highestSource)) {
+      return Math.min(authorityWeight * 1.2, 1.0); // 20% boost for high authority
+    }
+    
+    return authorityWeight;
+  }
+
+  /**
+   * Extracts biblical sources from text
+   */
+  private extractBiblicalSources(text: string): string[] {
+    const sources: string[] = [];
+    const lowerText = text.toLowerCase();
+    
+    // Check for direct mentions of biblical figures
+    const biblicalNames = [
+      'jesus', 'christ', 'paul', 'peter', 'john', 'james', 'matthew', 'mark', 'luke',
+      'moses', 'david', 'solomon', 'abraham', 'isaac', 'jacob', 'isaiah', 'jeremiah',
+      'daniel', 'elijah', 'samuel', 'joshua', 'noah', 'adam', 'job'
+    ];
+    
+    for (const name of biblicalNames) {
+      if (lowerText.includes(name)) {
+        sources.push(name.charAt(0).toUpperCase() + name.slice(1));
+      }
+    }
+    
+    // Check for book references (e.g., "in John", "according to Matthew")
+    const bookPatterns = [
+      /(?:in|according to|from)\s+(genesis|exodus|leviticus|numbers|deuteronomy|joshua|judges|ruth|samuel|kings|chronicles|ezra|nehemiah|esther|job|psalms|proverbs|ecclesiastes|song|isaiah|jeremiah|lamentations|ezekiel|daniel|hosea|joel|amos|obadiah|jonah|micah|nahum|habakkuk|zephaniah|haggai|zechariah|malachi|matthew|mark|luke|john|acts|romans|corinthians|galatians|ephesians|philippians|colossians|thessalonians|timothy|titus|philemon|hebrews|james|peter|john|jude|revelation)/gi
+    ];
+    
+    for (const pattern of bookPatterns) {
+      const matches = lowerText.match(pattern);
+      if (matches) {
+        // Map book names to likely authors
+        const bookAuthorMap: { [key: string]: string } = {
+          'genesis': 'Moses', 'exodus': 'Moses', 'leviticus': 'Moses', 'numbers': 'Moses', 'deuteronomy': 'Moses',
+          'joshua': 'Joshua', 'judges': 'Samuel', 'ruth': 'Samuel', 'samuel': 'Samuel', 'kings': 'Unknown',
+          'chronicles': 'Unknown', 'ezra': 'Ezra', 'nehemiah': 'Nehemiah', 'esther': 'Esther', 'job': 'Job',
+          'psalms': 'David', 'proverbs': 'Solomon', 'ecclesiastes': 'Solomon', 'song': 'Solomon',
+          'isaiah': 'Isaiah', 'jeremiah': 'Jeremiah', 'lamentations': 'Jeremiah', 'ezekiel': 'Ezekiel',
+          'daniel': 'Daniel', 'hosea': 'Hosea', 'joel': 'Joel', 'amos': 'Amos', 'obadiah': 'Obadiah',
+          'jonah': 'Jonah', 'micah': 'Micah', 'nahum': 'Nahum', 'habakkuk': 'Habakkuk', 'zephaniah': 'Zephaniah',
+          'haggai': 'Haggai', 'zechariah': 'Zechariah', 'malachi': 'Malachi',
+          'matthew': 'Matthew', 'mark': 'Mark', 'luke': 'Luke', 'john': 'John', 'acts': 'Luke',
+          'romans': 'Paul', 'corinthians': 'Paul', 'galatians': 'Paul', 'ephesians': 'Paul',
+          'philippians': 'Paul', 'colossians': 'Paul', 'thessalonians': 'Paul', 'timothy': 'Paul',
+          'titus': 'Paul', 'philemon': 'Paul', 'hebrews': 'Unknown', 'james': 'James', 'peter': 'Peter',
+          'jude': 'Jude', 'revelation': 'John'
+        };
+        
+        for (const match of matches) {
+          const bookName = match.replace(/(?:in|according to|from)\s+/i, '').toLowerCase();
+          const author = bookAuthorMap[bookName];
+          if (author && author !== 'Unknown' && !sources.includes(author)) {
+            sources.push(author);
+          }
+        }
+      }
+    }
+    
+    return sources;
+  }
+
+  /**
    * Selects the best phrase from scored options
    */
   private selectBestPhrase(scoredPhrases: PhraseScore[]): PhraseScore {
@@ -530,47 +612,21 @@ export class LexiconService {
   }
 
   /**
-   * Gets a clarification response using smart weighting system
+   * Gets a clarification response using smart weighting system, prioritizing Jesus's words
    */
   private getClarificationResponse(question: string, userContext: UserContext): LexiconResponse {
-    const category = this.selectBestClarificationCategory(question, userContext);
-    const phrases = this.clarificationLexicon.categories[category]?.phrases || [];
-    
-    if (phrases.length === 0) {
-      return {
-        text: this.clarificationLexicon.fallbackClarifications.default,
-        type: 'clarification',
-        category: 'fallback',
-        tone: 'neutral',
-        maturity: ['beginner', 'intermediate', 'advanced'],
-        context: ['default'],
-        confidence: 0.5
-      };
-    }
-    
-    // Filter phrases based on user context
-    const filteredPhrases = phrases.filter((phrase: LexiconPhrase) => 
-      phrase.maturity.includes(userContext.spiritualMaturity) &&
-      this.matchesContext(phrase.context, userContext)
-    );
-    
-    // If no filtered phrases, use all phrases
-    const availablePhrases = filteredPhrases.length > 0 ? filteredPhrases : phrases;
-    
+    const availablePhrases = this.clarificationLexicon.responses;
+    // Prioritize Jesus's words if available
+    const jesusPhrases = availablePhrases.filter((phrase: LexiconPhrase) => this.isJesusSaying(phrase));
+    let phrasesToScore = jesusPhrases.length > 0 ? jesusPhrases : availablePhrases;
     // Score and select the best phrase
-    const scoredPhrases = this.scorePhrases(availablePhrases, question, userContext);
+    const scoredPhrases = this.scorePhrases(phrasesToScore, question, userContext);
     const selectedPhrase = this.selectBestPhrase(scoredPhrases);
-    
-    // Update recent phrases tracking
     this.updateRecentPhrases(selectedPhrase.phrase.text);
-    
-    // Replace placeholders in the phrase
-    const processedText = this.processPlaceholders(selectedPhrase.phrase.text, question);
-    
     return {
-      text: processedText,
+      text: selectedPhrase.phrase.text,
       type: 'clarification',
-      category,
+      category: this.selectBestClarificationCategory(question, userContext),
       tone: selectedPhrase.phrase.tone,
       maturity: selectedPhrase.phrase.maturity,
       context: selectedPhrase.phrase.context,

@@ -169,7 +169,7 @@ export default function BibleStudyScreen() {
   const [selectedChapter, setSelectedChapter] = useState<number>(1);
   const [lemma, setLemma] = useState('');
   const [showFilters, setShowFilters] = useState(false);
-  const [useVerbForms, setUseVerbForms] = useState(false);
+
   const [isSearchingAllBooks, setIsSearchingAllBooks] = useState(false);
   const [filterError, setFilterError] = useState<string | null>(null);
   const [currentVerses, setCurrentVerses] = useState<any[]>([]);
@@ -274,6 +274,8 @@ export default function BibleStudyScreen() {
       // Only apply book/chapter filters if they are explicitly set
       if (selectedBook && selectedBook !== '') filters.book = selectedBook;
       if (selectedChapter !== null && selectedChapter !== 1) filters.chapter = selectedChapter.toString();
+      
+
 
       console.log('Searching with filters:', filters);
       const results = bibleService.search(searchQuery, filters);
@@ -347,7 +349,7 @@ export default function BibleStudyScreen() {
     setSelectedBook('Genesis');
     setSelectedChapter(1);
     setLemma('');
-    setUseVerbForms(false);
+
     if (searchQuery.trim()) {
       handleSearch();
     }
@@ -526,6 +528,9 @@ export default function BibleStudyScreen() {
           ]}>Search All Books</Text>
         </TouchableOpacity>
       </View>
+      
+
+      
       <View style={styles.filterRow}>
         <TouchableOpacity
           style={[styles.filterButton, styles.searchAllButton]}

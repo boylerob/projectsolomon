@@ -37,6 +37,9 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
   const [error, setError] = useState('');
   const [userContext, setUserContext] = useState<UserContext | null>(null);
   const [showFollowUps, setShowFollowUps] = useState(false);
+  const [isInClarificationFlow, setIsInClarificationFlow] = useState(false);
+  const [originalQuestion, setOriginalQuestion] = useState('');
+  const [clarificationText, setClarificationText] = useState('');
 
   // Remove the modes array and mode selection UI
   // const modes = [
@@ -77,11 +80,23 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
       setImmediateResponse(immediate);
       setLoading(false);
 
+      // If this is a clarification response, store the original question
+      if (immediate.type === 'clarification' && !isInClarificationFlow) {
+        setIsInClarificationFlow(true);
+        setOriginalQuestion(question);
+      }
+
       // If the immediate response is complete (factual answer), we're done
       if (immediate.isComplete) {
         const completeResponse = await AgentService.askQuestion(question);
         setResponse(completeResponse);
         setShowFollowUps(true);
+        
+        // If this was a clarification response, reset the clarification flow
+        if (immediate.type === 'clarification') {
+          setIsInClarificationFlow(false);
+          setOriginalQuestion('');
+        }
         return;
       }
 
@@ -98,11 +113,11 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
             
             // STEP 4: Show processing indicator and wait for Gemini results
             setTimeout(async () => {
-              setAiLoading(true);
+      setAiLoading(true);
               try {
                 const agentResponse = await geminiPromise; // Use the already-started promise
-                setResponse(agentResponse);
-                setShowFollowUps(true);
+      setResponse(agentResponse);
+      setShowFollowUps(true);
               } catch (err: any) {
                 setError('Error contacting Solomon. Please try again.');
                 console.error('Error asking question:', err);
@@ -214,6 +229,9 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
     setLoading(false);
     setAiLoading(false);
     setShowFollowUps(false);
+    setIsInClarificationFlow(false);
+    setOriginalQuestion('');
+    setClarificationText('');
     onClose();
   };
 
@@ -279,9 +297,43 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
             {/* Remove mode selection UI */}
             {/* Question Input */}
             <View style={styles.inputSection}>
+              {/* Show clarification context if we're in clarification flow */}
+              {isInClarificationFlow && originalQuestion && (
+                <View style={styles.clarificationContext}>
+                  <Text style={styles.clarificationContextText}>
+                    Clarifying: "{originalQuestion}"
+                  </Text>
+                </View>
+              )}
+              {isInClarificationFlow && originalQuestion && (
+                <View style={styles.clarificationInputContainer}>
+                  <TextInput
+                    style={styles.input}
+                    placeholder="Type your clarification..."
+                    value={clarificationText}
+                    onChangeText={setClarificationText}
+                    editable={!loading && !aiLoading}
+                    maxLength={300}
+                    multiline
+                    returnKeyType="send"
+                  />
+                  <TouchableOpacity
+                    style={[styles.askButton, (!clarificationText.trim() || loading || aiLoading) && styles.askButtonDisabled]}
+                    onPress={async () => {
+                      if (!clarificationText.trim()) return;
+                      setQuestion(clarificationText);
+                      setClarificationText('');
+                      await askSolomon();
+                    }}
+                    disabled={loading || aiLoading || !clarificationText.trim()}
+                  >
+                    <Text style={styles.askButtonText}>Submit Clarification</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
               <TextInput
                 style={styles.input}
-                placeholder="Ask Solomon anything..."
+                placeholder={isInClarificationFlow ? "Provide your clarification..." : "Ask Solomon anything..."}
                 value={question}
                 onChangeText={setQuestion}
                 onSubmitEditing={askSolomon}
@@ -290,13 +342,15 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
                 multiline
                 returnKeyType="send"
               />
-              <TouchableOpacity
+            <TouchableOpacity
                 style={styles.askButton}
-                onPress={askSolomon}
+              onPress={askSolomon}
                 disabled={loading || aiLoading || !question.trim()}
-              >
-                <Text style={styles.askButtonText}>Ask Solomon</Text>
-              </TouchableOpacity>
+            >
+                <Text style={styles.askButtonText}>
+                  {isInClarificationFlow ? "Clarify" : "Ask Solomon"}
+                </Text>
+            </TouchableOpacity>
             </View>
 
             {/* Loading State */}
@@ -325,7 +379,6 @@ const SolomonChatModal: React.FC<SolomonChatModalProps> = ({
                 </View>
 
                 {renderScriptureReferences()}
-                {renderPersonalApplication()}
                 {renderFurtherStudy()}
                 {renderFollowUpQuestions()}
               </View>
@@ -675,6 +728,23 @@ const styles = StyleSheet.create({
     color: '#666',
     fontSize: 16,
     fontWeight: '600',
+  },
+  clarificationContext: {
+    backgroundColor: '#e3f2fd',
+    padding: 10,
+    borderRadius: 6,
+    marginBottom: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: '#1976d2',
+  },
+  clarificationContextText: {
+    fontSize: 14,
+    color: '#1976d2',
+    fontStyle: 'italic',
+  },
+  clarificationInputContainer: {
+    marginTop: 10,
+    marginBottom: 10,
   },
 });
 
