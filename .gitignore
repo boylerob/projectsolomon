@@ -42,4 +42,4 @@ web-build/
 *.mobileprovision
 
 # Metro
-.metro-health-check* 
+.metro-health-check* bible-companion/assets/models/tinyllama/model.safetensors
