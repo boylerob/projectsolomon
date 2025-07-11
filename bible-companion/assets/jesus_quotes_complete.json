@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "source": "jesus_verses_unstructured.txt",
+    "totalQuotes": 1,
+    "description": "Complete collection of Jesus's direct words from the Gospels, Acts, and Revelation",
+    "processedAt": "2025-07-10T15:25:13.301Z"
+  },
+  "quotes": [
+    {
+      "reference": "John 1:39",
+      "book": "John",
+      "chapter": 1,
+      "verse": 39,
+      "quote": "Come and you will see.",
+      "isDirectSpeech": true
+    }
+  ]
+}

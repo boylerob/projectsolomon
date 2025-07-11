@@ -1,0 +1,3670 @@
+{
+  "metadata": {
+    "source": "jesus_verses_unstructured.txt",
+    "totalQuotes": 304,
+    "generatedAt": "2025-07-10T15:19:25.823Z",
+    "description": "Comprehensive collection of Jesus quotes from the Gospels and New Testament"
+  },
+  "quotes": [
+    {
+      "reference": "Matthew 3:15",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 3,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "“Let it be so now; it is proper for us to do this to fulfill all righteousness.” Then John consented.",
+      "fullText": "“Let it be so now; it is proper for us to do this to fulfill all righteousness.” Then John consented.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 4:4",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 4,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“It is written: ‘Man shall not live on bread alone, but on every word that comes from the mouth of God.’ ”",
+      "fullText": "“It is written: ‘Man shall not live on bread alone, but on every word that comes from the mouth of God.’ ”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 4:7",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 4,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“It is also written: ‘Do not put the Lord your God to the test.’ ”",
+      "fullText": "“It is also written: ‘Do not put the Lord your God to the test.’ ”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 4:10",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 4,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Away from me, Satan! For it is written: ‘Worship the Lord your God, and serve him only.’ ”",
+      "fullText": "“Away from me, Satan! For it is written: ‘Worship the Lord your God, and serve him only.’ ”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 4:17",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 4,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“Repent, for the kingdom of heaven has come near.”",
+      "fullText": "“Repent, for the kingdom of heaven has come near.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 4:19",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 4,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“Come, follow me, and I will send you out to fish for people.”",
+      "fullText": "“Come, follow me, and I will send you out to fish for people.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:3",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 3,
+        "isRange": false
+      },
+      "quote": "I am willing; Be clean.",
+      "fullText": "I am willing; Be clean.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:4",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“See that you don’t tell anyone. But go, show yourself to the priest and offer the gift Moses commanded, as a testimony to them.”",
+      "fullText": "“See that you don’t tell anyone. But go, show yourself to the priest and offer the gift Moses commanded, as a testimony to them.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:10-8:12",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 10,
+        "endChapter": 8,
+        "endVerse": 12,
+        "isRange": true
+      },
+      "quote": "“Truly I tell you, I have not found anyone in Israel with such great faith. 11 I say to you that many will come from the east and the west, and will take their places at the feast with Abraham, Isaac and Jacob in the kingdom of heaven. 12 But the subjects of the kingdom will be thrown outside, into the darkness, where there will be weeping and gnashing of teeth.”",
+      "fullText": "“Truly I tell you, I have not found anyone in Israel with such great faith. 11 I say to you that many will come from the east and the west, and will take their places at the feast with Abraham, Isaac and Jacob in the kingdom of heaven. 12 But the subjects of the kingdom will be thrown outside, into the darkness, where there will be weeping and gnashing of teeth.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:13",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“Go! Let it be done just as you believed it would.”",
+      "fullText": "“Go! Let it be done just as you believed it would.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:20",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“Foxes have dens and birds have nests, but the Son of Man has no place to lay his head.”",
+      "fullText": "“Foxes have dens and birds have nests, but the Son of Man has no place to lay his head.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:22",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“Follow me, and let the dead bury their own dead.”",
+      "fullText": "“Follow me, and let the dead bury their own dead.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 8:26",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 8,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“You of little faith, why are you so afraid?”",
+      "fullText": "“You of little faith, why are you so afraid?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:2",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 2,
+        "isRange": false
+      },
+      "quote": "“Take heart, son; your sins are forgiven.",
+      "fullText": "“Take heart, son; your sins are forgiven.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:4-9:6",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 4,
+        "endChapter": 9,
+        "endVerse": 6,
+        "isRange": true
+      },
+      "quote": "“Why do you entertain evil thoughts in your hearts? 5 Which is easier: to say, ‘Your sins are forgiven,’ or to say, ‘Get up and walk’? 6 But I want you to know that the Son of Man has authority on earth to forgive sins.” “Get up, take your mat and go home.”",
+      "fullText": "“Why do you entertain evil thoughts in your hearts? 5 Which is easier: to say, ‘Your sins are forgiven,’ or to say, ‘Get up and walk’? 6 But I want you to know that the Son of Man has authority on earth to forgive sins.” “Get up, take your mat and go home.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:15-9:17",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 15,
+        "endChapter": 9,
+        "endVerse": 17,
+        "isRange": true
+      },
+      "quote": "“How can the guests of the bridegroom mourn while he is with them? The time will come when the bridegroom will be taken from them; then they will fast. 16 “No one sews a patch of unshrunk cloth on an old garment, for the patch will pull away from the garment, making the tear worse. 17 Neither do people pour new wine into old wineskins. If they do, the skins will burst; the wine will run out and the wineskins will be ruined. No, they pour new wine into new wineskins, and both are preserved.”",
+      "fullText": "“How can the guests of the bridegroom mourn while he is with them? The time will come when the bridegroom will be taken from them; then they will fast. 16 “No one sews a patch of unshrunk cloth on an old garment, for the patch will pull away from the garment, making the tear worse. 17 Neither do people pour new wine into old wineskins. If they do, the skins will burst; the wine will run out and the wineskins will be ruined. No, they pour new wine into new wineskins, and both are preserved.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:22",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“Take heart, daughter,” “your faith has healed you.”",
+      "fullText": "“Take heart, daughter,” “your faith has healed you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:24",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 24,
+        "isRange": false
+      },
+      "quote": "“Go away. The girl is not dead but asleep.”",
+      "fullText": "“Go away. The girl is not dead but asleep.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:28",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 28,
+        "isRange": false
+      },
+      "quote": "“Do you believe that I am able to do this?”",
+      "fullText": "“Do you believe that I am able to do this?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:29",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 29,
+        "isRange": false
+      },
+      "quote": "“According to your faith let it be done to you”",
+      "fullText": "“According to your faith let it be done to you”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 9:30",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 9,
+        "startVerse": 30,
+        "isRange": false
+      },
+      "quote": "“See that no one knows about this.”",
+      "fullText": "“See that no one knows about this.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 10:5-10:42",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 10,
+        "startVerse": 5,
+        "endChapter": 10,
+        "endVerse": 42,
+        "isRange": true
+      },
+      "quote": "“Do not go among the Gentiles or enter any town of the Samaritans. 6 Go rather to the lost sheep of Israel. 7 As you go, proclaim this message: ‘The kingdom of heaven has come near.’ 8 Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give. 9 “Do not get any gold or silver or copper to take with you in your belts— 10 no bag for the journey or extra shirt or sandals or a staff, for the worker is worth his keep. 11 Whatever town or village you enter, search there for some worthy person and stay at their house until you leave. 12 As you enter the home, give it your greeting. 13 If the home is deserving, let your peace rest on it; if it is not, let your peace return to you. 14If anyone will not welcome you or listen to your words, leave that home or town and shake the dust off your feet. 15 Truly I tell you, it will be more bearable for Sodom and Gomorrah on the day of judgment than for that town. 16 “I am sending you out like sheep among wolves. Therefore be as shrewd as snakes and as innocent as doves. 17 Be on your guard; you will be handed over to the local councils and be flogged in the synagogues. 18 On my account you will be brought before governors and kings as witnesses to them and to the Gentiles. 19 But when they arrest you, do not worry about what to say or how to say it. At that time you will be given what to say, 20 for it will not be you speaking, but the Spirit of your Father speaking through you. 21 “Brother will betray brother to death, and a father his child; children will rebel against their parents and have them put to death. 22 You will be hated by everyone because of me, but the one who stands firm to the end will be saved. 23 When you are persecuted in one place, flee to another. Truly I tell you, you will not finish going through the towns of Israel before the Son of Man comes. 24“The student is not above the teacher, nor a servant above his master. 25 It is enough for students to be like their teachers, and servants like their masters. If the head of the house has been called Beelzebul, how much more the members of his household! 26 “So do not be afraid of them, for there is nothing concealed that will not be disclosed, or hidden that will not be made known. 27 What I tell you in the dark, speak in the daylight; what is whispered in your ear, proclaim from the roofs. 28 Do not be afraid of those who kill the body but cannot kill the soul. Rather, be afraid of the One who can destroy both soul and body in hell. 29 Are not two sparrows sold for a penny? Yet not one of them will fall to the ground outside your Father’s care. 30 And even the very hairs of your head are all numbered. 31 So don’t be afraid; you are worth more than many sparrows. 32 “Whoever acknowledges me before others, I will also acknowledge before my Father in heaven. 33 But whoever disowns me before others, I will disown before my Father in heaven. 34 “Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword. 35 For I have come to turn “ ‘a man against his father, a daughter against her mother, a daughter-in-law against her mother-in-law 36 a man’s enemies will be the members of his own household.’ 37 “Anyone who loves their father or mother more than me is not worthy of me; anyone who loves their son or daughter more than me is not worthy of me. 38 Whoever does not take up their cross and follow me is not worthy of me. 39 Whoever finds their life will lose it, and whoever loses their life for my sake will find it. 40 “Anyone who welcomes you welcomes me, and anyone who welcomes me welcomes the one who sent me. 41 Whoever welcomes a prophet as a prophet will receive a prophet’s reward, and whoever welcomes a righteous person as a righteous person will receive a righteous person’s reward. 42 And if anyone gives even a cup of cold water to one of these little ones who is my disciple, truly I tell you, that person will certainly not lose their reward.”",
+      "fullText": "“Do not go among the Gentiles or enter any town of the Samaritans. 6 Go rather to the lost sheep of Israel. 7 As you go, proclaim this message: ‘The kingdom of heaven has come near.’ 8 Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give. 9 “Do not get any gold or silver or copper to take with you in your belts— 10 no bag for the journey or extra shirt or sandals or a staff, for the worker is worth his keep. 11 Whatever town or village you enter, search there for some worthy person and stay at their house until you leave. 12 As you enter the home, give it your greeting. 13 If the home is deserving, let your peace rest on it; if it is not, let your peace return to you. 14If anyone will not welcome you or listen to your words, leave that home or town and shake the dust off your feet. 15 Truly I tell you, it will be more bearable for Sodom and Gomorrah on the day of judgment than for that town. 16 “I am sending you out like sheep among wolves. Therefore be as shrewd as snakes and as innocent as doves. 17 Be on your guard; you will be handed over to the local councils and be flogged in the synagogues. 18 On my account you will be brought before governors and kings as witnesses to them and to the Gentiles. 19 But when they arrest you, do not worry about what to say or how to say it. At that time you will be given what to say, 20 for it will not be you speaking, but the Spirit of your Father speaking through you. 21 “Brother will betray brother to death, and a father his child; children will rebel against their parents and have them put to death. 22 You will be hated by everyone because of me, but the one who stands firm to the end will be saved. 23 When you are persecuted in one place, flee to another. Truly I tell you, you will not finish going through the towns of Israel before the Son of Man comes. 24“The student is not above the teacher, nor a servant above his master. 25 It is enough for students to be like their teachers, and servants like their masters. If the head of the house has been called Beelzebul, how much more the members of his household! 26 “So do not be afraid of them, for there is nothing concealed that will not be disclosed, or hidden that will not be made known. 27 What I tell you in the dark, speak in the daylight; what is whispered in your ear, proclaim from the roofs. 28 Do not be afraid of those who kill the body but cannot kill the soul. Rather, be afraid of the One who can destroy both soul and body in hell. 29 Are not two sparrows sold for a penny? Yet not one of them will fall to the ground outside your Father’s care. 30 And even the very hairs of your head are all numbered. 31 So don’t be afraid; you are worth more than many sparrows. 32 “Whoever acknowledges me before others, I will also acknowledge before my Father in heaven. 33 But whoever disowns me before others, I will disown before my Father in heaven. 34 “Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword. 35 For I have come to turn “ ‘a man against his father, a daughter against her mother, a daughter-in-law against her mother-in-law 36 a man’s enemies will be the members of his own household.’ 37 “Anyone who loves their father or mother more than me is not worthy of me; anyone who loves their son or daughter more than me is not worthy of me. 38 Whoever does not take up their cross and follow me is not worthy of me. 39 Whoever finds their life will lose it, and whoever loses their life for my sake will find it. 40 “Anyone who welcomes you welcomes me, and anyone who welcomes me welcomes the one who sent me. 41 Whoever welcomes a prophet as a prophet will receive a prophet’s reward, and whoever welcomes a righteous person as a righteous person will receive a righteous person’s reward. 42 And if anyone gives even a cup of cold water to one of these little ones who is my disciple, truly I tell you, that person will certainly not lose their reward.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 11:6",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 11,
+        "startVerse": 6,
+        "isRange": false
+      },
+      "quote": "Blessed is anyone who does not stumble on account of me.”",
+      "fullText": "Blessed is anyone who does not stumble on account of me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 11:7-11:19",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 11,
+        "startVerse": 7,
+        "endChapter": 11,
+        "endVerse": 19,
+        "isRange": true
+      },
+      "quote": "“What did you go out into the wilderness to see? A reed swayed by the wind? 8 If not, what did you go out to see? A man dressed in fine clothes? No, those who wear fine clothes are in kings’ palaces. 9 Then what did you go out to see? A prophet? Yes, I tell you, and more than a prophet. 10 This is the one about whom it is written: “ ‘I will send my messenger ahead of you, who will prepare your way before you.’ 11 Truly I tell you, among those born of women there has not risen anyone greater than John the Baptist; yet whoever is least in the kingdom of heaven is greater than he. 12 From the days of John the Baptist until now, the kingdom of heaven has been subjected to violence, and violent people have been raiding it. 13 For all the Prophets and the Law prophesied until John. 14 And if you are willing to accept it, he is the Elijah who was to come. 15 Whoever has ears, let them hear. 16 “To what can I compare this generation? They are like children sitting in the marketplaces and calling out to others: 17 “ ‘We played the pipe for you, and you did not dance; we sang a dirge, and you did not mourn.’ 18 For John came neither eating nor drinking, and they say, ‘He has a demon.’ 19 The Son of Man came eating and drinking, and they say, ‘Here is a glutton and a drunkard, a friend of tax collectors and sinners.’ But wisdom is proved right by her deeds.”",
+      "fullText": "“What did you go out into the wilderness to see? A reed swayed by the wind? 8 If not, what did you go out to see? A man dressed in fine clothes? No, those who wear fine clothes are in kings’ palaces. 9 Then what did you go out to see? A prophet? Yes, I tell you, and more than a prophet. 10 This is the one about whom it is written: “ ‘I will send my messenger ahead of you, who will prepare your way before you.’ 11 Truly I tell you, among those born of women there has not risen anyone greater than John the Baptist; yet whoever is least in the kingdom of heaven is greater than he. 12 From the days of John the Baptist until now, the kingdom of heaven has been subjected to violence, and violent people have been raiding it. 13 For all the Prophets and the Law prophesied until John. 14 And if you are willing to accept it, he is the Elijah who was to come. 15 Whoever has ears, let them hear. 16 “To what can I compare this generation? They are like children sitting in the marketplaces and calling out to others: 17 “ ‘We played the pipe for you, and you did not dance; we sang a dirge, and you did not mourn.’ 18 For John came neither eating nor drinking, and they say, ‘He has a demon.’ 19 The Son of Man came eating and drinking, and they say, ‘Here is a glutton and a drunkard, a friend of tax collectors and sinners.’ But wisdom is proved right by her deeds.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 12:13",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 12,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "Stretch out your hand.",
+      "fullText": "Stretch out your hand.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 12:48",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 12,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "Who is my mother, and who are my brothers?”",
+      "fullText": "Who is my mother, and who are my brothers?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 13:33",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 13,
+        "startVerse": 33,
+        "isRange": false
+      },
+      "quote": "“The kingdom of heaven is like yeast that a woman took and mixed into about sixty pounds of flour until it worked all through the dough.”",
+      "fullText": "“The kingdom of heaven is like yeast that a woman took and mixed into about sixty pounds of flour until it worked all through the dough.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 13:51",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 13,
+        "startVerse": 51,
+        "isRange": false
+      },
+      "quote": "Have ye understood all these things?",
+      "fullText": "Have ye understood all these things?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 13:52",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 13,
+        "startVerse": 52,
+        "isRange": false
+      },
+      "quote": "“Therefore every teacher of the law who has become a disciple in the kingdom of heaven is like the owner of a house who brings out of his storeroom new treasures as well as old.”",
+      "fullText": "“Therefore every teacher of the law who has become a disciple in the kingdom of heaven is like the owner of a house who brings out of his storeroom new treasures as well as old.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 13:57",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 13,
+        "startVerse": 57,
+        "isRange": false
+      },
+      "quote": "“A prophet is not without honor except in his own town and in his own home.”",
+      "fullText": "“A prophet is not without honor except in his own town and in his own home.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 14:16",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 14,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“They do not need to go away. You give them something to eat.”",
+      "fullText": "“They do not need to go away. You give them something to eat.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 14:18",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 14,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "“Bring them here to me,”",
+      "fullText": "“Bring them here to me,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 14:27",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 14,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“Take courage! It is I. Don’t be afraid.”",
+      "fullText": "“Take courage! It is I. Don’t be afraid.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 14:31",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 14,
+        "startVerse": 31,
+        "isRange": false
+      },
+      "quote": "“You of little faith,” “why did you doubt?”",
+      "fullText": "“You of little faith,” “why did you doubt?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:16",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“Are you still so dull?”",
+      "fullText": "“Are you still so dull?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:24",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 24,
+        "isRange": false
+      },
+      "quote": "“I was sent only to the lost sheep of Israel.",
+      "fullText": "“I was sent only to the lost sheep of Israel.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:26",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“It is not right to take the children’s bread and toss it to the dogs.”",
+      "fullText": "“It is not right to take the children’s bread and toss it to the dogs.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:28",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 28,
+        "isRange": false
+      },
+      "quote": "“Woman, you have great faith! Your request is granted.”",
+      "fullText": "“Woman, you have great faith! Your request is granted.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:32",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 32,
+        "isRange": false
+      },
+      "quote": "“I have compassion for these people; they have already been with me three days and have nothing to eat. I do not want to send them away hungry, or they may collapse on the way.”",
+      "fullText": "“I have compassion for these people; they have already been with me three days and have nothing to eat. I do not want to send them away hungry, or they may collapse on the way.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 15:34",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 15,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“How many loaves do you have?”",
+      "fullText": "“How many loaves do you have?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 16:6",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 16,
+        "startVerse": 6,
+        "isRange": false
+      },
+      "quote": "“Be careful,” “Be on your guard against the yeast of the Pharisees and Sadducees.”",
+      "fullText": "“Be careful,” “Be on your guard against the yeast of the Pharisees and Sadducees.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 16:13",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 16,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“Who do people say the Son of Man is?”",
+      "fullText": "“Who do people say the Son of Man is?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 16:15",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 16,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "But whom say ye that I am? “Who do you say I am?”",
+      "fullText": "But whom say ye that I am? “Who do you say I am?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 16:23",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 16,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“Get behind me, Satan! You are a stumbling block to me; you do not have in mind the concerns of God, but merely human concerns.”",
+      "fullText": "“Get behind me, Satan! You are a stumbling block to me; you do not have in mind the concerns of God, but merely human concerns.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 17:7",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 17,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“Get up,” “Don’t be afraid.”",
+      "fullText": "“Get up,” “Don’t be afraid.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 17:9",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 17,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "“Don’t tell anyone what you have seen, until the Son of Man has been raised from the dead.”",
+      "fullText": "“Don’t tell anyone what you have seen, until the Son of Man has been raised from the dead.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 17:17",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 17,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“You unbelieving and perverse generation,” “how long shall I stay with you? How long shall I put up with you? Bring the boy here to me.”",
+      "fullText": "“You unbelieving and perverse generation,” “how long shall I stay with you? How long shall I put up with you? Bring the boy here to me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 17:20",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 17,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“Because you have so little faith. Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, ‘Move from here to there,’ and it will move. Nothing will be impossible for you.”",
+      "fullText": "“Because you have so little faith. Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, ‘Move from here to there,’ and it will move. Nothing will be impossible for you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 17:25",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 17,
+        "startVerse": 25,
+        "isRange": false
+      },
+      "quote": "“What do you think, Simon?” he asked. “From whom do the kings of the earth collect duty and taxes—from their own children or from others?”",
+      "fullText": "“What do you think, Simon?” he asked. “From whom do the kings of the earth collect duty and taxes—from their own children or from others?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 19:14",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 19,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these.”",
+      "fullText": "“Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 19:21",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 19,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“If you want to be perfect, go, sell your possessions and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "fullText": "“If you want to be perfect, go, sell your possessions and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 19:26",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 19,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“With man this is impossible, but with God all things are possible.”",
+      "fullText": "“With man this is impossible, but with God all things are possible.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 20:23",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 20,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“You will indeed drink from my cup, but to sit at my right or left is not for me to grant. These places belong to those for whom they have been prepared by my Father.”",
+      "fullText": "“You will indeed drink from my cup, but to sit at my right or left is not for me to grant. These places belong to those for whom they have been prepared by my Father.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 20:32",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 20,
+        "startVerse": 32,
+        "isRange": false
+      },
+      "quote": "“What do you want me to do for you?”",
+      "fullText": "“What do you want me to do for you?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 21:13",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 21,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“It is written,” “‘My house will be called a house of prayer,’ but you are making it ‘a den of robbers.’”",
+      "fullText": "“It is written,” “‘My house will be called a house of prayer,’ but you are making it ‘a den of robbers.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 21:16",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 21,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“Yes,” “have you never read, “ ‘From the lips of children and infants you, Lord, have called forth your praise’?”",
+      "fullText": "“Yes,” “have you never read, “ ‘From the lips of children and infants you, Lord, have called forth your praise’?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 21:19",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 21,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“May you never bear fruit again!”",
+      "fullText": "“May you never bear fruit again!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 22:18",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 22,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "“You hypocrites, why are you trying to trap me? 19 Show me the coin used for paying the tax.”",
+      "fullText": "“You hypocrites, why are you trying to trap me? 19 Show me the coin used for paying the tax.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 22:20",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 22,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“Whose image is this? And whose inscription?”",
+      "fullText": "“Whose image is this? And whose inscription?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 22:21",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 22,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“So give back to Caesar what is Caesar’s, and to God what is God’s.”",
+      "fullText": "“So give back to Caesar what is Caesar’s, and to God what is God’s.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 22:42",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 22,
+        "startVerse": 42,
+        "isRange": false
+      },
+      "quote": "What do you think about the Messiah? Whose son is he?",
+      "fullText": "What do you think about the Messiah? Whose son is he?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:18",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "“Go into the city to a certain man and tell him, ‘The Teacher says: My appointed time is near. I am going to celebrate the Passover with my disciples at your house.’”",
+      "fullText": "“Go into the city to a certain man and tell him, ‘The Teacher says: My appointed time is near. I am going to celebrate the Passover with my disciples at your house.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:21",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“Truly I tell you, one of you will betray me.”",
+      "fullText": "“Truly I tell you, one of you will betray me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:25",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 25,
+        "isRange": false
+      },
+      "quote": "“You have said so.”",
+      "fullText": "“You have said so.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:26",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“Take and eat; this is my body.”",
+      "fullText": "“Take and eat; this is my body.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:36",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "“Sit here while I go over there and pray.” “My soul is overwhelmed with sorrow to the point of death. Stay here and keep watch with me.”",
+      "fullText": "“Sit here while I go over there and pray.” “My soul is overwhelmed with sorrow to the point of death. Stay here and keep watch with me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:38",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 38,
+        "isRange": false
+      },
+      "quote": "“My soul is overwhelmed with sorrow to the point of death. Stay here and keep watch with me.”",
+      "fullText": "“My soul is overwhelmed with sorrow to the point of death. Stay here and keep watch with me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:39",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 39,
+        "isRange": false
+      },
+      "quote": "“My Father, if it is possible, may this cup be taken from me. Yet not as I will, but as you will.”",
+      "fullText": "“My Father, if it is possible, may this cup be taken from me. Yet not as I will, but as you will.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:42",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 42,
+        "isRange": false
+      },
+      "quote": "“My Father, if it is not possible for this cup to be taken away unless I drink it, may your will be done.”",
+      "fullText": "“My Father, if it is not possible for this cup to be taken away unless I drink it, may your will be done.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:50",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 50,
+        "isRange": false
+      },
+      "quote": "“Do what you came for, friend.”",
+      "fullText": "“Do what you came for, friend.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 26:75",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 26,
+        "startVerse": 75,
+        "isRange": false
+      },
+      "quote": "“Before the rooster crows, you will disown me three times.”",
+      "fullText": "“Before the rooster crows, you will disown me three times.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 27:11",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 27,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“You have said so,”",
+      "fullText": "“You have said so,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 27:46",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 27,
+        "startVerse": 46,
+        "isRange": false
+      },
+      "quote": "“Eli, Eli, lema sabachthani?” “My God, my God, why have you forsaken me?”",
+      "fullText": "“Eli, Eli, lema sabachthani?” “My God, my God, why have you forsaken me?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 27:63",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 27,
+        "startVerse": 63,
+        "isRange": false
+      },
+      "quote": "‘After three days I will rise again.’",
+      "fullText": "‘After three days I will rise again.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 28:9",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 28,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "“Greetings,”",
+      "fullText": "“Greetings,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Matthew 28:10",
+      "parsedReference": {
+        "book": "Matthew",
+        "chapter": 28,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Do not be afraid. Go and tell my brothers to go to Galilee; there they will see me.”",
+      "fullText": "“Do not be afraid. Go and tell my brothers to go to Galilee; there they will see me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 1:38",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 1,
+        "startVerse": 38,
+        "isRange": false
+      },
+      "quote": "“Let us go somewhere else—to the nearby villages—so I can preach there also. That is why I have come.”",
+      "fullText": "“Let us go somewhere else—to the nearby villages—so I can preach there also. That is why I have come.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 1:41",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 1,
+        "startVerse": 41,
+        "isRange": false
+      },
+      "quote": "“I am willing, Be clean!”",
+      "fullText": "“I am willing, Be clean!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 2:5",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 2,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“Son, your sins are forgiven.”",
+      "fullText": "“Son, your sins are forgiven.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 2:17",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 2,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners.”",
+      "fullText": "“It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 3:3",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 3,
+        "startVerse": 3,
+        "isRange": false
+      },
+      "quote": "“Stand up in front of everyone.”",
+      "fullText": "“Stand up in front of everyone.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 3:4",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 3,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“Which is lawful on the Sabbath: to do good or to do evil, to save life or to kill?”",
+      "fullText": "“Which is lawful on the Sabbath: to do good or to do evil, to save life or to kill?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 3:5",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 3,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“Stretch out your hand.”",
+      "fullText": "“Stretch out your hand.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 4:35",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 4,
+        "startVerse": 35,
+        "isRange": false
+      },
+      "quote": "“Let us go over to the other side.”",
+      "fullText": "“Let us go over to the other side.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 4:39",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 4,
+        "startVerse": 39,
+        "isRange": false
+      },
+      "quote": "“Quiet! Be still!”",
+      "fullText": "“Quiet! Be still!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 4:40",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 4,
+        "startVerse": 40,
+        "isRange": false
+      },
+      "quote": "“Why are you so afraid? Do you still have no faith?”",
+      "fullText": "“Why are you so afraid? Do you still have no faith?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:8",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Come out of this man, you impure spirit!”",
+      "fullText": "“Come out of this man, you impure spirit!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:9",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "What is your name?",
+      "fullText": "What is your name?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:19",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“Go home to your own people and tell them how much the Lord has done for you, and how he has had mercy on you.”",
+      "fullText": "“Go home to your own people and tell them how much the Lord has done for you, and how he has had mercy on you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:30",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 30,
+        "isRange": false
+      },
+      "quote": "“Who touched my clothes?”",
+      "fullText": "“Who touched my clothes?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:31",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 31,
+        "isRange": false
+      },
+      "quote": "‘Who touched me?’",
+      "fullText": "‘Who touched me?’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:34",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“Daughter, your faith has healed you. Go in peace and be freed from your suffering.”",
+      "fullText": "“Daughter, your faith has healed you. Go in peace and be freed from your suffering.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:36",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "“Don’t be afraid; just believe.”",
+      "fullText": "“Don’t be afraid; just believe.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:39",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 39,
+        "isRange": false
+      },
+      "quote": "“Why all this commotion and wailing? The child is not dead but asleep.”",
+      "fullText": "“Why all this commotion and wailing? The child is not dead but asleep.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 5:41",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 5,
+        "startVerse": 41,
+        "isRange": false
+      },
+      "quote": "“Talitha koum!” “Little girl, I say to you, get up!”",
+      "fullText": "“Talitha koum!” “Little girl, I say to you, get up!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 6:4",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 6,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“A prophet is not without honor except in his own town, among his relatives and in his own home.”",
+      "fullText": "“A prophet is not without honor except in his own town, among his relatives and in his own home.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 6:31",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 6,
+        "startVerse": 31,
+        "isRange": false
+      },
+      "quote": "“Come with me by yourselves to a quiet place and get some rest.”",
+      "fullText": "“Come with me by yourselves to a quiet place and get some rest.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 6:37",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 6,
+        "startVerse": 37,
+        "isRange": false
+      },
+      "quote": "“You give them something to eat.”",
+      "fullText": "“You give them something to eat.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 6:50",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 6,
+        "startVerse": 50,
+        "isRange": false
+      },
+      "quote": "“Take courage! It is I. Don’t be afraid.”",
+      "fullText": "“Take courage! It is I. Don’t be afraid.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 7:29",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 7,
+        "startVerse": 29,
+        "isRange": false
+      },
+      "quote": "“For such a reply, you may go; the demon has left your daughter.”",
+      "fullText": "“For such a reply, you may go; the demon has left your daughter.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 7:34",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 7,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“Ephphatha!”",
+      "fullText": "“Ephphatha!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 8:12",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 8,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“Why does this generation ask for a sign? Truly I tell you, no sign will be given to it.”",
+      "fullText": "“Why does this generation ask for a sign? Truly I tell you, no sign will be given to it.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 8:21",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 8,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“Do you still not understand?”",
+      "fullText": "“Do you still not understand?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 8:23",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 8,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“Do you see anything?”",
+      "fullText": "“Do you see anything?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 8:26",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 8,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“Don’t even go into the village.”",
+      "fullText": "“Don’t even go into the village.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 8:27",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 8,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“Who do people say I am?”",
+      "fullText": "“Who do people say I am?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:1",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 1,
+        "isRange": false
+      },
+      "quote": "“Truly I tell you, some who are standing here will not taste death before they see that the kingdom of God has come with power.”",
+      "fullText": "“Truly I tell you, some who are standing here will not taste death before they see that the kingdom of God has come with power.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:21",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“How long has he been like this?”",
+      "fullText": "“How long has he been like this?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:25",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 25,
+        "isRange": false
+      },
+      "quote": "“You deaf and mute spirit,” “I command you, come out of him and never enter him again.”",
+      "fullText": "“You deaf and mute spirit,” “I command you, come out of him and never enter him again.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:29",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 29,
+        "isRange": false
+      },
+      "quote": "“This kind can come out only by prayer.”",
+      "fullText": "“This kind can come out only by prayer.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:31",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 31,
+        "isRange": false
+      },
+      "quote": "“The Son of Man is going to be delivered into the hands of men. They will kill him, and after three days he will rise.”",
+      "fullText": "“The Son of Man is going to be delivered into the hands of men. They will kill him, and after three days he will rise.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:33",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 33,
+        "isRange": false
+      },
+      "quote": "“What were you arguing about on the road?”",
+      "fullText": "“What were you arguing about on the road?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 9:35",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 9,
+        "startVerse": 35,
+        "isRange": false
+      },
+      "quote": "“Anyone who wants to be first must be the very last, and the servant of all.”",
+      "fullText": "“Anyone who wants to be first must be the very last, and the servant of all.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 10:21",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 10,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“One thing you lack,” “Go, sell everything you have and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "fullText": "“One thing you lack,” “Go, sell everything you have and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 10:23",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 10,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "How hard it is for the rich to enter the kingdom of God!”",
+      "fullText": "How hard it is for the rich to enter the kingdom of God!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 10:27",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 10,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“With man this is impossible, but not with God; all things are possible with God.”",
+      "fullText": "“With man this is impossible, but not with God; all things are possible with God.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 10:49",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 10,
+        "startVerse": 49,
+        "isRange": false
+      },
+      "quote": "“Call him.”",
+      "fullText": "“Call him.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 11:14",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 11,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“May no one ever eat fruit from you again.”",
+      "fullText": "“May no one ever eat fruit from you again.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 11:17",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 11,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“Is it not written: ‘My house will be called a house of prayer for all nations’? But you have made it ‘a den of robbers.’”",
+      "fullText": "“Is it not written: ‘My house will be called a house of prayer for all nations’? But you have made it ‘a den of robbers.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 11:33",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 11,
+        "startVerse": 33,
+        "isRange": false
+      },
+      "quote": "“Neither will I tell you by what authority I am doing these things.”",
+      "fullText": "“Neither will I tell you by what authority I am doing these things.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 12:15",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 12,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "“Why are you trying to trap me?” “Bring me a denarius and let me look at it.” that are God's.",
+      "fullText": "“Why are you trying to trap me?” “Bring me a denarius and let me look at it.” that are God's.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 12:17",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 12,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“Give back to Caesar what is Caesar’s and to God what is God’s.”",
+      "fullText": "“Give back to Caesar what is Caesar’s and to God what is God’s.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 12:34",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 12,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“You are not far from the kingdom of God.”",
+      "fullText": "“You are not far from the kingdom of God.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 14:18",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 14,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "“Truly I tell you, one of you will betray me—one who is eating with me.”",
+      "fullText": "“Truly I tell you, one of you will betray me—one who is eating with me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 14:22",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 14,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“Take it; this is my body.”",
+      "fullText": "“Take it; this is my body.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 14:32",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 14,
+        "startVerse": 32,
+        "isRange": false
+      },
+      "quote": "“Sit here while I pray.”",
+      "fullText": "“Sit here while I pray.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 14:72",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 14,
+        "startVerse": 72,
+        "isRange": false
+      },
+      "quote": "“Before the rooster crows twice you will disown me three times.”",
+      "fullText": "“Before the rooster crows twice you will disown me three times.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 15:2",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 15,
+        "startVerse": 2,
+        "isRange": false
+      },
+      "quote": "“You have said so,”",
+      "fullText": "“You have said so,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 15:34",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 15,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“Eloi, Eloi, lema sabachthani?”",
+      "fullText": "“Eloi, Eloi, lema sabachthani?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Mark 16:15-16:18",
+      "parsedReference": {
+        "book": "Mark",
+        "chapter": 16,
+        "startVerse": 15,
+        "endChapter": 16,
+        "endVerse": 18,
+        "isRange": true
+      },
+      "quote": "“Go into all the world and preach the gospel to all creation. 16 Whoever believes and is baptized will be saved, but whoever does not believe will be condemned. 17 And these signs will accompany those who believe: In my name they will drive out demons; they will speak in new tongues; 18 they will pick up snakes with their hands; and when they drink deadly poison, it will not hurt them at all; they will place their hands on sick people, and they will get well.”",
+      "fullText": "“Go into all the world and preach the gospel to all creation. 16 Whoever believes and is baptized will be saved, but whoever does not believe will be condemned. 17 And these signs will accompany those who believe: In my name they will drive out demons; they will speak in new tongues; 18 they will pick up snakes with their hands; and when they drink deadly poison, it will not hurt them at all; they will place their hands on sick people, and they will get well.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 2:49",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 2,
+        "startVerse": 49,
+        "isRange": false
+      },
+      "quote": "Why were you searching for me?” “Didn’t you know I had to be in my Father’s house?”",
+      "fullText": "Why were you searching for me?” “Didn’t you know I had to be in my Father’s house?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 4:4",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 4,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“It is written: ‘Man shall not live on bread alone.’”",
+      "fullText": "“It is written: ‘Man shall not live on bread alone.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 4:8",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 4,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“It is written: ‘Worship the Lord your God and serve him only.’”",
+      "fullText": "“It is written: ‘Worship the Lord your God and serve him only.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 4:12",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 4,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“It is said: ‘Do not put the Lord your God to the test.’”",
+      "fullText": "“It is said: ‘Do not put the Lord your God to the test.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 4:21",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 4,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“Today this scripture is fulfilled in your hearing.”",
+      "fullText": "“Today this scripture is fulfilled in your hearing.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 4:43",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 4,
+        "startVerse": 43,
+        "isRange": false
+      },
+      "quote": "“I must proclaim the good news of the kingdom of God to the other towns also, because that is why I was sent.”",
+      "fullText": "“I must proclaim the good news of the kingdom of God to the other towns also, because that is why I was sent.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 5:4",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 5,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“Put out into deep water, and let down the nets for a catch.”",
+      "fullText": "“Put out into deep water, and let down the nets for a catch.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 5:10",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 5,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Don’t be afraid; from now on you will fish for people.”",
+      "fullText": "“Don’t be afraid; from now on you will fish for people.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 5:13",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 5,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“I am willing, Be clean!”",
+      "fullText": "“I am willing, Be clean!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 5:14",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 5,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“Don’t tell anyone, but go, show yourself to the priest and offer the sacrifices that Moses commanded for your cleansing, as a testimony to them.”",
+      "fullText": "“Don’t tell anyone, but go, show yourself to the priest and offer the sacrifices that Moses commanded for your cleansing, as a testimony to them.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 5:20",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 5,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“Friend, your sins are forgiven.”",
+      "fullText": "“Friend, your sins are forgiven.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 6:8",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 6,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Get up and stand in front of everyone.”",
+      "fullText": "“Get up and stand in front of everyone.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 6:9",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 6,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "“I ask you, which is lawful on the Sabbath: to do good or to do evil, to save life or to destroy it?”",
+      "fullText": "“I ask you, which is lawful on the Sabbath: to do good or to do evil, to save life or to destroy it?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 6:10",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 6,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Stretch out your hand.”",
+      "fullText": "“Stretch out your hand.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:9",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "“I tell you, I have not found such great faith even in Israel.”",
+      "fullText": "“I tell you, I have not found such great faith even in Israel.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:13",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“Don’t cry.”",
+      "fullText": "“Don’t cry.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:14",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“Young man, I say to you, get up!”",
+      "fullText": "“Young man, I say to you, get up!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:43",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 43,
+        "isRange": false
+      },
+      "quote": "“You have judged correctly,”",
+      "fullText": "“You have judged correctly,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:48",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "Thy sins are forgiven.",
+      "fullText": "Thy sins are forgiven.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 7:50",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 7,
+        "startVerse": 50,
+        "isRange": false
+      },
+      "quote": "“Your faith has saved you; go in peace.”",
+      "fullText": "“Your faith has saved you; go in peace.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:21",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“My mother and brothers are those who hear God’s word and put it into practice.”",
+      "fullText": "“My mother and brothers are those who hear God’s word and put it into practice.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:22",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“Let us go over to the other side of the lake.”",
+      "fullText": "“Let us go over to the other side of the lake.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:25",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 25,
+        "isRange": false
+      },
+      "quote": "Where is your faith?",
+      "fullText": "Where is your faith?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:30",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 30,
+        "isRange": false
+      },
+      "quote": "“What is your name?”",
+      "fullText": "“What is your name?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:45",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 45,
+        "isRange": false
+      },
+      "quote": "Who touched me?",
+      "fullText": "Who touched me?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:46",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 46,
+        "isRange": false
+      },
+      "quote": "“Someone touched me; I know that power has gone out from me.”",
+      "fullText": "“Someone touched me; I know that power has gone out from me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:48",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "“Daughter, your faith has healed you. Go in peace.”",
+      "fullText": "“Daughter, your faith has healed you. Go in peace.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:50",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 50,
+        "isRange": false
+      },
+      "quote": "“Don’t be afraid; just believe, and she will be healed.”",
+      "fullText": "“Don’t be afraid; just believe, and she will be healed.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:52",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 52,
+        "isRange": false
+      },
+      "quote": "“Stop wailing, She is not dead but asleep.”",
+      "fullText": "“Stop wailing, She is not dead but asleep.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 8:54",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 8,
+        "startVerse": 54,
+        "isRange": false
+      },
+      "quote": "“My child, get up!”",
+      "fullText": "“My child, get up!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:13",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“You give them something to eat.”",
+      "fullText": "“You give them something to eat.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:14",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“Have them sit down in groups of about fifty each.”",
+      "fullText": "“Have them sit down in groups of about fifty each.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:18",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "“Who do the crowds say I am?”",
+      "fullText": "“Who do the crowds say I am?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:48",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "“Whoever welcomes this little child in my name welcomes me; and whoever welcomes me welcomes the one who sent me. For it is the one who is least among you all who is the greatest.”",
+      "fullText": "“Whoever welcomes this little child in my name welcomes me; and whoever welcomes me welcomes the one who sent me. For it is the one who is least among you all who is the greatest.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:58",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 58,
+        "isRange": false
+      },
+      "quote": "“Foxes have dens and birds have nests, but the Son of Man has no place to lay his head.”",
+      "fullText": "“Foxes have dens and birds have nests, but the Son of Man has no place to lay his head.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:59",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 59,
+        "isRange": false
+      },
+      "quote": "“Follow me.”",
+      "fullText": "“Follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:60",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 60,
+        "isRange": false
+      },
+      "quote": "“Let the dead bury their own dead, but you go and proclaim the kingdom of God.”",
+      "fullText": "“Let the dead bury their own dead, but you go and proclaim the kingdom of God.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 9:62",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 9,
+        "startVerse": 62,
+        "isRange": false
+      },
+      "quote": "“No one who puts a hand to the plow and looks back is fit for service in the kingdom of God.”",
+      "fullText": "“No one who puts a hand to the plow and looks back is fit for service in the kingdom of God.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 10:37",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 10,
+        "startVerse": 37,
+        "isRange": false
+      },
+      "quote": "Go, and do likewise.",
+      "fullText": "Go, and do likewise.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 11:28",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 11,
+        "startVerse": 28,
+        "isRange": false
+      },
+      "quote": "“Blessed rather are those who hear the word of God and obey it.”",
+      "fullText": "“Blessed rather are those who hear the word of God and obey it.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 13:12",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 13,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“Woman, you are set free from your infirmity.”",
+      "fullText": "“Woman, you are set free from your infirmity.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 14:3",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 14,
+        "startVerse": 3,
+        "isRange": false
+      },
+      "quote": "“Is it lawful to heal on the Sabbath or not?”",
+      "fullText": "“Is it lawful to heal on the Sabbath or not?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 14:5",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 14,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“If one of you has a child or an ox that falls into a well on the Sabbath day, will you not immediately pull it out?”",
+      "fullText": "“If one of you has a child or an ox that falls into a well on the Sabbath day, will you not immediately pull it out?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 17:14",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 17,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“Go, show yourselves to the priests.”",
+      "fullText": "“Go, show yourselves to the priests.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 17:37",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 17,
+        "startVerse": 37,
+        "isRange": false
+      },
+      "quote": "“Where there is a dead body, there the vultures will gather.”",
+      "fullText": "“Where there is a dead body, there the vultures will gather.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 18:22",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 18,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“You still lack one thing. Sell everything you have and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "fullText": "“You still lack one thing. Sell everything you have and give to the poor, and you will have treasure in heaven. Then come, follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 18:27",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 18,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“What is impossible with man is possible with God.”",
+      "fullText": "“What is impossible with man is possible with God.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 18:42",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 18,
+        "startVerse": 42,
+        "isRange": false
+      },
+      "quote": "“Receive your sight; your faith has healed you.”",
+      "fullText": "“Receive your sight; your faith has healed you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 19:5",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 19,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“Zacchaeus, come down immediately. I must stay at your house today.”",
+      "fullText": "“Zacchaeus, come down immediately. I must stay at your house today.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 20:8",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 20,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Neither will I tell you by what authority I am doing these things.”",
+      "fullText": "“Neither will I tell you by what authority I am doing these things.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 20:25",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 20,
+        "startVerse": 25,
+        "isRange": false
+      },
+      "quote": "“Then give back to Caesar what is Caesar’s, and to God what is God’s.”",
+      "fullText": "“Then give back to Caesar what is Caesar’s, and to God what is God’s.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:8",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Go and make preparations for us to eat the Passover.”",
+      "fullText": "“Go and make preparations for us to eat the Passover.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:19",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“This is my body given for you; do this in remembrance of me.”",
+      "fullText": "“This is my body given for you; do this in remembrance of me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:34",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“I tell you, Peter, before the rooster crows today, you will deny three times that you know me.”",
+      "fullText": "“I tell you, Peter, before the rooster crows today, you will deny three times that you know me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:35",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 35,
+        "isRange": false
+      },
+      "quote": "“When I sent you without purse, bag or sandals, did you lack anything?”",
+      "fullText": "“When I sent you without purse, bag or sandals, did you lack anything?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:38",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 38,
+        "isRange": false
+      },
+      "quote": "“That’s enough!”",
+      "fullText": "“That’s enough!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:40",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 40,
+        "isRange": false
+      },
+      "quote": "“Pray that you will not fall into temptation.”",
+      "fullText": "“Pray that you will not fall into temptation.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:48",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "“Judas, are you betraying the Son of Man with a kiss?”",
+      "fullText": "“Judas, are you betraying the Son of Man with a kiss?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:51",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 51,
+        "isRange": false
+      },
+      "quote": "“No more of this!”",
+      "fullText": "“No more of this!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:61",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 61,
+        "isRange": false
+      },
+      "quote": "“Before the rooster crows today, you will disown me three times.”",
+      "fullText": "“Before the rooster crows today, you will disown me three times.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 22:70",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 22,
+        "startVerse": 70,
+        "isRange": false
+      },
+      "quote": "“You say that I am.”",
+      "fullText": "“You say that I am.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 23:3",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 23,
+        "startVerse": 3,
+        "isRange": false
+      },
+      "quote": "“You have said so,”",
+      "fullText": "“You have said so,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 23:34",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 23,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "“Father, forgive them, for they do not know what they are doing.”",
+      "fullText": "“Father, forgive them, for they do not know what they are doing.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 23:43",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 23,
+        "startVerse": 43,
+        "isRange": false
+      },
+      "quote": "“Truly I tell you, today you will be with me in paradise.”",
+      "fullText": "“Truly I tell you, today you will be with me in paradise.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 23:46",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 23,
+        "startVerse": 46,
+        "isRange": false
+      },
+      "quote": "“Father, into your hands I commit my spirit.”",
+      "fullText": "“Father, into your hands I commit my spirit.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 24:17",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 24,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“What are you discussing together as you walk along?”",
+      "fullText": "“What are you discussing together as you walk along?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 24:19",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 24,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "What things?",
+      "fullText": "What things?",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 24:36",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 24,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "“Peace be with you.”",
+      "fullText": "“Peace be with you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Luke 24:44",
+      "parsedReference": {
+        "book": "Luke",
+        "chapter": 24,
+        "startVerse": 44,
+        "isRange": false
+      },
+      "quote": "“This is what I told you while I was still with you: Everything must be fulfilled that is written about me in the Law of Moses, the Prophets and the Psalms.”",
+      "fullText": "“This is what I told you while I was still with you: Everything must be fulfilled that is written about me in the Law of Moses, the Prophets and the Psalms.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:38",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 38,
+        "isRange": false
+      },
+      "quote": "“What do you want?”",
+      "fullText": "“What do you want?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:39",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 39,
+        "isRange": false
+      },
+      "quote": "Come and you will see.",
+      "fullText": "\"Come and you will see.\"",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:42",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 42,
+        "isRange": false
+      },
+      "quote": "“You are Simon son of John. You will be called Cephas”",
+      "fullText": "“You are Simon son of John. You will be called Cephas”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:47",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 47,
+        "isRange": false
+      },
+      "quote": "“Here truly is an Israelite in whom there is no deceit.”",
+      "fullText": "“Here truly is an Israelite in whom there is no deceit.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:48",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "“I saw you while you were still under the fig tree before Philip called you.”",
+      "fullText": "“I saw you while you were still under the fig tree before Philip called you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:50",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 50,
+        "isRange": false
+      },
+      "quote": "“You believe because I told you I saw you under the fig tree. You will see greater things than that.”",
+      "fullText": "“You believe because I told you I saw you under the fig tree. You will see greater things than that.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 1:51",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 1,
+        "startVerse": 51,
+        "isRange": false
+      },
+      "quote": "“Very truly I tell you, you will see ‘heaven open, and the angels of God ascending and descending on’ the Son of Man.”",
+      "fullText": "“Very truly I tell you, you will see ‘heaven open, and the angels of God ascending and descending on’ the Son of Man.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 2:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 2,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“Fill the jars with water”",
+      "fullText": "“Fill the jars with water”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 2:8",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 2,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Now draw some out and take it to the master of the banquet.”",
+      "fullText": "“Now draw some out and take it to the master of the banquet.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 2:16",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 2,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“Get these out of here! Stop turning my Father’s house into a market!”",
+      "fullText": "“Get these out of here! Stop turning my Father’s house into a market!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 2:19",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 2,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“Destroy this temple, and I will raise it again in three days.”",
+      "fullText": "“Destroy this temple, and I will raise it again in three days.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 3:3",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 3,
+        "startVerse": 3,
+        "isRange": false
+      },
+      "quote": "“Very truly I tell you, no one can see the kingdom of God unless they are born again.”",
+      "fullText": "“Very truly I tell you, no one can see the kingdom of God unless they are born again.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 4:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 4,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“Will you give me a drink?”",
+      "fullText": "“Will you give me a drink?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 4:16",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 4,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“Go, call your husband and come back.”",
+      "fullText": "“Go, call your husband and come back.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 4:26",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 4,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“I, the one speaking to you—I am he.”",
+      "fullText": "“I, the one speaking to you—I am he.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 4:32",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 4,
+        "startVerse": 32,
+        "isRange": false
+      },
+      "quote": "“I have food to eat that you know nothing about.”",
+      "fullText": "“I have food to eat that you know nothing about.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 4:53",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 4,
+        "startVerse": 53,
+        "isRange": false
+      },
+      "quote": "“Your son will live.”",
+      "fullText": "“Your son will live.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 5:6",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 5,
+        "startVerse": 6,
+        "isRange": false
+      },
+      "quote": "“Do you want to get well?”",
+      "fullText": "“Do you want to get well?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 5:8",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 5,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“Get up! Pick up your mat and walk.”",
+      "fullText": "“Get up! Pick up your mat and walk.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 5:11",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 5,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "‘Pick up your mat and walk.’",
+      "fullText": "‘Pick up your mat and walk.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 5:14",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 5,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "“See, you are well again. Stop sinning or something worse may happen to you.”",
+      "fullText": "“See, you are well again. Stop sinning or something worse may happen to you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 5:17",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 5,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“My Father is always at his work to this very day, and I too am working.”",
+      "fullText": "“My Father is always at his work to this very day, and I too am working.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:5",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“Where shall we buy bread for these people to eat?”",
+      "fullText": "“Where shall we buy bread for these people to eat?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:10",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Have the people sit down.”",
+      "fullText": "“Have the people sit down.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:12",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“Gather the pieces that are left over. Let nothing be wasted.”",
+      "fullText": "“Gather the pieces that are left over. Let nothing be wasted.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:20",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“It is I; don’t be afraid.”",
+      "fullText": "“It is I; don’t be afraid.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:29",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 29,
+        "isRange": false
+      },
+      "quote": "“The work of God is this: to believe in the one he has sent.”",
+      "fullText": "“The work of God is this: to believe in the one he has sent.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:65",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 65,
+        "isRange": false
+      },
+      "quote": "“This is why I told you that no one can come to me unless the Father has enabled them.”",
+      "fullText": "“This is why I told you that no one can come to me unless the Father has enabled them.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 6:70",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 6,
+        "startVerse": 70,
+        "isRange": false
+      },
+      "quote": "“Have I not chosen you, the Twelve? Yet one of you is a devil!”",
+      "fullText": "“Have I not chosen you, the Twelve? Yet one of you is a devil!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 7:36",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 7,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "‘You will look for me, but you will not find me,’ ‘Where I am, you cannot come’",
+      "fullText": "‘You will look for me, but you will not find me,’ ‘Where I am, you cannot come’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 8:12",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 8,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life.”",
+      "fullText": "“I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 8:21",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 8,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“I am going away, and you will look for me, and you will die in your sin. Where I go, you cannot come.”",
+      "fullText": "“I am going away, and you will look for me, and you will die in your sin. Where I go, you cannot come.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 9:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 9,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "Go, wash in the pool of Siloam.",
+      "fullText": "Go, wash in the pool of Siloam.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 9:35",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 9,
+        "startVerse": 35,
+        "isRange": false
+      },
+      "quote": "“Do you believe in the Son of Man?”",
+      "fullText": "“Do you believe in the Son of Man?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 9:37",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 9,
+        "startVerse": 37,
+        "isRange": false
+      },
+      "quote": "“You have now seen him; in fact, he is the one speaking with you.”",
+      "fullText": "“You have now seen him; in fact, he is the one speaking with you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 9:39",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 9,
+        "startVerse": 39,
+        "isRange": false
+      },
+      "quote": "“For judgment I have come into this world, so that the blind will see and those who see will become blind.”",
+      "fullText": "“For judgment I have come into this world, so that the blind will see and those who see will become blind.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 9:41",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 9,
+        "startVerse": 41,
+        "isRange": false
+      },
+      "quote": "“If you were blind, you would not be guilty of sin; but now that you claim you can see, your guilt remains.",
+      "fullText": "“If you were blind, you would not be guilty of sin; but now that you claim you can see, your guilt remains.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 10:32",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 10,
+        "startVerse": 32,
+        "isRange": false
+      },
+      "quote": "“I have shown you many good works from the Father. For which of these do you stone me?”",
+      "fullText": "“I have shown you many good works from the Father. For which of these do you stone me?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:4",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“This sickness will not end in death. No, it is for God’s glory so that God’s Son may be glorified through it.”",
+      "fullText": "“This sickness will not end in death. No, it is for God’s glory so that God’s Son may be glorified through it.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“Let us go back to Judea.”",
+      "fullText": "“Let us go back to Judea.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:11",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“Our friend Lazarus has fallen asleep; but I am going there to wake him up.”",
+      "fullText": "“Our friend Lazarus has fallen asleep; but I am going there to wake him up.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:23",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“Your brother will rise again.”",
+      "fullText": "“Your brother will rise again.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:40",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 40,
+        "isRange": false
+      },
+      "quote": "“Did I not tell you that if you believe, you will see the glory of God?”",
+      "fullText": "“Did I not tell you that if you believe, you will see the glory of God?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:43",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 43,
+        "isRange": false
+      },
+      "quote": "“Lazarus, come out!”",
+      "fullText": "“Lazarus, come out!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 11:44",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 11,
+        "startVerse": 44,
+        "isRange": false
+      },
+      "quote": "“Take off the grave clothes and let him go.”",
+      "fullText": "“Take off the grave clothes and let him go.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 12:34",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 12,
+        "startVerse": 34,
+        "isRange": false
+      },
+      "quote": "‘The Son of Man must be lifted up’",
+      "fullText": "‘The Son of Man must be lifted up’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“You do not realize now what I am doing, but later you will understand.”",
+      "fullText": "“You do not realize now what I am doing, but later you will understand.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:10",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Those who have had a bath need only to wash their feet; their whole body is clean. And you are clean, though not every one of you.”",
+      "fullText": "“Those who have had a bath need only to wash their feet; their whole body is clean. And you are clean, though not every one of you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:26",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“It is the one to whom I will give this piece of bread when I have dipped it in the dish.”",
+      "fullText": "“It is the one to whom I will give this piece of bread when I have dipped it in the dish.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:27",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“What you are about to do, do quickly.”",
+      "fullText": "“What you are about to do, do quickly.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:36",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "“Where I am going, you cannot follow now, but you will follow later.”",
+      "fullText": "“Where I am going, you cannot follow now, but you will follow later.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 13:38",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 13,
+        "startVerse": 38,
+        "isRange": false
+      },
+      "quote": "“Will you really lay down your life for me? Very truly I tell you, before the rooster crows, you will disown me three times!",
+      "fullText": "“Will you really lay down your life for me? Very truly I tell you, before the rooster crows, you will disown me three times!",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 16:17",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 16,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "‘In a little while you will see me no more, and then after a little while you will see me, Because I am going to the Father’",
+      "fullText": "‘In a little while you will see me no more, and then after a little while you will see me, Because I am going to the Father’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 16:18",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 16,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "‘a little while’",
+      "fullText": "‘a little while’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:4",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“Who is it you want?”",
+      "fullText": "“Who is it you want?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:7",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "“Who is it you want?”",
+      "fullText": "“Who is it you want?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:8",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“I told you that I am he. If you are looking for me, then let these men go.”",
+      "fullText": "“I told you that I am he. If you are looking for me, then let these men go.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:9",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "“I have not lost one of those you gave me.”",
+      "fullText": "“I have not lost one of those you gave me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:11",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“Put your sword away! Shall I not drink the cup the Father has given me?”",
+      "fullText": "“Put your sword away! Shall I not drink the cup the Father has given me?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:36",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 36,
+        "isRange": false
+      },
+      "quote": "“My kingdom is not of this world. If it were, my servants would fight to prevent my arrest by the Jewish leaders. But now my kingdom is from another place.”",
+      "fullText": "“My kingdom is not of this world. If it were, my servants would fight to prevent my arrest by the Jewish leaders. But now my kingdom is from another place.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 18:37",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 18,
+        "startVerse": 37,
+        "isRange": false
+      },
+      "quote": "“You say that I am a king. In fact, the reason I was born and came into the world is to testify to the truth. Everyone on the side of truth listens to me.”",
+      "fullText": "“You say that I am a king. In fact, the reason I was born and came into the world is to testify to the truth. Everyone on the side of truth listens to me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 19:11",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 19,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“You would have no power over me if it were not given to you from above. Therefore the one who handed me over to you is guilty of a greater sin.”",
+      "fullText": "“You would have no power over me if it were not given to you from above. Therefore the one who handed me over to you is guilty of a greater sin.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 19:26",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 19,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“Woman, here is your son,”",
+      "fullText": "“Woman, here is your son,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 19:27",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 19,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“Here is your mother.”",
+      "fullText": "“Here is your mother.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 19:28",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 19,
+        "startVerse": 28,
+        "isRange": false
+      },
+      "quote": "“I am thirsty.”",
+      "fullText": "“I am thirsty.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 19:30",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 19,
+        "startVerse": 30,
+        "isRange": false
+      },
+      "quote": "“It is finished.”",
+      "fullText": "“It is finished.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:15",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "“Woman, why are you crying? Who is it you are looking for?”",
+      "fullText": "“Woman, why are you crying? Who is it you are looking for?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:17",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 17,
+        "isRange": false
+      },
+      "quote": "“Do not hold on to me, for I have not yet ascended to the Father. Go instead to my brothers and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’”",
+      "fullText": "“Do not hold on to me, for I have not yet ascended to the Father. Go instead to my brothers and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:19",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“Peace be with you!”",
+      "fullText": "“Peace be with you!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:21",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "“Peace be with you! As the Father has sent me, I am sending you.”",
+      "fullText": "“Peace be with you! As the Father has sent me, I am sending you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:23",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“Receive the Holy Spirit. 23 If you forgive anyone’s sins, their sins are forgiven; if you do not forgive them, they are not forgiven.”",
+      "fullText": "“Receive the Holy Spirit. 23 If you forgive anyone’s sins, their sins are forgiven; if you do not forgive them, they are not forgiven.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:26",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 26,
+        "isRange": false
+      },
+      "quote": "“Peace be with you!”",
+      "fullText": "“Peace be with you!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:27",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 27,
+        "isRange": false
+      },
+      "quote": "“Put your finger here; see my hands. Reach out your hand and put it into my side. Stop doubting and believe.”",
+      "fullText": "“Put your finger here; see my hands. Reach out your hand and put it into my side. Stop doubting and believe.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 20:29",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 20,
+        "startVerse": 29,
+        "isRange": false
+      },
+      "quote": "“Because you have seen me, you have believed; blessed are those who have not seen and yet have believed.”",
+      "fullText": "“Because you have seen me, you have believed; blessed are those who have not seen and yet have believed.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:5",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“Friends, haven’t you any fish?”",
+      "fullText": "“Friends, haven’t you any fish?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:6",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 6,
+        "isRange": false
+      },
+      "quote": "“Throw your net on the right side of the boat and you will find some.”",
+      "fullText": "“Throw your net on the right side of the boat and you will find some.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:10",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "“Bring some of the fish you have just caught.”",
+      "fullText": "“Bring some of the fish you have just caught.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:12",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 12,
+        "isRange": false
+      },
+      "quote": "“Come and have breakfast.”",
+      "fullText": "“Come and have breakfast.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:15",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "“Simon son of John, do you love me more than these?” “Feed my lambs.”",
+      "fullText": "“Simon son of John, do you love me more than these?” “Feed my lambs.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:16",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "“Simon son of John, do you love me?”",
+      "fullText": "“Simon son of John, do you love me?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:19",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 19,
+        "isRange": false
+      },
+      "quote": "“Follow me!”",
+      "fullText": "“Follow me!”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:22",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 22,
+        "isRange": false
+      },
+      "quote": "“If I want him to remain alive until I return, what is that to you? You must follow me.”",
+      "fullText": "“If I want him to remain alive until I return, what is that to you? You must follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "John 21:23",
+      "parsedReference": {
+        "book": "John",
+        "chapter": 21,
+        "startVerse": 23,
+        "isRange": false
+      },
+      "quote": "“If I want him to remain alive until I return, what is that to you?”",
+      "fullText": "“If I want him to remain alive until I return, what is that to you?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 1:42",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 1,
+        "startVerse": 42,
+        "isRange": false
+      },
+      "quote": "“You are Simon son of John. You will be called Cephas”",
+      "fullText": "“You are Simon son of John. You will be called Cephas”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 1:43",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 1,
+        "startVerse": 43,
+        "isRange": false
+      },
+      "quote": "“Follow me.”",
+      "fullText": "“Follow me.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 1:47",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 1,
+        "startVerse": 47,
+        "isRange": false
+      },
+      "quote": "“Here truly is an Israelite in whom there is no deceit.”",
+      "fullText": "“Here truly is an Israelite in whom there is no deceit.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 1:48",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 1,
+        "startVerse": 48,
+        "isRange": false
+      },
+      "quote": "I saw you while you were still under the fig tree before Philip called you.”",
+      "fullText": "I saw you while you were still under the fig tree before Philip called you.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 9:4",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 9,
+        "startVerse": 4,
+        "isRange": false
+      },
+      "quote": "“Saul, Saul, why do you persecute me?”",
+      "fullText": "“Saul, Saul, why do you persecute me?”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 9:5",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 9,
+        "startVerse": 5,
+        "isRange": false
+      },
+      "quote": "“I am Jesus, whom you are persecuting,”",
+      "fullText": "“I am Jesus, whom you are persecuting,”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 10:13",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 10,
+        "startVerse": 13,
+        "isRange": false
+      },
+      "quote": "“Get up, Peter. Kill and eat.”",
+      "fullText": "“Get up, Peter. Kill and eat.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 10:15",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 10,
+        "startVerse": 15,
+        "isRange": false
+      },
+      "quote": "“Do not call anything impure that God has made clean.”",
+      "fullText": "“Do not call anything impure that God has made clean.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 11:7",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 11,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "‘Get up, Peter. Kill and eat.’",
+      "fullText": "‘Get up, Peter. Kill and eat.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 11:9",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 11,
+        "startVerse": 9,
+        "isRange": false
+      },
+      "quote": "‘Do not call anything impure that God has made clean.’",
+      "fullText": "‘Do not call anything impure that God has made clean.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 11:16",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 11,
+        "startVerse": 16,
+        "isRange": false
+      },
+      "quote": "‘John baptized with water, but you will be baptized with the Holy Spirit.’",
+      "fullText": "‘John baptized with water, but you will be baptized with the Holy Spirit.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 20:35",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 20,
+        "startVerse": 35,
+        "isRange": false
+      },
+      "quote": "‘It is more blessed to give than to receive.’",
+      "fullText": "‘It is more blessed to give than to receive.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 22:7",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 22,
+        "startVerse": 7,
+        "isRange": false
+      },
+      "quote": "Why do you persecute me?’",
+      "fullText": "Why do you persecute me?’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 22:8",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 22,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "‘I am Jesus of Nazareth, whom you are persecuting,’",
+      "fullText": "‘I am Jesus of Nazareth, whom you are persecuting,’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 22:10",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 22,
+        "startVerse": 10,
+        "isRange": false
+      },
+      "quote": "‘Get up, and go into Damascus. There you will be told all that you have been assigned to do.’",
+      "fullText": "‘Get up, and go into Damascus. There you will be told all that you have been assigned to do.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 22:18",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 22,
+        "startVerse": 18,
+        "isRange": false
+      },
+      "quote": "‘Quick! Leave Jerusalem immediately, because the people here will not accept your testimony about me.",
+      "fullText": "‘Quick! Leave Jerusalem immediately, because the people here will not accept your testimony about me.",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 22:21",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 22,
+        "startVerse": 21,
+        "isRange": false
+      },
+      "quote": "‘Go; I will send you far away to the Gentiles.’",
+      "fullText": "‘Go; I will send you far away to the Gentiles.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 23:11",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 23,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“Take courage! As you have testified about me in Jerusalem, so you must also testify in Rome.”",
+      "fullText": "“Take courage! As you have testified about me in Jerusalem, so you must also testify in Rome.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Acts 26:14",
+      "parsedReference": {
+        "book": "Acts",
+        "chapter": 26,
+        "startVerse": 14,
+        "isRange": false
+      },
+      "quote": "‘Saul, Saul, why do you persecute me? It is hard for you to kick against the goads.’",
+      "fullText": "‘Saul, Saul, why do you persecute me? It is hard for you to kick against the goads.’",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Revelation 1:8",
+      "parsedReference": {
+        "book": "Revelation",
+        "chapter": 1,
+        "startVerse": 8,
+        "isRange": false
+      },
+      "quote": "“I am the Alpha and the Omega, who is, and who was, and who is to come, the Almighty.”",
+      "fullText": "“I am the Alpha and the Omega, who is, and who was, and who is to come, the Almighty.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Revelation 1:11",
+      "parsedReference": {
+        "book": "Revelation",
+        "chapter": 1,
+        "startVerse": 11,
+        "isRange": false
+      },
+      "quote": "“Write on a scroll what you see and send it to the seven churches: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia and Laodicea.”",
+      "fullText": "“Write on a scroll what you see and send it to the seven churches: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia and Laodicea.”",
+      "source": "unstructured_file"
+    },
+    {
+      "reference": "Revelation 22:20",
+      "parsedReference": {
+        "book": "Revelation",
+        "chapter": 22,
+        "startVerse": 20,
+        "isRange": false
+      },
+      "quote": "“Yes, I am coming soon.”",
+      "fullText": "“Yes, I am coming soon.”",
+      "source": "unstructured_file"
+    }
+  ]
+}

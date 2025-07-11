@@ -1,0 +1,18 @@
+{
+  "model_type": "tinyllama_clarification_refinement",
+  "version": "1.0.0",
+  "description": "TinyLlama model for biblical clarification refinement",
+  "architecture": {
+    "vocab_size": 32000,
+    "hidden_size": 2048,
+    "num_layers": 22,
+    "num_heads": 32,
+    "max_position_embeddings": 2048
+  },
+  "training": {
+    "task": "clarification_refinement",
+    "input_format": "original_question + original_response + user_clarification",
+    "output_format": "refined_response"
+  },
+  "status": "placeholder_ready_for_fine_tuning"
+}

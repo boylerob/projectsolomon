@@ -1,0 +1,32 @@
+[
+  {
+    "reference": "Matthew 5:3-12",
+    "text": "Blessed are the poor in spirit, for theirs is the kingdom of heaven. Blessed are those who mourn, for they shall be comforted. Blessed are the meek, for they shall inherit the earth...",
+    "context": ["Sermon on the Mount", "Beatitudes"],
+    "keywords": ["blessed", "kingdom", "comfort", "meek"]
+  },
+  {
+    "reference": "John 14:6",
+    "text": "I am the way, and the truth, and the life. No one comes to the Father except through me.",
+    "context": ["Identity", "Salvation"],
+    "keywords": ["way", "truth", "life", "Father"]
+  },
+  {
+    "reference": "Luke 23:34",
+    "text": "Father, forgive them, for they know not what they do.",
+    "context": ["Crucifixion", "Forgiveness"],
+    "keywords": ["forgive", "Father", "crucifixion"]
+  },
+  {
+    "reference": "Matthew 28:19-20",
+    "text": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.",
+    "context": ["Great Commission", "Discipleship"],
+    "keywords": ["disciples", "baptize", "command", "with you"]
+  },
+  {
+    "reference": "John 11:25-26",
+    "text": "I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live, and everyone who lives and believes in me shall never die. Do you believe this?",
+    "context": ["Resurrection", "Faith"],
+    "keywords": ["resurrection", "life", "believe"]
+  }
+] 

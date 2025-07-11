@@ -1,0 +1,26 @@
+{
+  "name": "bible-companion-server",
+  "version": "2.0.0",
+  "description": "Enhanced backend server for Bible Companion app with large dataset support",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup": "node scripts/setup-database.js",
+    "import-data": "node scripts/import-biblical-data.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.6",
+    "better-sqlite3": "^9.2.2",
+    "node-cache": "^5.1.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+} 
