@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "source": "https://biblevise.com/books-of-the-bible-and-their-authors/",
+    "lastUpdated": "2024-03-19",
+    "description": "Authorship information for books of the Bible"
+  },
+  "books": {
+    "Genesis": {
+      "author": "Moses",
+      "section": "Old Testament",
+      "yearWritten": "1445-1405 B.C.",
+      "genre": "The Law",
+      "notes": "Traditionally attributed to Moses, though not explicitly stated in Genesis"
+    },
+    "Exodus": {
+      "author": "Moses",
+      "section": "Old Testament",
+      "yearWritten": "1445-1405 B.C.",
+      "genre": "The Law"
+    },
+    "Leviticus": {
+      "author": "Moses",
+      "section": "Old Testament",
+      "yearWritten": "1445-1405 B.C.",
+      "genre": "The Law"
+    },
+    "Numbers": {
+      "author": "Moses",
+      "section": "Old Testament",
+      "yearWritten": "1445-1405 B.C.",
+      "genre": "The Law"
+    },
+    "Deuteronomy": {
+      "author": "Moses",
+      "section": "Old Testament",
+      "yearWritten": "1445-1405 B.C.",
+      "genre": "The Law",
+      "notes": "Moses wrote most of Deuteronomy, but the final 8 verses (34:5-12) describing his death were likely written by Joshua"
+    },
+    "Joshua": {
+      "author": "Joshua",
+      "section": "Old Testament",
+      "yearWritten": "1405-1385 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Traditionally attributed to Joshua, though authorship is not explicitly stated"
+    },
+    "Judges": {
+      "author": "Samuel",
+      "section": "Old Testament",
+      "yearWritten": "1045-1000 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Traditionally attributed to Samuel, though authorship is debated"
+    },
+    "Ruth": {
+      "author": "Samuel",
+      "section": "Old Testament",
+      "yearWritten": "1030-930 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Traditionally attributed to Samuel, though authorship is debated"
+    },
+    "1 Samuel": {
+      "authors": ["Samuel", "Gad", "Nathan"],
+      "section": "Old Testament",
+      "yearWritten": "930-722 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Samuel wrote until his death, then Gad and Nathan continued"
+    },
+    "2 Samuel": {
+      "authors": ["Samuel", "Gad", "Nathan"],
+      "section": "Old Testament",
+      "yearWritten": "930-722 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Originally part of 1 Samuel, separated in the Septuagint"
+    },
+    "1 Kings": {
+      "author": "Jeremiah",
+      "section": "Old Testament",
+      "yearWritten": "560-538 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Traditionally attributed to Jeremiah, though authorship is debated"
+    },
+    "2 Kings": {
+      "author": "Jeremiah",
+      "section": "Old Testament",
+      "yearWritten": "560-538 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Originally part of 1 Kings, separated in the Septuagint"
+    },
+    "1 Chronicles": {
+      "author": "Ezra",
+      "section": "Old Testament",
+      "yearWritten": "450-425 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Traditionally attributed to Ezra"
+    },
+    "2 Chronicles": {
+      "author": "Ezra",
+      "section": "Old Testament",
+      "yearWritten": "450-425 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Originally part of 1 Chronicles, separated in the Septuagint"
+    },
+    "Ezra": {
+      "author": "Ezra",
+      "section": "Old Testament",
+      "yearWritten": "450-420 B.C.",
+      "genre": "Historical Narrative"
+    },
+    "Nehemiah": {
+      "author": "Nehemiah",
+      "section": "Old Testament",
+      "yearWritten": "445-420 B.C.",
+      "genre": "Historical Narrative"
+    },
+    "Esther": {
+      "author": "Unknown",
+      "section": "Old Testament",
+      "yearWritten": "450-350 B.C.",
+      "genre": "Historical Narrative",
+      "notes": "Possibly Mordecai or Ezra"
+    },
+    "Job": {
+      "author": "Unknown",
+      "section": "Old Testament",
+      "yearWritten": "Unknown",
+      "genre": "Wisdom Literature",
+      "notes": "Possibly Job, Moses, or Solomon"
+    },
+    "Psalms": {
+      "authors": [
+        "Multiple Authors"
+      ],
+      "yearWritten": "1440-430 BC",
+      "genre": "Poetry",
+      "sections": [
+        {
+          "name": "Book 1 (Psalms 1-41)",
+          "chapters": "1-41",
+          "author": "David"
+        },
+        {
+          "name": "Book 2 (Psalms 42-72)",
+          "chapters": "42-72",
+          "author": "David, Sons of Korah, Asaph, Solomon"
+        },
+        {
+          "name": "Book 3 (Psalms 73-89)",
+          "chapters": "73-89",
+          "author": "Asaph, Sons of Korah, Heman, Ethan"
+        },
+        {
+          "name": "Book 4 (Psalms 90-106)",
+          "chapters": "90-106",
+          "author": "Moses, Anonymous"
+        },
+        {
+          "name": "Book 5 (Psalms 107-150)",
+          "chapters": "107-150",
+          "author": "David, Anonymous"
+        }
+      ],
+      "chapterAuthors": {
+        "72": "Solomon",
+        "88": "Heman",
+        "89": "Ethan",
+        "90": "Moses",
+        "127": "Solomon"
+      },
+      "notes": "The Psalms were written by multiple authors over a period of about 1,000 years. King David wrote 73 psalms, Solomon wrote 2 (72 and 127), Asaph wrote 12, the Sons of Korah wrote 11, Heman wrote 1 (88), Ethan wrote 1 (89), Moses wrote 1 (90), and 49 psalms are anonymous. The psalms are organized into five books, with different authors contributing to each book."
+    },
+    "Proverbs": {
+      "authors": ["Solomon", "Agur", "Lemuel"],
+      "section": "Old Testament",
+      "yearWritten": "970-930 B.C.",
+      "genre": "Wisdom Literature",
+      "notes": "Primarily Solomon, with contributions from others"
+    },
+    "Ecclesiastes": {
+      "author": "Solomon",
+      "section": "Old Testament",
+      "yearWritten": "935 B.C.",
+      "genre": "Wisdom Literature"
+    },
+    "Song of Solomon": {
+      "author": "Solomon",
+      "section": "Old Testament",
+      "yearWritten": "970-930 B.C.",
+      "genre": "Poetry"
+    },
+    "Isaiah": {
+      "author": "Isaiah",
+      "section": "Old Testament",
+      "yearWritten": "740-680 B.C.",
+      "genre": "Prophecy"
+    },
+    "Jeremiah": {
+      "author": "Jeremiah",
+      "section": "Old Testament",
+      "yearWritten": "627-586 B.C.",
+      "genre": "Prophecy",
+      "notes": "Possibly with help from Baruch"
+    },
+    "Lamentations": {
+      "author": "Jeremiah",
+      "section": "Old Testament",
+      "yearWritten": "586 B.C.",
+      "genre": "Poetry"
+    },
+    "Ezekiel": {
+      "author": "Ezekiel",
+      "section": "Old Testament",
+      "yearWritten": "593-571 B.C.",
+      "genre": "Prophecy"
+    },
+    "Daniel": {
+      "author": "Daniel",
+      "section": "Old Testament",
+      "yearWritten": "605-536 B.C.",
+      "genre": "Prophecy"
+    },
+    "Hosea": {
+      "author": "Hosea",
+      "section": "Old Testament",
+      "yearWritten": "750-710 B.C.",
+      "genre": "Prophecy"
+    },
+    "Joel": {
+      "author": "Joel",
+      "section": "Old Testament",
+      "yearWritten": "835-796 B.C.",
+      "genre": "Prophecy"
+    },
+    "Amos": {
+      "author": "Amos",
+      "section": "Old Testament",
+      "yearWritten": "760-750 B.C.",
+      "genre": "Prophecy"
+    },
+    "Obadiah": {
+      "author": "Obadiah",
+      "section": "Old Testament",
+      "yearWritten": "850-840 B.C.",
+      "genre": "Prophecy"
+    },
+    "Jonah": {
+      "author": "Jonah",
+      "section": "Old Testament",
+      "yearWritten": "785-760 B.C.",
+      "genre": "Prophecy"
+    },
+    "Micah": {
+      "author": "Micah",
+      "section": "Old Testament",
+      "yearWritten": "735-700 B.C.",
+      "genre": "Prophecy"
+    },
+    "Nahum": {
+      "author": "Nahum",
+      "section": "Old Testament",
+      "yearWritten": "650-630 B.C.",
+      "genre": "Prophecy"
+    },
+    "Habakkuk": {
+      "author": "Habakkuk",
+      "section": "Old Testament",
+      "yearWritten": "615-605 B.C.",
+      "genre": "Prophecy"
+    },
+    "Zephaniah": {
+      "author": "Zephaniah",
+      "section": "Old Testament",
+      "yearWritten": "635-625 B.C.",
+      "genre": "Prophecy"
+    },
+    "Haggai": {
+      "author": "Haggai",
+      "section": "Old Testament",
+      "yearWritten": "520 B.C.",
+      "genre": "Prophecy"
+    },
+    "Zechariah": {
+      "author": "Zechariah",
+      "section": "Old Testament",
+      "yearWritten": "520-480 B.C.",
+      "genre": "Prophecy"
+    },
+    "Malachi": {
+      "author": "Malachi",
+      "section": "Old Testament",
+      "yearWritten": "430 B.C.",
+      "genre": "Prophecy"
+    },
+    "Matthew": {
+      "author": "Matthew",
+      "section": "New Testament",
+      "yearWritten": "50-65 A.D.",
+      "genre": "Gospel"
+    },
+    "Mark": {
+      "author": "Mark",
+      "section": "New Testament",
+      "yearWritten": "50-60 A.D.",
+      "genre": "Gospel",
+      "notes": "Based on Peter's eyewitness accounts"
+    },
+    "Luke": {
+      "author": "Luke",
+      "section": "New Testament",
+      "yearWritten": "60-61 A.D.",
+      "genre": "Gospel"
+    },
+    "John": {
+      "author": "John",
+      "section": "New Testament",
+      "yearWritten": "85-90 A.D.",
+      "genre": "Gospel"
+    },
+    "Acts": {
+      "author": "Luke",
+      "section": "New Testament",
+      "yearWritten": "61-64 A.D.",
+      "genre": "Historical Narrative"
+    },
+    "Romans": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "57 A.D.",
+      "genre": "Epistle"
+    },
+    "1 Corinthians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "55 A.D.",
+      "genre": "Epistle"
+    },
+    "2 Corinthians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "55-56 A.D.",
+      "genre": "Epistle"
+    },
+    "Galatians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "49-50 A.D.",
+      "genre": "Epistle"
+    },
+    "Ephesians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "60-62 A.D.",
+      "genre": "Epistle"
+    },
+    "Philippians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "60-62 A.D.",
+      "genre": "Epistle"
+    },
+    "Colossians": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "60-62 A.D.",
+      "genre": "Epistle"
+    },
+    "1 Thessalonians": {
+      "authors": ["Paul", "Silvanus", "Timothy"],
+      "section": "New Testament",
+      "yearWritten": "51 A.D.",
+      "genre": "Epistle"
+    },
+    "2 Thessalonians": {
+      "authors": ["Paul", "Silvanus", "Timothy"],
+      "section": "New Testament",
+      "yearWritten": "51-52 A.D.",
+      "genre": "Epistle"
+    },
+    "1 Timothy": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "62-66 A.D.",
+      "genre": "Epistle"
+    },
+    "2 Timothy": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "66-67 A.D.",
+      "genre": "Epistle"
+    },
+    "Titus": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "64-65 A.D.",
+      "genre": "Epistle"
+    },
+    "Philemon": {
+      "author": "Paul",
+      "section": "New Testament",
+      "yearWritten": "57-62 A.D.",
+      "genre": "Epistle",
+      "notes": "Timothy may have been a co-author"
+    },
+    "Hebrews": {
+      "author": "Unknown",
+      "section": "New Testament",
+      "yearWritten": "61-69 A.D.",
+      "genre": "Epistle",
+      "notes": "Possible authors include Paul, Luke, Barnabas, Priscilla, Silas, or Apollos"
+    },
+    "James": {
+      "author": "James",
+      "section": "New Testament",
+      "yearWritten": "44-49 A.D.",
+      "genre": "Epistle",
+      "notes": "James the Just, half-brother of Jesus"
+    },
+    "1 Peter": {
+      "author": "Peter",
+      "section": "New Testament",
+      "yearWritten": "60-65 A.D.",
+      "genre": "Epistle"
+    },
+    "2 Peter": {
+      "author": "Peter",
+      "section": "New Testament",
+      "yearWritten": "65-68 A.D.",
+      "genre": "Epistle"
+    },
+    "1 John": {
+      "author": "John",
+      "section": "New Testament",
+      "yearWritten": "85-95 A.D.",
+      "genre": "Epistle"
+    },
+    "2 John": {
+      "author": "John",
+      "section": "New Testament",
+      "yearWritten": "85-95 A.D.",
+      "genre": "Epistle"
+    },
+    "3 John": {
+      "author": "John",
+      "section": "New Testament",
+      "yearWritten": "85-95 A.D.",
+      "genre": "Epistle"
+    },
+    "Jude": {
+      "author": "Jude",
+      "section": "New Testament",
+      "yearWritten": "60-80 A.D.",
+      "genre": "Epistle",
+      "notes": "Half-brother of Jesus"
+    },
+    "Revelation": {
+      "author": "John",
+      "section": "New Testament",
+      "yearWritten": "94-96 A.D.",
+      "genre": "Apocalyptic Literature"
+    }
+  }
+} 

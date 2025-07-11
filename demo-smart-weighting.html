@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon Smart Weighting Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #4B0082;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fafafa;
+        }
+        .demo-section h3 {
+            color: #4B0082;
+            margin-top: 0;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .ask-button {
+            background: #4B0082;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .ask-button:hover {
+            background: #3a0066;
+        }
+        .response-container {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+        }
+        .response-type {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .factual { background: #17a2b8; color: white; }
+        .conversational { background: #28a745; color: white; }
+        .clarification { background: #ffc107; color: black; }
+        .response-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .score-breakdown {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .score-bar {
+            background: #e9ecef;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 2px;
+        }
+        .score-fill {
+            height: 100%;
+            background: #4B0082;
+            transition: width 0.3s ease;
+        }
+        .example-questions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .example-btn {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: left;
+        }
+        .example-btn:hover {
+            background: #bbdefb;
+        }
+        .confidence {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .high { background: #d4edda; color: #155724; }
+        .medium { background: #fff3cd; color: #856404; }
+        .low { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Solomon Smart Weighting System Demo</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            See how the smart weighting system selects the best responses
+        </p>
+
+        <div class="demo-section">
+            <h3>🔍 Test Smart Phrase Selection</h3>
+            <input type="text" id="questionInput" class="question-input" 
+                   placeholder="Ask Solomon a question..." />
+            <button class="ask-button" onclick="testSmartWeighting()">Get Smart Response</button>
+            
+            <div id="responseArea"></div>
+        </div>
+
+        <div class="demo-section">
+            <h3>📝 Example Questions to Test</h3>
+            <div class="example-questions">
+                <button class="example-btn" onclick="setQuestion('How many verses are in the Bible?')">
+                    📊 How many verses are in the Bible?
+                </button>
+                <button class="example-btn" onclick="setQuestion('Who wrote the book of John?')">
+                    ✍️ Who wrote the book of John?
+                </button>
+                <button class="example-btn" onclick="setQuestion('What does the Bible say about love?')">
+                    ❤️ What does the Bible say about love?
+                </button>
+                <button class="example-btn" onclick="setQuestion('I am struggling with anxiety')">
+                    😰 I am struggling with anxiety
+                </button>
+                <button class="example-btn" onclick="setQuestion('How do I pray?')">
+                    🙏 How do I pray?
+                </button>
+                <button class="example-btn" onclick="setQuestion('What is faith?')">
+                    🤔 What is faith?
+                </button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h3>⚖️ Weighting System Breakdown</h3>
+            <p>The smart weighting system considers 5 factors:</p>
+            <ul>
+                <li><strong>Relevance (35%)</strong>: Keyword matching and semantic similarity</li>
+                <li><strong>Contextual (25%)</strong>: Conversation flow and topic continuity</li>
+                <li><strong>Diversity (20%)</strong>: Avoids repetition and maintains variety</li>
+                <li><strong>User Preference (15%)</strong>: Matches user's tone and interaction style</li>
+                <li><strong>Temporal (5%)</strong>: Adapts to conversation length and time of day</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Mock Smart Weighting System
+        class MockSmartWeightingSystem {
+            constructor() {
+                this.recentPhrases = [];
+                this.userContext = {
+                    spiritualMaturity: 'beginner',
+                    conversationHistory: [],
+                    isFirstQuestion: true,
+                    recentTopics: [],
+                    preferredTone: 'friendly',
+                    interactionStyle: 'conversational',
+                    recentPhrases: []
+                };
+            }
+
+            calculateRelevanceScore(phrase, question) {
+                const lowerQuestion = question.toLowerCase();
+                const lowerPhrase = phrase.text.toLowerCase();
+                
+                let score = 0;
+                
+                // Keyword matching
+                if (phrase.keywords) {
+                    const keywordMatches = phrase.keywords.filter(keyword => 
+                        lowerQuestion.includes(keyword.toLowerCase())
+                    ).length;
+                    score += (keywordMatches / phrase.keywords.length) * 0.6;
+                }
+                
+                // Word overlap
+                const questionWords = lowerQuestion.split(/\s+/);
+                const phraseWords = lowerPhrase.split(/\s+/);
+                const commonWords = questionWords.filter(word => 
+                    phraseWords.includes(word) && word.length > 3
+                );
+                score += (commonWords.length / Math.max(questionWords.length, phraseWords.length)) * 0.4;
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateContextualScore(phrase, userContext) {
+                let score = 0.5;
+                
+                if (userContext.isFirstQuestion && phrase.text.toLowerCase().includes('welcome')) {
+                    score += 0.25;
+                }
+                
+                if (userContext.conversationHistory.length > 0 && phrase.text.includes('that')) {
+                    score += 0.15;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateDiversityScore(phrase, userContext) {
+                const recentPhrases = [...this.recentPhrases, ...(userContext.recentPhrases || [])];
+                
+                if (recentPhrases.length === 0) return 1.0;
+                
+                if (recentPhrases.includes(phrase.text)) return 0.1;
+                
+                const phraseStart = phrase.text.toLowerCase().split(' ').slice(0, 3).join(' ');
+                const recentStarts = recentPhrases.map(p => p.toLowerCase().split(' ').slice(0, 3).join(' '));
+                
+                if (recentStarts.includes(phraseStart)) return 0.3;
+                
+                return 1.0;
+            }
+
+            calculateUserPreferenceScore(phrase, userContext) {
+                let score = 0.5;
+                
+                if (userContext.preferredTone && phrase.tone === userContext.preferredTone) {
+                    score += 0.3;
+                }
+                
+                if (userContext.interactionStyle === 'conversational' && phrase.text.includes('?')) {
+                    score += 0.2;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateTemporalScore(phrase, userContext) {
+                let score = 0.5;
+                
+                const conversationLength = userContext.conversationHistory.length;
+                
+                if (conversationLength === 0 && phrase.text.length > 30) {
+                    score += 0.3;
+                } else if (conversationLength > 5 && phrase.text.length < 40) {
+                    score += 0.3;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            scorePhrases(phrases, question, userContext) {
+                return phrases.map(phrase => {
+                    const relevance = this.calculateRelevanceScore(phrase, question);
+                    const contextual = this.calculateContextualScore(phrase, userContext);
+                    const diversity = this.calculateDiversityScore(phrase, userContext);
+                    const userPreference = this.calculateUserPreferenceScore(phrase, userContext);
+                    const temporal = this.calculateTemporalScore(phrase, userContext);
+                    
+                    const totalScore = (
+                        relevance * 0.35 +
+                        contextual * 0.25 +
+                        diversity * 0.20 +
+                        userPreference * 0.15 +
+                        temporal * 0.05
+                    );
+                    
+                    return {
+                        phrase,
+                        score: totalScore,
+                        breakdown: {
+                            relevance,
+                            contextual,
+                            diversity,
+                            userPreference,
+                            temporal
+                        }
+                    };
+                });
+            }
+
+            getResponse(question) {
+                // Simulate different response types
+                const lowerQuestion = question.toLowerCase();
+                
+                // Factual questions
+                if (lowerQuestion.includes('how many') || lowerQuestion.includes('verses') || 
+                    lowerQuestion.includes('wrote') || lowerQuestion.includes('author')) {
+                    return {
+                        text: "Hold on one second, I will get you that exact answer right now.",
+                        type: 'factual',
+                        immediateAnswer: {
+                            text: "The Bible contains approximately 31,102 verses across 66 books. The book of John was written by the Apostle John, one of Jesus' twelve disciples."
+                        },
+                        isComplete: true,
+                        confidence: 1.0
+                    };
+                }
+                
+                // Clarification questions
+                if (lowerQuestion.includes('what is') || lowerQuestion.includes('how do i') ||
+                    lowerQuestion.includes('struggling') || lowerQuestion.includes('anxiety')) {
+                    return {
+                        text: "That's a really important question. Can you tell me a bit more about what's going on in your life right now? Understanding your situation will help me give you the most helpful response.",
+                        type: 'clarification',
+                        isComplete: true,
+                        confidence: 0.9
+                    };
+                }
+                
+                // Conversational questions - use smart weighting
+                const mockPhrases = [
+                    {
+                        text: "That's a great question! Let me think about this for a moment and give you a thoughtful response.",
+                        tone: 'friendly',
+                        keywords: ['question', 'think', 'thoughtful'],
+                        complexity: 'simple'
+                    },
+                    {
+                        text: "I love that you're asking about this. It's such an important topic, and I'd be happy to explore it with you.",
+                        tone: 'friendly',
+                        keywords: ['love', 'important', 'explore'],
+                        complexity: 'simple'
+                    },
+                    {
+                        text: "What a wonderful question to ponder. This touches on some deep spiritual truths that I think will really speak to your heart.",
+                        tone: 'pastoral',
+                        keywords: ['wonderful', 'ponder', 'spiritual', 'truths'],
+                        complexity: 'moderate'
+                    }
+                ];
+                
+                const scoredPhrases = this.scorePhrases(mockPhrases, question, this.userContext);
+                const bestPhrase = scoredPhrases.sort((a, b) => b.score - a.score)[0];
+                
+                // Update context
+                this.userContext.isFirstQuestion = false;
+                this.userContext.conversationHistory.push(question);
+                this.recentPhrases.unshift(bestPhrase.phrase.text);
+                if (this.recentPhrases.length > 10) this.recentPhrases = this.recentPhrases.slice(0, 10);
+                
+                return {
+                    text: bestPhrase.phrase.text,
+                    type: 'conversational',
+                    isComplete: false,
+                    confidence: bestPhrase.score,
+                    scoreBreakdown: bestPhrase.breakdown
+                };
+            }
+        }
+
+        const smartSystem = new MockSmartWeightingSystem();
+
+        function setQuestion(question) {
+            document.getElementById('questionInput').value = question;
+        }
+
+        function testSmartWeighting() {
+            const question = document.getElementById('questionInput').value;
+            if (!question.trim()) return;
+
+            const responseArea = document.getElementById('responseArea');
+            responseArea.innerHTML = '<div style="color: #666; font-style: italic;">Processing with smart weighting...</div>';
+
+            setTimeout(() => {
+                const response = smartSystem.getResponse(question);
+                
+                let responseHtml = `
+                    <div class="response-container">
+                        <div class="response-type ${response.type}">${response.type}</div>
+                        <div class="response-text">${response.text}</div>
+                `;
+
+                if (response.immediateAnswer) {
+                    responseHtml += `<div class="response-text" style="margin-top: 10px; font-weight: bold;">${response.immediateAnswer.text}</div>`;
+                }
+
+                if (response.confidence !== undefined) {
+                    const confidenceClass = response.confidence > 0.8 ? 'high' : response.confidence > 0.6 ? 'medium' : 'low';
+                    responseHtml += `<span class="confidence ${confidenceClass}">Confidence: ${Math.round(response.confidence * 100)}%</span>`;
+                }
+
+                if (response.scoreBreakdown) {
+                    responseHtml += `
+                        <div class="score-breakdown">
+                            <h4>Score Breakdown:</h4>
+                            <div class="score-item">
+                                <span>Relevance (35%)</span>
+                                <span>${Math.round(response.scoreBreakdown.relevance * 100)}%</span>
+                            </div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: ${response.scoreBreakdown.relevance * 100}%"></div>
+                            </div>
+                            
+                            <div class="score-item">
+                                <span>Contextual (25%)</span>
+                                <span>${Math.round(response.scoreBreakdown.contextual * 100)}%</span>
+                            </div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: ${response.scoreBreakdown.contextual * 100}%"></div>
+                            </div>
+                            
+                            <div class="score-item">
+                                <span>Diversity (20%)</span>
+                                <span>${Math.round(response.scoreBreakdown.diversity * 100)}%</span>
+                            </div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: ${response.scoreBreakdown.diversity * 100}%"></div>
+                            </div>
+                            
+                            <div class="score-item">
+                                <span>User Preference (15%)</span>
+                                <span>${Math.round(response.scoreBreakdown.userPreference * 100)}%</span>
+                            </div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: ${response.scoreBreakdown.userPreference * 100}%"></div>
+                            </div>
+                            
+                            <div class="score-item">
+                                <span>Temporal (5%)</span>
+                                <span>${Math.round(response.scoreBreakdown.temporal * 100)}%</span>
+                            </div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: ${response.scoreBreakdown.temporal * 100}%"></div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                responseHtml += `</div>`;
+                responseArea.innerHTML = responseHtml;
+            }, 500);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Smart Weighting System Demo loaded');
+        });
+    </script>
+</body>
+</html> 

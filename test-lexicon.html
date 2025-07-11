@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon - Your AI Bible Companion</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            background: #fafbfc;
+        }
+        .question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .response {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 10px;
+        }
+        .response-type {
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .response-text {
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+        .explanation {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .input-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .result.factual {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+        }
+        .result.immediate {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .result.clarification {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .answer-text {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+        .tier-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .tier-factual {
+            background: #17a2b8;
+            color: white;
+        }
+        .tier-immediate {
+            background: #28a745;
+            color: white;
+        }
+        .tier-clarification {
+            background: #ffc107;
+            color: #212529;
+        }
+        .score-breakdown {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .score-bar {
+            background: #e9ecef;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 2px;
+        }
+        .score-fill {
+            height: 100%;
+            background: #4B0082;
+            transition: width 0.3s ease;
+        }
+        .confidence {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .high { background: #d4edda; color: #155724; }
+        .medium { background: #fff3cd; color: #856404; }
+        .low { background: #f8d7da; color: #721c24; }
+        .smart-indicator {
+            background: #4B0082;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Solomon - Your AI Bible Companion</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 30px;">
+            Enhanced with Smart Weighting System: Intelligent phrase selection for better conversations
+        </p>
+
+        <div class="test-section">
+            <h3>🎯 Tier 1: Factual Answers (Immediate from Local Data)</h3>
+            
+            <div class="question">"What does John 3:16 say?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-factual">Factual Answer</div>
+                <div class="response-type">Immediate Factual Response</div>
+                <div class="response-text">Here's that verse for you:</div>
+                <div class="answer-text">"For God so loved the world, that he gave his only begotten Son, that whosoever believeth on him should not perish, but have eternal life." — John 3:16</div>
+            </div>
+            <div class="explanation">Direct verse request - answered immediately from local Bible data</div>
+
+            <div class="question">"How many times is 'love' mentioned in the Bible?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-factual">Factual Answer</div>
+                <div class="response-type">Immediate Factual Response</div>
+                <div class="response-text">I can tell you that right away:</div>
+                <div class="answer-text">The word "love" appears 348 times in the Bible.</div>
+            </div>
+            <div class="explanation">Word count question - answered immediately from local analysis</div>
+
+            <div class="question">"Who wrote the book of Romans?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-factual">Factual Answer</div>
+                <div class="response-type">Immediate Factual Response</div>
+                <div class="response-text">Here's what I know about that:</div>
+                <div class="answer-text">Romans was written by Paul around AD 57.</div>
+            </div>
+            <div class="explanation">Author question - answered immediately from metadata</div>
+
+            <div class="question">"How many chapters are in Genesis?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-factual">Factual Answer</div>
+                <div class="response-type">Immediate Factual Response</div>
+                <div class="response-text">Here's the information you're looking for:</div>
+                <div class="answer-text">Genesis has 50 chapters.</div>
+            </div>
+            <div class="explanation">Metadata question - answered immediately from book info</div>
+        </div>
+
+        <div class="test-section">
+            <h3>💬 Tier 2: Smart Immediate Responses (Intelligent Acknowledgment)</h3>
+            
+            <div class="question">"What does the Bible say about love?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-immediate">Smart Response</div>
+                <div class="response-type">Intelligent Acknowledgment</div>
+                <div class="response-text">That's a really good question! <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Broad topic - smart weighting selected the most relevant acknowledgment</div>
+
+            <div class="question">"How should I pray?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-immediate">Smart Response</div>
+                <div class="response-type">Intelligent Acknowledgment</div>
+                <div class="response-text">I get what you're asking about. <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Practical question - smart weighting considered context and user preference</div>
+
+            <div class="question">"I'm struggling with doubt"</div>
+            <div class="response">
+                <div class="tier-indicator tier-immediate">Smart Response</div>
+                <div class="response-type">Intelligent Acknowledgment</div>
+                <div class="response-text">That's something a lot of people wonder about. <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Personal struggle - smart weighting selected empathetic response</div>
+        </div>
+
+        <div class="test-section">
+            <h3>🤔 Tier 3: Smart Clarification Responses (Intelligent Question Refinement)</h3>
+            
+            <div class="question">"What does the Bible say about marriage?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-clarification">Smart Clarification</div>
+                <div class="response-type">Intelligent Question Refinement</div>
+                <div class="response-text">What specifically about marriage interests you? <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Broad topic - smart weighting selected the most appropriate clarification</div>
+
+            <div class="question">"What is faith?"</div>
+            <div class="response">
+                <div class="tier-indicator tier-clarification">Smart Clarification</div>
+                <div class="response-type">Intelligent Question Refinement</div>
+                <div class="response-text">When you say 'faith', what do you mean exactly? <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Abstract concept - smart weighting selected precise clarification</div>
+
+            <div class="question">"I feel distant from God"</div>
+            <div class="response">
+                <div class="tier-indicator tier-clarification">Smart Clarification</div>
+                <div class="response-type">Intelligent Question Refinement</div>
+                <div class="response-text">What's behind this question for you? <span class="smart-indicator">Smart Weighted</span></div>
+            </div>
+            <div class="explanation">Personal struggle - smart weighting selected caring clarification</div>
+        </div>
+
+        <div class="input-section">
+            <h3>🧪 Ask Solomon Your Question</h3>
+            <input type="text" id="questionInput" placeholder="Type your question here..." />
+            <button onclick="askSolomon()">Ask Solomon</button>
+            
+            <div id="result" class="result">
+                <div id="resultTier" class="tier-indicator"></div>
+                <div id="resultType" class="response-type"></div>
+                <div id="resultText" class="response-text"></div>
+                <div id="resultAnswer" class="answer-text" style="display: none;"></div>
+                <div id="resultExplanation" class="explanation"></div>
+                <div id="resultScoreBreakdown" class="score-breakdown" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced lexicon data with smart weighting attributes
+        const responseLexicon = {
+            categories: {
+                acknowledgment: {
+                    phrases: [
+                        { 
+                            text: "That's a really good question!", 
+                            tone: "friendly",
+                            keywords: ["question", "good", "really"],
+                            complexity: "simple",
+                            emotionalTone: "encouraging"
+                        },
+                        { 
+                            text: "I get what you're asking about.", 
+                            tone: "understanding",
+                            keywords: ["asking", "understand", "get"],
+                            complexity: "simple",
+                            emotionalTone: "neutral"
+                        },
+                        { 
+                            text: "That's something a lot of people wonder about.", 
+                            tone: "relatable",
+                            keywords: ["people", "wonder", "lot"],
+                            complexity: "simple",
+                            emotionalTone: "comforting"
+                        },
+                        {
+                            text: "What a wonderful question to ponder.",
+                            tone: "pastoral",
+                            keywords: ["wonderful", "ponder", "question"],
+                            complexity: "moderate",
+                            emotionalTone: "encouraging"
+                        }
+                    ]
+                },
+                welcome: {
+                    phrases: [
+                        { 
+                            text: "Hey there! I'm here to help you explore God's Word together.", 
+                            tone: "friendly",
+                            keywords: ["help", "explore", "together"],
+                            complexity: "simple",
+                            emotionalTone: "encouraging"
+                        }
+                    ]
+                }
+            },
+            fallbackResponses: {
+                default: "That's an interesting question. Let me think about that."
+            }
+        };
+
+        const clarificationLexicon = {
+            categories: {
+                topicClarification: {
+                    phrases: [
+                        { 
+                            text: "What specifically about [topic] interests you?", 
+                            tone: "curious",
+                            keywords: ["specifically", "interests", "topic"],
+                            complexity: "simple",
+                            emotionalTone: "neutral"
+                        },
+                        { 
+                            text: "Are you looking for what the Bible says about [topic], or how to live it out?", 
+                            tone: "clarifying",
+                            keywords: ["bible", "live", "out"],
+                            complexity: "moderate",
+                            emotionalTone: "neutral"
+                        }
+                    ]
+                },
+                personalContext: {
+                    phrases: [
+                        { 
+                            text: "What's behind this question for you?", 
+                            tone: "caring",
+                            keywords: ["behind", "question", "you"],
+                            complexity: "simple",
+                            emotionalTone: "comforting"
+                        },
+                        { 
+                            text: "Are you going through something that's making you think about this?", 
+                            tone: "empathetic",
+                            keywords: ["going", "through", "think"],
+                            complexity: "moderate",
+                            emotionalTone: "comforting"
+                        }
+                    ]
+                },
+                conceptClarification: {
+                    phrases: [
+                        { 
+                            text: "When you say '[term]', what do you mean exactly?", 
+                            tone: "clarifying",
+                            keywords: ["mean", "exactly", "say"],
+                            complexity: "simple",
+                            emotionalTone: "neutral"
+                        }
+                    ]
+                }
+            },
+            fallbackClarifications: {
+                default: "Could you tell me a bit more about what you're looking for?"
+            }
+        };
+
+        // Mock Bible data for demo
+        const mockBibleData = {
+            verses: {
+                "John 3:16": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth on him should not perish, but have eternal life.",
+                "Genesis 1:1": "In the beginning God created the heavens and the earth.",
+                "Psalm 23:1": "The LORD is my shepherd; I shall not want."
+            },
+            wordCounts: {
+                "love": 348,
+                "faith": 247,
+                "hope": 129,
+                "grace": 170
+            },
+            authors: {
+                "Romans": "Paul",
+                "John": "John",
+                "Genesis": "Moses",
+                "Psalms": "David and others"
+            },
+            metadata: {
+                "Genesis": { chapters: 50, genre: "Law", testament: "Old Testament" },
+                "John": { chapters: 21, genre: "Gospel", testament: "New Testament" },
+                "Romans": { chapters: 16, genre: "Epistle", testament: "New Testament" }
+            }
+        };
+
+        // Smart Weighting System
+        class SmartWeightingSystem {
+            constructor() {
+                this.recentPhrases = [];
+                this.userContext = {
+                    spiritualMaturity: 'beginner',
+                    conversationHistory: [],
+                    isFirstQuestion: true,
+                    recentTopics: [],
+                    preferredTone: 'friendly',
+                    interactionStyle: 'conversational',
+                    recentPhrases: []
+                };
+            }
+
+            calculateRelevanceScore(phrase, question) {
+                const lowerQuestion = question.toLowerCase();
+                const lowerPhrase = phrase.text.toLowerCase();
+                
+                let score = 0;
+                
+                // Keyword matching
+                if (phrase.keywords) {
+                    const keywordMatches = phrase.keywords.filter(keyword => 
+                        lowerQuestion.includes(keyword.toLowerCase())
+                    ).length;
+                    score += (keywordMatches / phrase.keywords.length) * 0.6;
+                }
+                
+                // Word overlap
+                const questionWords = lowerQuestion.split(/\s+/);
+                const phraseWords = lowerPhrase.split(/\s+/);
+                const commonWords = questionWords.filter(word => 
+                    phraseWords.includes(word) && word.length > 3
+                );
+                score += (commonWords.length / Math.max(questionWords.length, phraseWords.length)) * 0.4;
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateContextualScore(phrase, userContext) {
+                let score = 0.5;
+                
+                if (userContext.isFirstQuestion && phrase.text.toLowerCase().includes('welcome')) {
+                    score += 0.25;
+                }
+                
+                if (userContext.conversationHistory.length > 0 && phrase.text.includes('that')) {
+                    score += 0.15;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateDiversityScore(phrase, userContext) {
+                const recentPhrases = [...this.recentPhrases, ...(userContext.recentPhrases || [])];
+                
+                if (recentPhrases.length === 0) return 1.0;
+                
+                if (recentPhrases.includes(phrase.text)) return 0.1;
+                
+                const phraseStart = phrase.text.toLowerCase().split(' ').slice(0, 3).join(' ');
+                const recentStarts = recentPhrases.map(p => p.toLowerCase().split(' ').slice(0, 3).join(' '));
+                
+                if (recentStarts.includes(phraseStart)) return 0.3;
+                
+                return 1.0;
+            }
+
+            calculateUserPreferenceScore(phrase, userContext) {
+                let score = 0.5;
+                
+                if (userContext.preferredTone && phrase.tone === userContext.preferredTone) {
+                    score += 0.3;
+                }
+                
+                if (userContext.interactionStyle === 'conversational' && phrase.text.includes('?')) {
+                    score += 0.2;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            calculateTemporalScore(phrase, userContext) {
+                let score = 0.5;
+                
+                const conversationLength = userContext.conversationHistory.length;
+                
+                if (conversationLength === 0 && phrase.text.length > 30) {
+                    score += 0.3;
+                } else if (conversationLength > 5 && phrase.text.length < 40) {
+                    score += 0.3;
+                }
+                
+                return Math.min(score, 1.0);
+            }
+
+            scorePhrases(phrases, question, userContext) {
+                return phrases.map(phrase => {
+                    const relevance = this.calculateRelevanceScore(phrase, question);
+                    const contextual = this.calculateContextualScore(phrase, userContext);
+                    const diversity = this.calculateDiversityScore(phrase, userContext);
+                    const userPreference = this.calculateUserPreferenceScore(phrase, userContext);
+                    const temporal = this.calculateTemporalScore(phrase, userContext);
+                    
+                    const totalScore = (
+                        relevance * 0.35 +
+                        contextual * 0.25 +
+                        diversity * 0.20 +
+                        userPreference * 0.15 +
+                        temporal * 0.05
+                    );
+                    
+                    return {
+                        phrase,
+                        score: totalScore,
+                        breakdown: {
+                            relevance,
+                            contextual,
+                            diversity,
+                            userPreference,
+                            temporal
+                        }
+                    };
+                });
+            }
+
+            selectBestPhrase(scoredPhrases) {
+                scoredPhrases.sort((a, b) => b.score - a.score);
+                
+                const topPhrases = scoredPhrases.slice(0, 3);
+                if (topPhrases.length > 1) {
+                    const weights = topPhrases.map((_, index) => Math.pow(0.7, index));
+                    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+                    const random = Math.random() * totalWeight;
+                    
+                    let cumulativeWeight = 0;
+                    for (let i = 0; i < topPhrases.length; i++) {
+                        cumulativeWeight += weights[i];
+                        if (random <= cumulativeWeight) {
+                            return topPhrases[i];
+                        }
+                    }
+                }
+                
+                return scoredPhrases[0];
+            }
+
+            updateRecentPhrases(phraseText) {
+                this.recentPhrases.unshift(phraseText);
+                if (this.recentPhrases.length > 10) {
+                    this.recentPhrases = this.recentPhrases.slice(0, 10);
+                }
+            }
+        }
+
+        const smartSystem = new SmartWeightingSystem();
+
+        function canAnswerFactually(question) {
+            const lowerQuestion = question.toLowerCase();
+            
+            const factualPatterns = [
+                /what does .* say/i,
+                /what does .* mean/i,
+                /how many times is .* mentioned/i,
+                /who wrote .*/i,
+                /how many chapters in .*/i,
+                /what genre is .*/i,
+                /what testament is .*/i
+            ];
+
+            return factualPatterns.some(pattern => pattern.test(lowerQuestion));
+        }
+
+        function getFactualAnswer(question) {
+            const lowerQuestion = question.toLowerCase();
+            
+            // Verse lookup
+            const verseMatch = question.match(/what does (.+) say/i);
+            if (verseMatch) {
+                const verseRef = verseMatch[1].trim();
+                if (mockBibleData.verses[verseRef]) {
+                    return {
+                        type: 'verse',
+                        text: mockBibleData.verses[verseRef],
+                        reference: verseRef
+                    };
+                }
+            }
+            
+            // Word count
+            const wordMatch = question.match(/how many times is ['"]?([^'"]+)['"]? mentioned/i);
+            if (wordMatch) {
+                const word = wordMatch[1].toLowerCase();
+                if (mockBibleData.wordCounts[word]) {
+                    return {
+                        type: 'wordCount',
+                        text: `The word "${word}" appears ${mockBibleData.wordCounts[word]} times in the Bible.`
+                    };
+                }
+            }
+            
+            // Author
+            const authorMatch = question.match(/who wrote (.+)/i);
+            if (authorMatch) {
+                const book = authorMatch[1].trim();
+                if (mockBibleData.authors[book]) {
+                    return {
+                        type: 'author',
+                        text: `${book} was written by ${mockBibleData.authors[book]}.`
+                    };
+                }
+            }
+            
+            // Chapters
+            const chapterMatch = question.match(/how many chapters in (.+)/i);
+            if (chapterMatch) {
+                const book = chapterMatch[1].trim();
+                if (mockBibleData.metadata[book]) {
+                    return {
+                        type: 'metadata',
+                        text: `${book} has ${mockBibleData.metadata[book].chapters} chapters.`
+                    };
+                }
+            }
+            
+            return null;
+        }
+
+        function shouldUseClarification(question) {
+            const lowerQuestion = question.toLowerCase();
+            
+            const skipPatterns = [
+                /what does .* say/i,
+                /how many times/i,
+                /who wrote/i,
+                /when was/i,
+                /where is/i
+            ];
+            
+            for (const pattern of skipPatterns) {
+                if (pattern.test(lowerQuestion)) {
+                    return false;
+                }
+            }
+            
+            const clarifyPatterns = [
+                /what does the bible say about/i,
+                /how should i/i,
+                /what is/i,
+                /i feel/i,
+                /i am/i,
+                /i have/i,
+                /i want/i,
+                /i need/i,
+                /i struggle/i
+            ];
+            
+            for (const pattern of clarifyPatterns) {
+                if (pattern.test(lowerQuestion)) {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        function extractTopic(question) {
+            const patterns = [
+                /what does the bible say about (.+)/i,
+                /what is (.+)/i,
+                /how should i (.+)/i
+            ];
+            
+            for (const pattern of patterns) {
+                const match = question.match(pattern);
+                if (match && match[1]) {
+                    return match[1].trim();
+                }
+            }
+            
+            return 'this';
+        }
+
+        function extractTerm(question) {
+            const quotedMatch = question.match(/"([^"]+)"/);
+            if (quotedMatch) {
+                return quotedMatch[1];
+            }
+            
+            const words = question.split(' ');
+            const keyWords = words.filter(word => 
+                word.length > 3 && 
+                !['what', 'does', 'bible', 'say', 'about', 'how', 'should'].includes(word.toLowerCase())
+            );
+            
+            return keyWords[0] || 'this';
+        }
+
+        function askSolomon() {
+            const question = document.getElementById('questionInput').value.trim();
+            if (!question) return;
+
+            const resultDiv = document.getElementById('result');
+            const resultTier = document.getElementById('resultTier');
+            const resultType = document.getElementById('resultType');
+            const resultText = document.getElementById('resultText');
+            const resultAnswer = document.getElementById('resultAnswer');
+            const resultExplanation = document.getElementById('resultExplanation');
+            const resultScoreBreakdown = document.getElementById('resultScoreBreakdown');
+
+            // Check for factual answer first
+            if (canAnswerFactually(question)) {
+                const factualAnswer = getFactualAnswer(question);
+                if (factualAnswer) {
+                    resultTier.textContent = 'Factual Answer';
+                    resultTier.className = 'tier-indicator tier-factual';
+                    resultType.textContent = 'Immediate Factual Response';
+                    
+                    if (factualAnswer.type === 'verse') {
+                        resultText.textContent = "Here's that verse for you:";
+                        resultAnswer.textContent = `"${factualAnswer.text}" — ${factualAnswer.reference}`;
+                    } else {
+                        resultText.textContent = "I can tell you that right away:";
+                        resultAnswer.textContent = factualAnswer.text;
+                    }
+                    
+                    resultAnswer.style.display = 'block';
+                    resultExplanation.textContent = 'Direct factual question - answered immediately from local Bible data.';
+                    resultDiv.className = 'result factual';
+                    resultDiv.style.display = 'block';
+                    resultScoreBreakdown.style.display = 'none';
+                    return;
+                }
+            }
+
+            // Check for clarification
+            const shouldClarify = shouldUseClarification(question);
+            if (shouldClarify) {
+                const topic = extractTopic(question);
+                const term = extractTerm(question);
+                
+                let category = 'topicClarification';
+                if (question.toLowerCase().includes('i feel') || question.toLowerCase().includes('i am')) {
+                    category = 'personalContext';
+                } else if (question.toLowerCase().includes('what is')) {
+                    category = 'conceptClarification';
+                }
+                
+                const phrases = clarificationLexicon.categories[category]?.phrases || [];
+                
+                if (phrases.length > 0) {
+                    // Use smart weighting for clarification phrases
+                    const scoredPhrases = smartSystem.scorePhrases(phrases, question, smartSystem.userContext);
+                    const selectedPhrase = smartSystem.selectBestPhrase(scoredPhrases);
+                    
+                    const processedText = selectedPhrase.phrase.text
+                        .replace(/\[topic\]/g, topic)
+                        .replace(/\[term\]/g, term);
+                    
+                    resultTier.textContent = 'Smart Clarification';
+                    resultTier.className = 'tier-indicator tier-clarification';
+                    resultType.textContent = 'Intelligent Question Refinement';
+                    resultText.textContent = processedText + ' <span class="smart-indicator">Smart Weighted</span>';
+                    resultAnswer.style.display = 'none';
+                    resultExplanation.textContent = 'This question needs clarification - smart weighting selected the most appropriate clarification.';
+                    resultDiv.className = 'result clarification';
+                    
+                    // Show score breakdown
+                    showScoreBreakdown(selectedPhrase.breakdown, selectedPhrase.score);
+                } else {
+                    const fallbackText = clarificationLexicon.fallbackClarifications.default;
+                    resultTier.textContent = 'Clarification';
+                    resultTier.className = 'tier-indicator tier-clarification';
+                    resultType.textContent = 'Question Refinement';
+                    resultText.textContent = fallbackText;
+                    resultAnswer.style.display = 'none';
+                    resultExplanation.textContent = 'This question needs clarification to provide a better response.';
+                    resultDiv.className = 'result clarification';
+                    resultScoreBreakdown.style.display = 'none';
+                }
+            } else {
+                // Get smart immediate response
+                const phrases = responseLexicon.categories.acknowledgment.phrases;
+                
+                if (phrases.length > 0) {
+                    // Use smart weighting for immediate responses
+                    const scoredPhrases = smartSystem.scorePhrases(phrases, question, smartSystem.userContext);
+                    const selectedPhrase = smartSystem.selectBestPhrase(scoredPhrases);
+                    
+                    resultTier.textContent = 'Smart Response';
+                    resultTier.className = 'tier-indicator tier-immediate';
+                    resultType.textContent = 'Intelligent Acknowledgment';
+                    resultText.textContent = selectedPhrase.phrase.text + ' <span class="smart-indicator">Smart Weighted</span>';
+                    resultAnswer.style.display = 'none';
+                    resultExplanation.textContent = 'Smart weighting selected the most relevant and contextually appropriate response.';
+                    resultDiv.className = 'result immediate';
+                    
+                    // Show score breakdown
+                    showScoreBreakdown(selectedPhrase.breakdown, selectedPhrase.score);
+                } else {
+                    const fallbackText = responseLexicon.fallbackResponses.default;
+                    resultTier.textContent = 'Immediate Response';
+                    resultTier.className = 'tier-indicator tier-immediate';
+                    resultType.textContent = 'Conversational Acknowledgment';
+                    resultText.textContent = fallbackText;
+                    resultAnswer.style.display = 'none';
+                    resultExplanation.textContent = 'This question is specific enough to provide an immediate response.';
+                    resultDiv.className = 'result immediate';
+                    resultScoreBreakdown.style.display = 'none';
+                }
+            }
+
+            // Update user context
+            smartSystem.userContext.isFirstQuestion = false;
+            smartSystem.userContext.conversationHistory.push(question);
+            smartSystem.updateRecentPhrases(resultText.textContent);
+
+            resultDiv.style.display = 'block';
+        }
+
+        function showScoreBreakdown(breakdown, totalScore) {
+            const resultScoreBreakdown = document.getElementById('resultScoreBreakdown');
+            
+            const confidenceClass = totalScore > 0.8 ? 'high' : totalScore > 0.6 ? 'medium' : 'low';
+            
+            resultScoreBreakdown.innerHTML = `
+                <h4>Smart Weighting Breakdown <span class="confidence ${confidenceClass}">Confidence: ${Math.round(totalScore * 100)}%</span></h4>
+                <div class="score-item">
+                    <span>Relevance (35%)</span>
+                    <span>${Math.round(breakdown.relevance * 100)}%</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${breakdown.relevance * 100}%"></div>
+                </div>
+                
+                <div class="score-item">
+                    <span>Contextual (25%)</span>
+                    <span>${Math.round(breakdown.contextual * 100)}%</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${breakdown.contextual * 100}%"></div>
+                </div>
+                
+                <div class="score-item">
+                    <span>Diversity (20%)</span>
+                    <span>${Math.round(breakdown.diversity * 100)}%</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${breakdown.diversity * 100}%"></div>
+                </div>
+                
+                <div class="score-item">
+                    <span>User Preference (15%)</span>
+                    <span>${Math.round(breakdown.userPreference * 100)}%</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${breakdown.userPreference * 100}%"></div>
+                </div>
+                
+                <div class="score-item">
+                    <span>Temporal (5%)</span>
+                    <span>${Math.round(breakdown.temporal * 100)}%</span>
+                </div>
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${breakdown.temporal * 100}%"></div>
+                </div>
+            `;
+            
+            resultScoreBreakdown.style.display = 'block';
+        }
+
+        // Allow Enter key to ask
+        document.getElementById('questionInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                askSolomon();
+            }
+        });
+    </script>
+</body>
+</html> 

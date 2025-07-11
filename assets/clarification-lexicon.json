@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-01-15",
+    "totalPhrases": 45,
+    "description": "Second-tier clarification responses to refine user questions",
+    "tone": "friendly, plainspoken, and deeply thoughtful biblical companion - like a kind and clever friend, not a scholar or preacher"
+  },
+  "clarificationTriggers": {
+    "skipClarification": {
+      "patterns": [
+        "what does [verse] say",
+        "what does [verse] mean", 
+        "how many times is [word] mentioned",
+        "where is [specific term] in the bible",
+        "what verse says [specific phrase]",
+        "what does [specific word] mean in [verse]",
+        "who wrote [book]",
+        "when was [book] written",
+        "what is the context of [verse]"
+      ],
+      "keywords": ["verse", "chapter", "book", "mentioned", "says", "wrote", "written", "context"]
+    },
+    "useClarification": {
+      "patterns": [
+        "what does the bible say about [broad topic]",
+        "how should i [action]",
+        "what is [abstract concept]",
+        "why does [complex situation]",
+        "how do i [personal struggle]",
+        "is it wrong to [behavior]",
+        "what does god think about [topic]",
+        "how can i [personal growth]",
+        "what should i do about [situation]"
+      ],
+      "keywords": ["love", "faith", "prayer", "sin", "marriage", "money", "suffering", "heaven", "forgiveness", "salvation", "relationships", "work", "family", "friendship", "anger", "fear", "doubt", "hope", "joy", "peace", "patience", "kindness", "goodness", "gentleness", "self-control"]
+    }
+  },
+  "categories": {
+    "topicClarification": {
+      "description": "Helping narrow down broad topics",
+      "phrases": [
+        {
+          "text": "What specifically about [topic] interests you?",
+          "tone": "curious",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "theological"]
+        },
+        {
+          "text": "Are you thinking about [topic] in terms of relationships, personal growth, or something else?",
+          "tone": "exploring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "practical"]
+        },
+        {
+          "text": "What aspect of [topic] would be most helpful for you right now?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "personal"]
+        },
+        {
+          "text": "Are you looking for what the Bible says about [topic], or how to live it out?",
+          "tone": "clarifying",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "practical"]
+        },
+        {
+          "text": "Would you like to focus on the Old Testament, New Testament, or both when it comes to [topic]?",
+          "tone": "structuring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "theological"]
+        },
+        {
+          "text": "Are you interested in [topic] from a personal angle, or just understanding it better?",
+          "tone": "distinguishing",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "personal"]
+        },
+        {
+          "text": "What's the most important thing you want to know about [topic]?",
+          "tone": "focused",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad"]
+        },
+        {
+          "text": "Are you thinking about [topic] in your own life, or just curious about it in general?",
+          "tone": "personal",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "personal"]
+        }
+      ]
+    },
+    "personalContext": {
+      "description": "Understanding the user's personal situation",
+      "phrases": [
+        {
+          "text": "What's behind this question for you?",
+          "tone": "caring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "Are you going through something that's making you think about this?",
+          "tone": "empathetic",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "Is this something you're wrestling with right now?",
+          "tone": "understanding",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "What are you hoping to figure out?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "clarification"]
+        },
+        {
+          "text": "Are you looking for comfort, guidance, or just understanding?",
+          "tone": "caring",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "What would be most helpful for you right now?",
+          "tone": "supportive",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "clarification"]
+        },
+        {
+          "text": "Is this connected to something specific in your life?",
+          "tone": "connecting",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "What's really on your heart with this?",
+          "tone": "gentle",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "deepening"]
+        }
+      ]
+    },
+    "scopeRefinement": {
+      "description": "Helping focus overly broad questions",
+      "phrases": [
+        {
+          "text": "That covers a lot of ground. Should we start with the basics or go deeper?",
+          "tone": "helpful",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "theological"]
+        },
+        {
+          "text": "Would you like a quick overview or a deeper dive into this?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad"]
+        },
+        {
+          "text": "Should we focus on what this means for you, or for people in general?",
+          "tone": "clarifying",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "personal"]
+        },
+        {
+          "text": "Are you looking for examples from the Bible or advice for your life?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad", "practical"]
+        },
+        {
+          "text": "Would it help to break this down into smaller questions?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["broad"]
+        },
+        {
+          "text": "Should we look at this from a historical, cultural, or personal angle?",
+          "tone": "exploring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "theological"]
+        },
+        {
+          "text": "Are you interested in what Jesus said, or the bigger picture?",
+          "tone": "clarifying",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "theological"]
+        },
+        {
+          "text": "Would you like to focus on the biblical side, practical side, or emotional side of this?",
+          "tone": "organizing",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["broad", "practical"]
+        }
+      ]
+    },
+    "situationSpecific": {
+      "description": "Understanding specific situations or scenarios",
+      "phrases": [
+        {
+          "text": "Could you tell me a bit more about your situation?",
+          "tone": "inviting",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "What exactly is happening that's making you think about this?",
+          "tone": "curious",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "Are you dealing with this right now, or just thinking about it?",
+          "tone": "understanding",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "What's the most challenging part of this for you?",
+          "tone": "caring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["personal", "struggle"]
+        },
+        {
+          "text": "Have you been thinking about this for a while, or did something just happen?",
+          "tone": "curious",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "What would be the most helpful thing for you to know right now?",
+          "tone": "supportive",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "Are you looking for a quick answer or something to think about?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        },
+        {
+          "text": "What's the biggest question you have about this?",
+          "tone": "focused",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["personal", "situation"]
+        }
+      ]
+    },
+    "conceptClarification": {
+      "description": "Understanding what users mean by specific terms",
+      "phrases": [
+        {
+          "text": "When you say '[term]', what do you mean exactly?",
+          "tone": "clarifying",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "Are you thinking about '[term]' in a spiritual sense, or something else?",
+          "tone": "exploring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "What does '[term]' mean to you?",
+          "tone": "curious",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "Are you asking about the biblical definition of '[term]' or how people use it today?",
+          "tone": "distinguishing",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "Could you give me an example of what you mean by '[term]'?",
+          "tone": "helpful",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "Are you thinking about '[term]' in terms of feelings, actions, or beliefs?",
+          "tone": "exploring",
+          "maturity": ["intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "What aspect of '[term]' is most important to you?",
+          "tone": "focused",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        },
+        {
+          "text": "Are you looking for the definition of '[term]' or how to experience it?",
+          "tone": "clarifying",
+          "maturity": ["beginner", "intermediate", "advanced"],
+          "context": ["theological", "clarification"]
+        }
+      ]
+    }
+  },
+  "fallbackClarifications": {
+    "default": "Could you tell me a bit more about what you're looking for?",
+    "broad": "What aspect of this would be most helpful for you?",
+    "personal": "What's behind this question for you?",
+    "complex": "Could you break this down a bit more for me?"
+  }
+} 

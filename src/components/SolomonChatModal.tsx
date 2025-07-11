@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
+  Modal, 
   View, 
   Text, 
   TextInput, 
@@ -12,22 +13,35 @@ import {
 } from 'react-native';
 import AgentService, { AgentResponse, UserContext, ImmediateResponse } from '../services/AgentService';
 
+interface SolomonChatModalProps {
+  visible: boolean;
+  onClose: () => void;
+  additionalContext?: string;
+}
+
 const { width } = Dimensions.get('window');
 
-export const HomeScreen = () => {
+const SolomonChatModal: React.FC<SolomonChatModalProps> = ({ 
+  visible, 
+  onClose, 
+  additionalContext 
+}) => {
   const [question, setQuestion] = useState('');
+  // Remove mode state and mode selection UI
   // const [mode, setMode] = useState<'chat' | 'summary' | 'deep'>('chat');
   const [response, setResponse] = useState<AgentResponse | null>(null);
   const [immediateResponse, setImmediateResponse] = useState<ImmediateResponse | null>(null);
+  const [secondImmediateResponse, setSecondImmediateResponse] = useState<ImmediateResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiLoading, setAiLoading] = useState(false);
   const [error, setError] = useState('');
   const [userContext, setUserContext] = useState<UserContext | null>(null);
   const [showFollowUps, setShowFollowUps] = useState(false);
-  const [isSolomonAsked, setIsSolomonAsked] = useState(false);
-  const [conversationHistory, setConversationHistory] = useState<Array<{question: string, response: string}>>([]);
-  const [followUpQuestion, setFollowUpQuestion] = useState('');
+  const [isInClarificationFlow, setIsInClarificationFlow] = useState(false);
+  const [originalQuestion, setOriginalQuestion] = useState('');
+  const [clarificationText, setClarificationText] = useState('');
 
+  // Remove the modes array and mode selection UI
   // const modes = [
   //   { label: 'Chat', value: 'chat' as const, description: 'Quick, conversational response' },
   //   { label: 'Summary', value: 'summary' as const, description: 'Structured overview with key points' },
@@ -35,8 +49,10 @@ export const HomeScreen = () => {
   // ];
 
   useEffect(() => {
-    initializeContext();
-  }, []);
+    if (visible) {
+      initializeContext();
+    }
+  }, [visible]);
 
   const initializeContext = async () => {
     try {
@@ -49,127 +65,85 @@ export const HomeScreen = () => {
 
   const askSolomon = async () => {
     if (!question.trim()) return;
-    setIsSolomonAsked(true);
     
     setLoading(true);
     setAiLoading(false);
     setError('');
     setResponse(null);
     setImmediateResponse(null);
+    setSecondImmediateResponse(null);
     setShowFollowUps(false);
 
     try {
-      // Get immediate response first
+      // STEP 1: Get first immediate response (welcome)
       const immediate = await AgentService.getImmediateResponse(question);
       setImmediateResponse(immediate);
       setLoading(false);
 
-      // If the immediate response is complete, we're done
+      // If this is a clarification response, store the original question
+      if (immediate.type === 'clarification' && !isInClarificationFlow) {
+        setIsInClarificationFlow(true);
+        setOriginalQuestion(question);
+      }
+
+      // If the immediate response is complete (factual answer), we're done
       if (immediate.isComplete) {
-        const completeResponse = await AgentService.askQuestion(question, 'chat'); // Default to chat mode for immediate response
+        const completeResponse = await AgentService.askQuestion(question);
         setResponse(completeResponse);
         setShowFollowUps(true);
+        
+        // If this was a clarification response, reset the clarification flow
+        if (immediate.type === 'clarification') {
+          setIsInClarificationFlow(false);
+          setOriginalQuestion('');
+        }
         return;
       }
 
-      // Otherwise, show AI processing
+      // STEP 2: Start Gemini processing IMMEDIATELY (in parallel)
+      const geminiPromise = AgentService.askQuestion(question);
+
+      // STEP 3: Get second immediate response (acknowledgment) for natural conversation flow
+      if (immediate.type === 'conversational') {
+        // Small delay to simulate natural conversation cadence
+        setTimeout(async () => {
+          const secondImmediate = await AgentService.getSecondImmediateResponse(question, immediate);
+          if (secondImmediate) {
+            setSecondImmediateResponse(secondImmediate);
+            
+            // STEP 4: Show processing indicator and wait for Gemini results
+            setTimeout(async () => {
       setAiLoading(true);
-      const agentResponse = await AgentService.askQuestion(question, 'chat'); // Default to chat mode for full response
+              try {
+                const agentResponse = await geminiPromise; // Use the already-started promise
       setResponse(agentResponse);
       setShowFollowUps(true);
+              } catch (err: any) {
+                setError('Error contacting Solomon. Please try again.');
+                console.error('Error asking question:', err);
+              } finally {
+                setAiLoading(false);
+              }
+            }, 1200); // Wait 1.2 seconds after second response before showing results
+          }
+        }, 800); // 800ms delay for natural cadence
+      }
     } catch (err: any) {
       setError('Error contacting Solomon. Please try again.');
       console.error('Error asking question:', err);
     } finally {
       setLoading(false);
-      setAiLoading(false);
-    }
-  };
-
-  const askFollowUp = async () => {
-    if (!followUpQuestion.trim()) return;
-    
-    // Add to conversation history
-    const newEntry = {
-      question: followUpQuestion,
-      response: 'Processing...'
-    };
-    setConversationHistory([...conversationHistory, newEntry]);
-    
-    try {
-      const followUpResponse = await AgentService.askQuestion(followUpQuestion, 'chat');
-      
-      // Update the conversation history with the actual response
-      setConversationHistory(prev => 
-        prev.map((entry, index) => 
-          index === prev.length - 1 
-            ? { ...entry, response: followUpResponse.content }
-            : entry
-        )
-      );
-      
-      setFollowUpQuestion('');
-    } catch (err: any) {
-      setError('Error asking follow-up question. Please try again.');
-      console.error('Error asking follow-up:', err);
     }
   };
 
   const handleFollowUpQuestion = (followUpQuestion: string) => {
-    setFollowUpQuestion(followUpQuestion);
+    setQuestion(followUpQuestion);
     setShowFollowUps(false);
     // Auto-ask the follow-up question
-    setTimeout(() => askFollowUp(), 100);
+    setTimeout(() => askSolomon(), 100);
   };
 
-  const rateResponse = async (rating: number) => {
-    if (response) {
-      try {
-        await AgentService.rateResponse(response.content, rating);
-        Alert.alert('Thank you!', 'Your feedback helps Solomon improve.');
-      } catch (error) {
-        console.error('Error rating response:', error);
-      }
-    }
-  };
-
-  const renderImmediateResponse = () => {
-    if (!immediateResponse) return null;
-
-    const getResponseTypeColor = () => {
-      switch (immediateResponse.type) {
-        case 'factual': return '#17a2b8';
-        case 'conversational': return '#28a745';
-        case 'clarification': return '#ffc107';
-        default: return '#6c757d';
-      }
-    };
-
-    const getResponseTypeText = () => {
-      switch (immediateResponse.type) {
-        case 'factual': return 'Factual Answer';
-        case 'conversational': return 'Processing...';
-        case 'clarification': return 'Clarification';
-        default: return 'Response';
-      }
-    };
-
-    return (
-      <View style={styles.immediateResponseContainer}>
-        <View style={[styles.responseTypeBadge, { backgroundColor: getResponseTypeColor() }]}>
-          <Text style={styles.responseTypeText}>{getResponseTypeText()}</Text>
-        </View>
-        <Text style={styles.immediateResponseText}>{immediateResponse.text}</Text>
-        
-        {aiLoading && immediateResponse.type === 'conversational' && (
-          <View style={styles.aiProcessingContainer}>
-            <ActivityIndicator size="small" color="#4B0082" />
-            <Text style={styles.aiProcessingText}>Solomon is thinking deeper about this...</Text>
-          </View>
-        )}
-      </View>
-    );
-  };
+  // Remove the renderResponseRating function and all references to it
 
   const renderScriptureReferences = () => {
     if (!response?.scriptureReferences || response.scriptureReferences.length === 0) {
@@ -200,6 +174,8 @@ export const HomeScreen = () => {
       </View>
     );
   };
+
+
 
   const renderFurtherStudy = () => {
     if (!response?.furtherStudy || response.furtherStudy.length === 0) return null;
@@ -241,153 +217,200 @@ export const HomeScreen = () => {
     );
   };
 
-  const renderResponseRating = () => {
-    if (!response) return null;
+  // In the render section, remove any call to renderResponseRating or feedback UI
+
+  // Restore closeModal function
+  const closeModal = () => {
+    setQuestion('');
+    setResponse(null);
+    setImmediateResponse(null);
+    setSecondImmediateResponse(null);
+    setError('');
+    setLoading(false);
+    setAiLoading(false);
+    setShowFollowUps(false);
+    setIsInClarificationFlow(false);
+    setOriginalQuestion('');
+    setClarificationText('');
+    onClose();
+  };
+
+  // Restore renderImmediateResponse function
+  const renderImmediateResponse = () => {
+    if (!immediateResponse) return null;
+
+    const getResponseTypeColor = () => {
+      switch (immediateResponse.type) {
+        case 'factual': return '#17a2b8';
+        case 'conversational': return '#28a745';
+        case 'clarification': return '#ffc107';
+        default: return '#6c757d';
+      }
+    };
+
+    const getResponseTypeText = () => {
+      switch (immediateResponse.type) {
+        case 'factual': return 'Factual Answer';
+        case 'conversational': return 'Processing...';
+        case 'clarification': return 'Clarification';
+        default: return 'Response';
+      }
+    };
 
     return (
-      <View style={styles.ratingSection}>
-        <Text style={styles.ratingTitle}>Was this helpful?</Text>
-        <View style={styles.ratingButtons}>
-          <TouchableOpacity
-            style={[styles.ratingButton, styles.thumbsDown]}
-            onPress={() => rateResponse(1)}
-          >
-            <Text style={styles.ratingButtonText}>👎</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.ratingButton, styles.thumbsUp]}
-            onPress={() => rateResponse(5)}
-          >
-            <Text style={styles.ratingButtonText}>👍</Text>
-          </TouchableOpacity>
+      <View style={styles.immediateResponseContainer}>
+        <View style={[styles.responseTypeBadge, { backgroundColor: getResponseTypeColor() }]}> 
+          <Text style={styles.responseTypeText}>{getResponseTypeText()}</Text>
         </View>
+        <Text style={styles.immediateResponseText}>{immediateResponse.text}</Text>
+        {/* Render second immediate response if available */}
+        {secondImmediateResponse && (
+          <View style={styles.secondImmediateResponseContainer}>
+            <Text style={styles.secondImmediateResponseText}>{secondImmediateResponse.text}</Text>
+          </View>
+        )}
+        {aiLoading && immediateResponse.type === 'conversational' && (
+          <View style={styles.aiProcessingContainer}>
+            <ActivityIndicator size="small" color="#4B0082" />
+            <Text style={styles.aiProcessingText}>Solomon is thinking deeper about this...</Text>
+          </View>
+        )}
       </View>
     );
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Ask Solomon</Text>
-        <Text style={styles.subtitle}>Your AI Bible Companion</Text>
-      </View>
+    <Modal
+      visible={visible}
+      animationType="slide"
+      transparent={true}
+      onRequestClose={closeModal}
+    >
+      <View style={styles.overlay}>
+        <View style={styles.modal}>
+          <View style={styles.header}>
+            <Text style={styles.title}>Ask Solomon</Text>
+            <Text style={styles.subtitle}>Your AI Bible Companion</Text>
+          </View>
 
-      <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        {/* Initial Question Input - Only show if not asked yet */}
-        {!isSolomonAsked && (
-          <>
+          <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
+            {/* Remove mode selection UI */}
+            {/* Question Input */}
             <View style={styles.inputSection}>
+              {/* Show clarification context if we're in clarification flow */}
+              {isInClarificationFlow && originalQuestion && (
+                <View style={styles.clarificationContext}>
+                  <Text style={styles.clarificationContextText}>
+                    Clarifying: "{originalQuestion}"
+                  </Text>
+                </View>
+              )}
+              {isInClarificationFlow && originalQuestion && (
+                <View style={styles.clarificationInputContainer}>
+                  <TextInput
+                    style={styles.input}
+                    placeholder="Type your clarification..."
+                    value={clarificationText}
+                    onChangeText={setClarificationText}
+                    editable={!loading && !aiLoading}
+                    maxLength={300}
+                    multiline
+                    returnKeyType="send"
+                  />
+                  <TouchableOpacity
+                    style={[styles.askButton, (!clarificationText.trim() || loading || aiLoading) && styles.askButtonDisabled]}
+                    onPress={async () => {
+                      if (!clarificationText.trim()) return;
+                      setQuestion(clarificationText);
+                      setClarificationText('');
+                      await askSolomon();
+                    }}
+                    disabled={loading || aiLoading || !clarificationText.trim()}
+                  >
+                    <Text style={styles.askButtonText}>Submit Clarification</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
               <TextInput
                 style={styles.input}
-                placeholder="What would you like to ask Solomon?"
+                placeholder={isInClarificationFlow ? "Provide your clarification..." : "Ask Solomon anything..."}
                 value={question}
                 onChangeText={setQuestion}
-                editable={!loading}
-                multiline
+                onSubmitEditing={askSolomon}
+                editable={!loading && !aiLoading}
                 maxLength={500}
-                textAlignVertical="top"
-              />
-              <Text style={styles.charCount}>{question.length}/500</Text>
-            </View>
-
-            <TouchableOpacity
-              style={[styles.askButton, (!question.trim() || loading) && styles.askButtonDisabled]}
-              onPress={askSolomon}
-              disabled={loading || !question.trim()}
-            >
-              {loading ? (
-                <ActivityIndicator size="small" color="#fff" />
-              ) : (
-                <Text style={styles.askButtonText}>Ask Solomon</Text>
-              )}
-            </TouchableOpacity>
-          </>
-        )}
-
-        {/* Anchor Question Headline */}
-        {isSolomonAsked && question && (
-          <View style={styles.anchorQuestionContainer}>
-            <Text style={styles.anchorQuestionLabel}>Your Question:</Text>
-            <Text style={styles.anchorQuestionText}>{question}</Text>
-          </View>
-        )}
-
-        {/* Loading State */}
-        {loading && (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#4B0082" />
-            <Text style={styles.loadingText}>Solomon is thinking...</Text>
-          </View>
-        )}
-
-        {/* Error State */}
-        {error ? (
-          <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>{error}</Text>
-          </View>
-        ) : null}
-
-        {/* Initial Response */}
-        {response && (
-          <View style={styles.initialResponseContainer}>
-            <Text style={styles.responseText}>{response.content}</Text>
-            {renderScriptureReferences()}
-            {renderFurtherStudy()}
-            {renderFollowUpQuestions()}
-          </View>
-        )}
-
-        {/* Conversation History */}
-        {conversationHistory.length > 0 && (
-          <View style={styles.conversationContainer}>
-            <Text style={styles.conversationTitle}>Conversation</Text>
-            {conversationHistory.map((entry, index) => (
-              <View key={index} style={styles.conversationEntry}>
-                <View style={styles.questionBubble}>
-                  <Text style={styles.questionText}>{entry.question}</Text>
-                </View>
-                <View style={styles.responseBubble}>
-                  <Text style={styles.responseText}>{entry.response}</Text>
-                </View>
-              </View>
-            ))}
-          </View>
-        )}
-
-        {/* Follow-up Q&A Section */}
-        {isSolomonAsked && (
-          <View style={styles.followUpSection}>
-            <Text style={styles.followUpTitle}>Ask a follow-up question:</Text>
-            <View style={styles.followUpInputContainer}>
-              <TextInput
-                style={styles.followUpInput}
-                placeholder="Type your follow-up question..."
-                value={followUpQuestion}
-                onChangeText={setFollowUpQuestion}
                 multiline
-                maxLength={300}
                 returnKeyType="send"
-                onSubmitEditing={askFollowUp}
               />
-              <TouchableOpacity
-                style={[styles.followUpSubmitButton, (!followUpQuestion.trim()) && styles.followUpSubmitButtonDisabled]}
-                onPress={askFollowUp}
-                disabled={!followUpQuestion.trim()}
-              >
-                <Text style={styles.followUpSubmitButtonText}>Ask</Text>
-              </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.askButton}
+              onPress={askSolomon}
+                disabled={loading || aiLoading || !question.trim()}
+            >
+                <Text style={styles.askButtonText}>
+                  {isInClarificationFlow ? "Clarify" : "Ask Solomon"}
+                </Text>
+            </TouchableOpacity>
             </View>
-          </View>
-        )}
-      </ScrollView>
-    </View>
+
+            {/* Loading State */}
+            {loading && (
+              <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#4B0082" />
+                <Text style={styles.loadingText}>Solomon is thinking...</Text>
+              </View>
+            )}
+
+            {/* Error State */}
+            {error ? (
+              <View style={styles.errorContainer}>
+                <Text style={styles.errorText}>{error}</Text>
+              </View>
+            ) : null}
+
+            {/* Immediate Response */}
+            {renderImmediateResponse()}
+
+            {/* Full AI Response */}
+            {response && (
+              <View style={styles.responseContainer}>
+                <View style={styles.mainResponse}>
+                  <Text style={styles.responseText}>{response.content}</Text>
+                </View>
+
+                {renderScriptureReferences()}
+                {renderFurtherStudy()}
+                {renderFollowUpQuestions()}
+              </View>
+            )}
+          </ScrollView>
+
+          <TouchableOpacity style={styles.closeButton} onPress={closeModal} disabled={loading}>
+            <Text style={styles.closeButtonText}>Close</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  overlay: {
     flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modal: {
+    width: width * 0.95,
+    maxHeight: '90%',
     backgroundColor: '#fff',
+    borderRadius: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
   },
   header: {
     padding: 20,
@@ -408,7 +431,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     padding: 20,
-    flex: 1,
+    maxHeight: '80%',
   },
   modeSection: {
     marginBottom: 20,
@@ -532,6 +555,17 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 24,
   },
+  secondImmediateResponseContainer: {
+    marginTop: 8,
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#e9ecef',
+  },
+  secondImmediateResponseText: {
+    fontSize: 14,
+    color: '#666',
+    fontStyle: 'italic',
+  },
   aiProcessingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -607,6 +641,7 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 20,
   },
+
   studySection: {
     marginBottom: 15,
     paddingTop: 15,
@@ -639,12 +674,6 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     borderTopWidth: 1,
     borderTopColor: '#e9ecef',
-  },
-  followUpTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 10,
   },
   followUpButton: {
     backgroundColor: '#e3f2fd',
@@ -688,103 +717,35 @@ const styles = StyleSheet.create({
   ratingButtonText: {
     fontSize: 18,
   },
-  anchorQuestionContainer: {
-    backgroundColor: '#f0f7f4',
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 15,
-    borderLeftWidth: 4,
-    borderLeftColor: '#28a745',
-  },
-  anchorQuestionLabel: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 5,
-  },
-  anchorQuestionText: {
-    fontSize: 16,
-    color: '#28a745',
-    fontStyle: 'italic',
-  },
-  initialResponseContainer: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 15,
-    marginBottom: 15,
-    borderWidth: 1,
-    borderColor: '#e9ecef',
-  },
-  conversationContainer: {
+  closeButton: {
     backgroundColor: '#f8f9fa',
-    borderRadius: 8,
     padding: 15,
-    marginBottom: 15,
-    borderWidth: 1,
-    borderColor: '#e9ecef',
-  },
-  conversationTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#4B0082',
-    marginBottom: 10,
-    textAlign: 'center',
-  },
-  conversationEntry: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  },
-  questionBubble: {
-    backgroundColor: '#e3f2fd',
-    padding: 10,
-    borderRadius: 10,
-    borderBottomLeftRadius: 0,
-    maxWidth: '80%',
-  },
-  questionText: {
-    fontSize: 14,
-    color: '#1976d2',
-    fontWeight: '600',
-  },
-  responseBubble: {
-    backgroundColor: '#f8f9fa',
-    padding: 10,
-    borderRadius: 10,
-    borderBottomRightRadius: 0,
-    maxWidth: '80%',
-    borderWidth: 1,
-    borderColor: '#e9ecef',
-  },
-  followUpInputContainer: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    marginTop: 10,
-  },
-  followUpInput: {
-    flex: 1,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
-    padding: 10,
-    fontSize: 14,
-    backgroundColor: '#fafafa',
-    marginRight: 10,
-    minHeight: 40,
-  },
-  followUpSubmitButton: {
-    backgroundColor: '#4B0082',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    borderRadius: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#e9ecef',
     alignItems: 'center',
   },
-  followUpSubmitButtonDisabled: {
-    backgroundColor: '#ccc',
-  },
-  followUpSubmitButtonText: {
-    color: '#fff',
-    fontSize: 14,
+  closeButtonText: {
+    color: '#666',
+    fontSize: 16,
     fontWeight: '600',
   },
-}); 
+  clarificationContext: {
+    backgroundColor: '#e3f2fd',
+    padding: 10,
+    borderRadius: 6,
+    marginBottom: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: '#1976d2',
+  },
+  clarificationContextText: {
+    fontSize: 14,
+    color: '#1976d2',
+    fontStyle: 'italic',
+  },
+  clarificationInputContainer: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+});
+
+export default SolomonChatModal; 
