@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Solomon - Knowledge Base Admin</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .progress {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        .sources-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .source-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .source-item h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .source-item p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .job-status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-processing { background: #d1ecf1; color: #0c5460; }
+        .status-completed { background: #d4edda; color: #155724; }
+        .status-failed { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 Project Solomon Knowledge Base</h1>
+        <p>Admin Interface for Data Ingestion and Processing</p>
+    </div>
+
+    <div class="container">
+        <!-- Add New Source -->
+        <div class="card">
+            <h2>📚 Add New Source</h2>
+            <form id="sourceForm">
+                <div class="form-group">
+                    <label for="sourceName">Source Name *</label>
+                    <input type="text" id="sourceName" required placeholder="e.g., 'Commentary on John'">
+                </div>
+                
+                <div class="form-group">
+                    <label for="sourceType">Source Type *</label>
+                    <select id="sourceType" required>
+                        <option value="">Select type...</option>
+                        <option value="website">Website</option>
+                        <option value="book">Book</option>
+                        <option value="article">Article</option>
+                        <option value="journal">Journal</option>
+                        <option value="commentary">Commentary</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sourceUrl">Website URL</label>
+                    <input type="url" id="sourceUrl" placeholder="https://example.com/article">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fileInput">Upload File</label>
+                    <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" placeholder="Author name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="publicationDate">Publication Date</label>
+                    <input type="date" id="publicationDate">
+                </div>
+                
+                <div class="form-group">
+                    <label for="authorityLevel">Authority Level</label>
+                    <select id="authorityLevel">
+                        <option value="1">Biblical Authority (1.0)</option>
+                        <option value="2">Apostolic Tradition (0.9)</option>
+                        <option value="3" selected>Scholarly Consensus (0.7)</option>
+                        <option value="4">Personal Opinion (0.3)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submitBtn">Add Source & Process</button>
+            </form>
+            
+            <div id="statusMessage"></div>
+        </div>
+
+        <!-- Sources & Jobs -->
+        <div class="card">
+            <h2>📋 Sources & Processing Jobs</h2>
+            <div class="form-group">
+                <label for="statusFilter">Filter by Status:</label>
+                <select id="statusFilter" onchange="loadSources()">
+                    <option value="">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="processing">Processing</option>
+                    <option value="completed">Completed</option>
+                    <option value="failed">Failed</option>
+                </select>
+            </div>
+            
+            <div id="sourcesList" class="sources-list">
+                <p>Loading sources...</p>
+            </div>
+            
+            <button onclick="loadSources()" style="margin-top: 15px;">Refresh</button>
+        </div>
+    </div>
+
+    <!-- Search & Analytics -->
+    <div class="card" style="margin-top: 30px;">
+        <h2>🔍 Knowledge Base Analytics</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                <h3 id="totalSources">-</h3>
+                <p>Total Sources</p>
+            </div>
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                <h3 id="totalChunks">-</h3>
+                <p>Content Chunks</p>
+            </div>
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                <h3 id="activeJobs">-</h3>
+                <p>Active Jobs</p>
+            </div>
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                <h3 id="conflicts">-</h3>
+                <p>Conflicts Detected</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'https://solomon-backend-841857698822.us-central1.run.app';
+
+        // Form submission
+        document.getElementById('sourceForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('statusMessage');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+            
+            try {
+                const formData = {
+                    sourceName: document.getElementById('sourceName').value,
+                    sourceType: document.getElementById('sourceType').value,
+                    sourceUrl: document.getElementById('sourceUrl').value || null,
+                    author: document.getElementById('author').value || null,
+                    publicationDate: document.getElementById('publicationDate').value || null,
+                    authorityLevel: parseInt(document.getElementById('authorityLevel').value)
+                };
+                
+                const response = await fetch(`${API_BASE}/api/knowledge/sources`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    statusDiv.innerHTML = `<div class="status success">✅ Source added successfully! ID: ${result.sourceId}</div>`;
+                    document.getElementById('sourceForm').reset();
+                    loadSources();
+                    loadAnalytics();
+                } else {
+                    statusDiv.innerHTML = `<div class="status error">❌ Error: ${result.error}</div>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Network error: ${error.message}</div>`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Add Source & Process';
+            }
+        });
+
+        // Load sources
+        async function loadSources() {
+            const sourcesList = document.getElementById('sourcesList');
+            const statusFilter = document.getElementById('statusFilter').value;
+            
+            try {
+                const params = new URLSearchParams();
+                if (statusFilter) params.append('status', statusFilter);
+                
+                const response = await fetch(`${API_BASE}/api/knowledge/sources?${params}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    if (result.sources.length === 0) {
+                        sourcesList.innerHTML = '<p>No sources found.</p>';
+                        return;
+                    }
+                    
+                    sourcesList.innerHTML = result.sources.map(source => `
+                        <div class="source-item">
+                            <h4>${source.source_name}</h4>
+                            <p><strong>Type:</strong> ${source.source_type}</p>
+                            <p><strong>Author:</strong> ${source.author || 'Unknown'}</p>
+                            <p><strong>Status:</strong> 
+                                <span class="job-status status-${source.processing_status}">
+                                    ${source.processing_status}
+                                </span>
+                            </p>
+                            ${source.job_status === 'processing' ? `
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: ${source.progress_percentage || 0}%"></div>
+                                </div>
+                            ` : ''}
+                            <p><strong>Added:</strong> ${new Date(source.created_at).toLocaleDateString()}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    sourcesList.innerHTML = '<p>Error loading sources.</p>';
+                }
+            } catch (error) {
+                sourcesList.innerHTML = '<p>Error loading sources.</p>';
+            }
+        }
+
+        // Load analytics
+        async function loadAnalytics() {
+            try {
+                // Get sources count
+                const sourcesResponse = await fetch(`${API_BASE}/api/knowledge/sources?limit=1000`);
+                const sourcesResult = await sourcesResponse.json();
+                
+                // Get jobs count
+                const jobsResponse = await fetch(`${API_BASE}/api/knowledge/jobs?limit=1000`);
+                const jobsResult = await jobsResponse.json();
+                
+                // Get conflicts count
+                const conflictsResponse = await fetch(`${API_BASE}/api/knowledge/conflicts?limit=1000`);
+                const conflictsResult = await conflictsResponse.json();
+                
+                document.getElementById('totalSources').textContent = sourcesResult.success ? sourcesResult.sources.length : '-';
+                document.getElementById('activeJobs').textContent = jobsResult.success ? jobsResult.jobs.filter(j => j.status === 'processing').length : '-';
+                document.getElementById('conflicts').textContent = conflictsResult.success ? conflictsResult.conflicts.length : '-';
+                
+                // Estimate chunks (this would need a separate endpoint for accuracy)
+                document.getElementById('totalChunks').textContent = sourcesResult.success ? 
+                    sourcesResult.sources.filter(s => s.processing_status === 'completed').length * 10 : '-';
+                
+            } catch (error) {
+                console.error('Error loading analytics:', error);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSources();
+            loadAnalytics();
+            
+            // Auto-refresh every 30 seconds
+            setInterval(() => {
+                loadSources();
+                loadAnalytics();
+            }, 30000);
+        });
+    </script>
+</body>
+</html> 
