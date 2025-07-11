@@ -1,6 +1,6 @@
 # Project Solomon Backend API
 
-A comprehensive backend API for biblical data search, Jesus quotes, and AI-enhanced responses using Google Cloud infrastructure with **Gemini 2.5 Pro** integration.
+A comprehensive backend API for biblical data search, Jesus quotes, and AI-enhanced responses using Google Cloud infrastructure with **Gemini 2.0 Flash** integration.
 
 ## 🏗️ Architecture
 
